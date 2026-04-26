@@ -1,0 +1,147 @@
+{
+  "analysis": "Compact theory-driven leakage-free CV: only alpha and low-gamma Pi, D_eff, M_tau, and fold-local functional backbone features.",
+  "primary_population": "AD + FTD patients only; controls used only for fold-local access-window and backbone calibration.",
+  "n_subjects_total": 88,
+  "n_patients": 59,
+  "n_controls": 29,
+  "n_splits": 5,
+  "n_repeats": 100,
+  "n_folds": 500,
+  "theory_bands": [
+    "alpha",
+    "low_gamma"
+  ],
+  "backbone_top_fraction": 0.2,
+  "n_random_backbones_per_fold_band": 50,
+  "models_subject_mean_out_of_sample": {
+    "A_clinical": {
+      "n_test": 59,
+      "mae": 3.0200574547124006,
+      "rmse": 4.018963359750808,
+      "r2": 0.16164161510579333,
+      "spearman_rho": 0.42870330340349455,
+      "pearson_r": 0.4037041511046148
+    },
+    "B_standard_alpha_lowgamma": {
+      "n_test": 59,
+      "mae": 2.9407667454772723,
+      "rmse": 3.987379959229401,
+      "r2": 0.17476647619391528,
+      "spearman_rho": 0.48298909161502035,
+      "pearson_r": 0.4241305637255509
+    },
+    "C_gcc_dynamics_only": {
+      "n_test": 59,
+      "mae": 3.126039203882731,
+      "rmse": 4.184174578484674,
+      "r2": 0.09129856946635595,
+      "spearman_rho": 0.39909557318090627,
+      "pearson_r": 0.32246530318777383
+    },
+    "D_gcc_real_backbone_compact": {
+      "n_test": 59,
+      "mae": 3.2879867151270923,
+      "rmse": 4.3150774502482685,
+      "r2": 0.03355129378354693,
+      "spearman_rho": 0.28829673520650634,
+      "pearson_r": 0.23727584770430304
+    },
+    "E_gcc_random_backbone_compact": {
+      "n_test": 59,
+      "mae": 3.1502333904115627,
+      "rmse": 4.219756521097024,
+      "r2": 0.07577778182919093,
+      "spearman_rho": 0.35478791671942017,
+      "pearson_r": 0.28972561788823725
+    },
+    "F_real_backbone_only": {
+      "n_test": 59,
+      "mae": 3.0515794015534983,
+      "rmse": 4.136734334016634,
+      "r2": 0.11178750070441468,
+      "spearman_rho": 0.41124157284092494,
+      "pearson_r": 0.3602676797474207
+    }
+  },
+  "subject_level_mae_improvements_positive_means_candidate_better": {
+    "B_minus_D_real": {
+      "mean": -0.34721996964982055,
+      "ci95_low": -0.5958877854610067,
+      "ci95_high": -0.09519403581816041,
+      "signflip_p_one_sided": 0.995510044899551
+    },
+    "C_minus_D_real": {
+      "mean": -0.1619475112443621,
+      "ci95_low": -0.34455341436545334,
+      "ci95_high": 0.015787224277033836,
+      "signflip_p_one_sided": 0.958570414295857
+    },
+    "E_random_minus_D_real": {
+      "mean": -0.13775332471553078,
+      "ci95_low": -0.28503534231638045,
+      "ci95_high": 0.006150728478240545,
+      "signflip_p_one_sided": 0.9656303436965631
+    },
+    "B_minus_C_dynamics": {
+      "mean": -0.1852724584054584,
+      "ci95_low": -0.38037769992911574,
+      "ci95_high": 0.010901494754399105,
+      "signflip_p_one_sided": 0.963430365696343
+    },
+    "B_minus_F_backbone_only": {
+      "mean": -0.11081265607622455,
+      "ci95_low": -0.29978043445971614,
+      "ci95_high": 0.07718288204827807,
+      "signflip_p_one_sided": 0.8687113128868711
+    }
+  },
+  "fold_level_mean_mae": {
+    "A_clinical": 3.0423901444949837,
+    "B_standard_alpha_lowgamma": 3.0043846220640615,
+    "C_gcc_dynamics_only": 3.2138671120376974,
+    "D_gcc_real_backbone_compact": 3.406148477330579,
+    "E_gcc_random_backbone_compact": 3.315168021920448,
+    "F_real_backbone_only": 3.1984183682931016
+  },
+  "fold_level_sd_mae": {
+    "A_clinical": 0.6610498529943686,
+    "B_standard_alpha_lowgamma": 0.6797407034971592,
+    "C_gcc_dynamics_only": 0.7341123508289452,
+    "D_gcc_real_backbone_compact": 0.7577649662456627,
+    "E_gcc_random_backbone_compact": 0.7683345751385714,
+    "F_real_backbone_only": 0.7123734136763793
+  },
+  "fold_level_mae_improvements_positive_means_candidate_better": {
+    "B_minus_D_real": {
+      "mean": -0.4017638552665175,
+      "sd": 0.4375298740810583,
+      "wilcoxon_p_two_sided": 1.2191095973417943e-63
+    },
+    "C_minus_D_real": {
+      "mean": -0.19228136529288176,
+      "sd": 0.37285495663952833,
+      "wilcoxon_p_two_sided": 5.539687930898136e-34
+    },
+    "E_random_minus_D_real": {
+      "mean": -0.0909804554101313,
+      "sd": 0.45745584842783293,
+      "wilcoxon_p_two_sided": 4.7306117630190664e-07
+    },
+    "B_minus_C_dynamics": {
+      "mean": -0.2094824899736357,
+      "sd": 0.3194309601059614,
+      "wilcoxon_p_two_sided": 2.9278066477281483e-38
+    },
+    "B_minus_F_backbone_only": {
+      "mean": -0.19403374622903982,
+      "sd": 0.34929418635826803,
+      "wilcoxon_p_two_sided": 5.827695922888306e-31
+    }
+  },
+  "outputs": {
+    "predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_compact_cv_predictions.csv",
+    "fold_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_compact_cv_fold_metrics.csv",
+    "subject_mean_predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_compact_cv_subject_mean_predictions.csv",
+    "plot": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_compact_cv_model_comparison.png"
+  }
+}

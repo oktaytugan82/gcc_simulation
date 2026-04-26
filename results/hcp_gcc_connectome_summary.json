@@ -1,0 +1,117 @@
+{
+  "config": {
+    "dt": 0.04,
+    "total_time": 12.0,
+    "event_start": 5.0,
+    "event_end": 8.0,
+    "baseline_start": 2.0,
+    "baseline_end": 4.5,
+    "base_freq_hz": 1.0,
+    "freq_std_hz": 0.1,
+    "sigma0": 0.22,
+    "s_backbone": 0.65,
+    "s_other": 0.25,
+    "phi_base": 0.55,
+    "phi_backbone_event": 0.95,
+    "phi_other_event": 0.3,
+    "backbone_global_gain": 0.1,
+    "backbone_fraction": 0.1,
+    "min_backbone_nodes": 20,
+    "max_backbone_nodes": 120,
+    "n_controls": 12,
+    "degree_swap_factor": 12,
+    "strength_match_iterations": 600,
+    "seed": 20260426
+  },
+  "k_values": [
+    1.6,
+    2.4,
+    3.2,
+    4.0
+  ],
+  "variant_ids": [
+    "brc_v3_1m_fibercount_conf50",
+    "brc_v3_200k_fibercount_conf50",
+    "brc_v3_20k_electrical_conf50",
+    "brc_v3_20k_fibercount_conf10",
+    "brc_v3_20k_fibercount_conf25",
+    "brc_v3_20k_fibercount_conf50_default"
+  ],
+  "outputs": {
+    "simulation_results": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\hcp_gcc_connectome_simulation_results.csv",
+    "null_model_stats": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\hcp_gcc_connectome_null_model_stats.csv",
+    "group_comparison": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\hcp_gcc_connectome_group_comparison.csv",
+    "summary_json": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\hcp_gcc_connectome_summary.json",
+    "reentry_plot": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\hcp_gcc_connectome_reentry_comparison.png",
+    "structural_alpha_plot": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\hcp_gcc_connectome_structural_alpha.png"
+  },
+  "primary_comparison": {
+    "null_type": "degree_strength_preserving",
+    "metric": "delta_A_R",
+    "interpretation": "Positive real_minus_null means the empirical HCP-derived topology showed a larger event-driven increase in backbone order advantage than degree+strength-preserving null graphs.",
+    "top_rows": [
+      {
+        "variant_id": "brc_v3_1m_fibercount_conf50",
+        "K": 2.4,
+        "delta_A_R_real_mean": 0.13455713339499198,
+        "delta_A_R_null_mean": 0.04341539926826954,
+        "delta_A_R_real_minus_null": 0.09114173412672244,
+        "delta_A_R_mw_p_greater": 0.020202059794111847,
+        "alpha_S_max_real": 0.9737217937732073,
+        "alpha_S_max_null_mean": 0.8609431184173323,
+        "alpha_S_max_real_minus_null": 0.11277867535587505
+      },
+      {
+        "variant_id": "brc_v3_20k_fibercount_conf25",
+        "K": 3.2,
+        "delta_A_R_real_mean": 0.10915779570738475,
+        "delta_A_R_null_mean": 0.0421285810880363,
+        "delta_A_R_real_minus_null": 0.06702921461934845,
+        "delta_A_R_mw_p_greater": 0.11829204666093807,
+        "alpha_S_max_real": 0.9436619718309854,
+        "alpha_S_max_null_mean": 0.8365541619911575,
+        "alpha_S_max_real_minus_null": 0.10710780983982793
+      },
+      {
+        "variant_id": "brc_v3_20k_fibercount_conf10",
+        "K": 4.0,
+        "delta_A_R_real_mean": 0.14847290453811487,
+        "delta_A_R_null_mean": 0.08340714483832319,
+        "delta_A_R_real_minus_null": 0.06506575969979168,
+        "delta_A_R_mw_p_greater": 0.09696542614120535,
+        "alpha_S_max_real": 0.9378238341968913,
+        "alpha_S_max_null_mean": 0.8127960722930846,
+        "alpha_S_max_real_minus_null": 0.1250277619038067
+      },
+      {
+        "variant_id": "brc_v3_200k_fibercount_conf50",
+        "K": 2.4,
+        "delta_A_R_real_mean": 0.09404694847762585,
+        "delta_A_R_null_mean": 0.03053839582328995,
+        "delta_A_R_real_minus_null": 0.0635085526543359,
+        "delta_A_R_mw_p_greater": 0.06301106088518654,
+        "alpha_S_max_real": 0.9811827956989244,
+        "alpha_S_max_null_mean": 0.8672175057294251,
+        "alpha_S_max_real_minus_null": 0.11396528996949928
+      },
+      {
+        "variant_id": "brc_v3_20k_fibercount_conf50_default",
+        "K": 2.4,
+        "delta_A_R_real_mean": 0.1276299711316824,
+        "delta_A_R_null_mean": 0.07779173258071144,
+        "delta_A_R_real_minus_null": 0.049838238550970956,
+        "delta_A_R_mw_p_greater": 0.14273815442594123,
+        "alpha_S_max_real": 0.9019607843137254,
+        "alpha_S_max_null_mean": 0.8711664077467498,
+        "alpha_S_max_real_minus_null": 0.03079437656697559
+      }
+    ]
+  },
+  "notes": [
+    "Backbone is the top-strength 10% of the real largest connected component, bounded by 20 and 120 nodes.",
+    "The same backbone node indices are used in the random controls.",
+    "Degree-preserving controls use double-edge swaps and shuffled empirical weights.",
+    "Degree+strength controls add iterative symmetric edge-weight scaling to match node strengths approximately.",
+    "Rows are excluded only if outside the largest connected component of the corresponding empirical variant."
+  ]
+}

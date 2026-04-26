@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the archived Zenodo release."
+title: "GCC simulation and analysis code"
+version: "v1.1.0"
+date-released: "2026-04-26"
+type: software
+authors:
+  - family-names: "Tugan"
+    given-names: "Mehmet Oktay"
+    orcid: "https://orcid.org/0009-0005-8665-3583"
+repository-code: "https://github.com/oktaytugan82/gcc_simulation"
+license: MIT
+abstract: "Simulation and analysis code for the Gamma-Code Consensus (GCC), including synthetic Kuramoto network experiments, EEG pilot analysis, OpenNeuro ds004504 model comparisons, and HCP-derived Budapest Reference Connectome topology stress tests."
+keywords:
+  - consciousness
+  - global access
+  - neural dynamics
+  - Kuramoto model
+  - connectome
+  - EEG
+  - terminal lucidity

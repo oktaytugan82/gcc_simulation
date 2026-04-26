@@ -6,7 +6,18 @@ This repository contains the complete simulation and analysis code accompanying 
 > Mehmet Oktay Tugan (2026)
 > Submitted to PLOS Computational Biology.
 
-The Gamma-Code Consensus (GCC) is a dynamical regime model for level of consciousness and global access in a network of coupled neural populations. This code reproduces all numerical simulations (synthetic Kuramoto networks) and the empirical pilot analysis on the publicly available Chennu et al. 2016 EEG dataset.
+The Gamma-Code Consensus (GCC) is a dynamical regime model for level of consciousness and global access in a network of coupled neural populations. This code reproduces all numerical simulations (synthetic Kuramoto networks), the empirical pilot analysis on the publicly available Chennu et al. 2016 EEG dataset, the OpenNeuro ds004504 model-comparison analyses, and the HCP-derived Budapest Reference Connectome topology stress test added in release v1.1.0.
+
+## Release v1.1.0 additions
+
+Version v1.1.0 adds:
+
+- `connectome/`: Budapest Reference Connectome downloader, matrix preparation, and GCC real-connectome stress-test code.
+- `ds004504/`: OpenNeuro ds004504 audit, feature extraction, and leakage-free model-comparison scripts.
+- `results/hcp_gcc_connectome_*`: derived HCP stress-test result tables and summaries.
+- `figures/hcp_gcc_connectome_*`: HCP stress-test figures used in the NoC-oriented manuscript revision.
+- `manuscript/`: revised manuscript source and compiled PDF including the HCP-derived connectome section.
+- `RELEASE_v1.1.0.md`: concise release notes and reproduction commands.
 
 ## Repository structure
 

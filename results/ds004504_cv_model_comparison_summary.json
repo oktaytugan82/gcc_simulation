@@ -1,0 +1,76 @@
+{
+  "analysis": "Leakage-free repeated stratified 5-fold CV; controls in each training fold define GCC access windows and wPLI backbone.",
+  "primary_population": "AD + FTD patients only; controls used only for fold-local calibration.",
+  "n_subjects_total": 88,
+  "n_patients": 59,
+  "n_controls": 29,
+  "n_splits": 5,
+  "n_repeats": 100,
+  "n_folds": 500,
+  "backbone_top_fraction": 0.2,
+  "models_subject_mean_out_of_sample": {
+    "A_clinical": {
+      "n_test": 59,
+      "mae": 3.0298756204113273,
+      "rmse": 4.030052516863259,
+      "r2": 0.15700882164016394,
+      "spearman_rho": 0.43075238403073485,
+      "pearson_r": 0.3986596807375052
+    },
+    "B_standard_eeg": {
+      "n_test": 59,
+      "mae": 3.09367063669231,
+      "rmse": 4.230176156847158,
+      "r2": 0.07120787438027565,
+      "spearman_rho": 0.3454928118451271,
+      "pearson_r": 0.30252621127447105
+    },
+    "C_gcc_real_backbone": {
+      "n_test": 59,
+      "mae": 3.2857439893907534,
+      "rmse": 4.479813433690034,
+      "r2": -0.04164917488341602,
+      "spearman_rho": -0.039407681048520174,
+      "pearson_r": -0.07347521570599662
+    },
+    "D_gcc_random_backbone": {
+      "n_test": 59,
+      "mae": 3.2653102324938073,
+      "rmse": 4.482397592790904,
+      "r2": -0.04285126225038938,
+      "spearman_rho": 0.01401689936315111,
+      "pearson_r": -0.09678121438233156
+    }
+  },
+  "primary_subject_level_mae_improvement_B_minus_C": {
+    "mean": -0.19207335269844314,
+    "ci95_low": -0.568054269030238,
+    "ci95_high": 0.1682608815718178
+  },
+  "primary_subject_level_mae_improvement_B_minus_C_signflip_p_one_sided": 0.8430815691843082,
+  "random_control_subject_level_mae_improvement_D_minus_C": {
+    "mean": -0.02043375689694589,
+    "ci95_low": -0.06673239758060795,
+    "ci95_high": 0.025026000344900313
+  },
+  "fold_level_mean_mae": {
+    "A_clinical": 3.0589102268819155,
+    "B_standard_eeg": 3.200338932596359,
+    "C_gcc_real_backbone": 3.353367433096379,
+    "D_gcc_random_backbone": 3.339047330390335
+  },
+  "fold_level_sd_mae": {
+    "A_clinical": 0.6968839133256717,
+    "B_standard_eeg": 0.7594489703709559,
+    "C_gcc_real_backbone": 0.7995099097128266,
+    "D_gcc_random_backbone": 0.8030831305614221
+  },
+  "fold_level_B_minus_C_mae_mean": -0.15302850050002015,
+  "fold_level_B_minus_C_mae_wilcoxon_p_two_sided": 1.2746117839737591e-15,
+  "outputs": {
+    "predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_cv_predictions.csv",
+    "fold_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_cv_fold_metrics.csv",
+    "subject_mean_predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_cv_subject_mean_predictions.csv",
+    "plot": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_cv_model_comparison.png"
+  }
+}

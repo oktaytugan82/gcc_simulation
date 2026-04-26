@@ -1,0 +1,31 @@
+{
+  "title": "GCC simulation and analysis code",
+  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v1.1.0 adds HCP-derived Budapest Reference Connectome preparation, GCC real-connectome topology stress tests with degree- and degree-plus-strength-preserving null controls, OpenNeuro ds004504 analysis scripts, derived result tables, figures, and the NoC-oriented manuscript version.",
+  "creators": [
+    {
+      "name": "Tugan, Mehmet Oktay",
+      "orcid": "0009-0005-8665-3583"
+    }
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "v1.1.0",
+  "keywords": [
+    "global access",
+    "consciousness",
+    "neural dynamics",
+    "EEG",
+    "Kuramoto model",
+    "connectome",
+    "Human Connectome Project",
+    "Terminal Lucidity"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/oktaytugan82/gcc_simulation",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

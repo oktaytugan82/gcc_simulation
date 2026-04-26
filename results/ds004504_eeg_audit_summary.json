@@ -1,0 +1,31 @@
+{
+  "dataset_root": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\data\\ds004504-main",
+  "n_participants": 88,
+  "n_read_ok": 88,
+  "n_failed": 0,
+  "groups": {
+    "A": 36,
+    "C": 29,
+    "F": 23
+  },
+  "read_ok_by_group": {
+    "A": 36,
+    "C": 29,
+    "F": 23
+  },
+  "sfreqs_hz": {
+    "500.0": 88
+  },
+  "n_channels": {
+    "19": 88
+  },
+  "unique_channel_sets": 1,
+  "dominant_channel_set_count": 88,
+  "duration_s_min": 306.1,
+  "duration_s_max": 1281.72,
+  "duration_s_mean": 793.5354545454545,
+  "file_bytes_min": 13076664,
+  "file_bytes_max": 54545192,
+  "file_bytes_total": 2951099688,
+  "failures": []
+}

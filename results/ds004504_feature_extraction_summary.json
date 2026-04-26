@@ -1,0 +1,53 @@
+{
+  "dataset_root": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\data\\ds004504-main",
+  "n_subjects": 88,
+  "n_subject_band_rows": 352,
+  "n_window_rows": 55324,
+  "bands": {
+    "theta": [
+      4.0,
+      7.0
+    ],
+    "alpha": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      13.0,
+      30.0
+    ],
+    "low_gamma": [
+      30.0,
+      45.0
+    ]
+  },
+  "target_sfreq_hz": 125.0,
+  "window_s": 10.0,
+  "step_s": 5.0,
+  "channels": [
+    "Fp1",
+    "Fp2",
+    "F3",
+    "F4",
+    "C3",
+    "C4",
+    "P3",
+    "P4",
+    "O1",
+    "O2",
+    "F7",
+    "F8",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "Fz",
+    "Cz",
+    "Pz"
+  ],
+  "outputs": {
+    "subject_band_features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_gcc_features_by_band.csv",
+    "window_features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_gcc_window_features.csv",
+    "wpli_matrices": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\ds004504_wpli_matrices.npz"
+  }
+}

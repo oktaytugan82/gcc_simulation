@@ -1,0 +1,37 @@
+{
+  "root": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\data\\ds006623-minimal",
+  "pipeline": "xcp_d_without_GSR_bandpass_output",
+  "atlas": "4S156Parcels",
+  "tr": 0.8,
+  "window_sec": 60.0,
+  "step_sec": 15.0,
+  "alpha": 0.1,
+  "fd_threshold": 0.8,
+  "min_valid_fraction": 0.8,
+  "subjects_seen": 26,
+  "subjects_analyzed": 26,
+  "phase_rows": 147,
+  "window_rows": 8299,
+  "phase_counts": {
+    "Base1": 26,
+    "Base2": 25,
+    "LOR_task2": 25,
+    "LOR_task3": 26,
+    "PreLOR": 26,
+    "ROR": 19
+  },
+  "skipped": [
+    {
+      "subject": "16",
+      "phase": "LOR_task2",
+      "reason": "no valid windows"
+    },
+    {
+      "subject": "25",
+      "phase": "ROR",
+      "reason": "no valid windows"
+    }
+  ],
+  "phase_features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_fmri_gcc_withoutGSR_4S156_phase_features.csv",
+  "window_features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_fmri_gcc_withoutGSR_4S156_window_features.csv"
+}

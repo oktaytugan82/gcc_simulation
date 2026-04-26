@@ -1,0 +1,254 @@
+{
+  "dataset": "OpenNeuro ds003367 / data-openneuro disease release ds003367",
+  "input": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\data\\ds003367\\sub-all.dz",
+  "n_scans": 50,
+  "group_counts": {
+    "control": 16,
+    "acute_only": 10,
+    "recovery_early": 9,
+    "recovery_late": 9,
+    "chronic_doc": 6
+  },
+  "radius_mm": 8.0,
+  "roi_voxel_counts": {
+    "mesopontine_tegmentum": 264,
+    "midbrain_tegmentum": 264,
+    "left_intralaminar_thalamus": 264,
+    "right_intralaminar_thalamus": 264,
+    "left_hypothalamic_basal_forebrain": 264,
+    "right_hypothalamic_basal_forebrain": 264,
+    "left_internal_capsule": 264,
+    "right_internal_capsule": 264,
+    "left_thalamocortical_corona": 264,
+    "right_thalamocortical_corona": 264,
+    "left_temporal_stem": 264,
+    "right_temporal_stem": 264
+  },
+  "group_tests": [
+    {
+      "feature": "p1_backbone_z",
+      "group_a": "recovery_late",
+      "group_b": "chronic_doc",
+      "n_a": 9,
+      "n_b": 6,
+      "mean_a": -0.28123645218575233,
+      "mean_b": -0.6756275225715297,
+      "median_a": -0.22537956479936838,
+      "median_b": -0.6917965552226331,
+      "cohens_d_a_minus_b": 1.035043410615459,
+      "mannwhitney_p_two_sided": 0.1134865134865135,
+      "welch_p_two_sided": 0.045410616192083156
+    },
+    {
+      "feature": "p1_backbone_z",
+      "group_a": "control",
+      "group_b": "chronic_doc",
+      "n_a": 16,
+      "n_b": 6,
+      "mean_a": 1.3242394440032834e-07,
+      "mean_b": -0.6756275225715297,
+      "median_a": 0.022254907188956473,
+      "median_b": -0.6917965552226331,
+      "cohens_d_a_minus_b": 3.3209251954622876,
+      "mannwhitney_p_two_sided": 0.00010721992146140753,
+      "welch_p_two_sided": 0.0002611057556581739
+    },
+    {
+      "feature": "p1_aan_core_z",
+      "group_a": "recovery_late",
+      "group_b": "chronic_doc",
+      "n_a": 9,
+      "n_b": 6,
+      "mean_a": -0.09603425800358106,
+      "mean_b": -0.3620299978647381,
+      "median_a": -0.1159755935271581,
+      "median_b": -0.40344035501281417,
+      "cohens_d_a_minus_b": 1.4238471408392874,
+      "mannwhitney_p_two_sided": 0.04955044955044956,
+      "welch_p_two_sided": 0.02767219827628084
+    },
+    {
+      "feature": "p1_aan_core_z",
+      "group_a": "control",
+      "group_b": "chronic_doc",
+      "n_a": 16,
+      "n_b": 6,
+      "mean_a": 6.265387732934391e-08,
+      "mean_b": -0.3620299978647381,
+      "median_a": -0.04971408098936081,
+      "median_b": -0.40344035501281417,
+      "cohens_d_a_minus_b": 1.5870132248722908,
+      "mannwhitney_p_two_sided": 0.0045300416817444684,
+      "welch_p_two_sided": 0.005399447278306817
+    },
+    {
+      "feature": "p1_relay_tract_z",
+      "group_a": "recovery_late",
+      "group_b": "chronic_doc",
+      "n_a": 9,
+      "n_b": 6,
+      "mean_a": -0.46643864636792354,
+      "mean_b": -0.9892250472783214,
+      "median_a": -0.06422202909986179,
+      "median_b": -1.0981592740087458,
+      "cohens_d_a_minus_b": 0.684526930472194,
+      "mannwhitney_p_two_sided": 0.181018981018981,
+      "welch_p_two_sided": 0.19304214915247025
+    },
+    {
+      "feature": "p1_relay_tract_z",
+      "group_a": "control",
+      "group_b": "chronic_doc",
+      "n_a": 16,
+      "n_b": 6,
+      "mean_a": 2.0219401146437388e-07,
+      "mean_b": -0.9892250472783214,
+      "median_a": -0.013816495115558306,
+      "median_b": -1.0981592740087458,
+      "cohens_d_a_minus_b": 2.393828829298915,
+      "mannwhitney_p_two_sided": 0.0011794191360754828,
+      "welch_p_two_sided": 0.01097338897050835
+    },
+    {
+      "feature": "global_integrity_z",
+      "group_a": "recovery_late",
+      "group_b": "chronic_doc",
+      "n_a": 9,
+      "n_b": 6,
+      "mean_a": 0.5724770890341865,
+      "mean_b": -0.23451290900508562,
+      "median_a": 0.08042547106742859,
+      "median_b": -0.3722084276378155,
+      "cohens_d_a_minus_b": 0.7170820306015337,
+      "mannwhitney_p_two_sided": 0.2721278721278721,
+      "welch_p_two_sided": 0.1610269718262859
+    },
+    {
+      "feature": "global_integrity_z",
+      "group_a": "control",
+      "group_b": "chronic_doc",
+      "n_a": 16,
+      "n_b": 6,
+      "mean_a": 1.6727950423955917e-05,
+      "mean_b": -0.23451290900508562,
+      "median_a": -0.15833289921283722,
+      "median_b": -0.3722084276378155,
+      "cohens_d_a_minus_b": 0.29099419653676994,
+      "mannwhitney_p_two_sided": 0.49423022797635796,
+      "welch_p_two_sided": 0.5642726476392751
+    },
+    {
+      "feature": "p1_specificity_residual",
+      "group_a": "recovery_late",
+      "group_b": "chronic_doc",
+      "n_a": 9,
+      "n_b": 6,
+      "mean_a": -0.0431362488819591,
+      "mean_b": -0.45649129577327296,
+      "median_a": -0.0033509747036604143,
+      "median_b": -0.4601981774751454,
+      "cohens_d_a_minus_b": 1.0942673035603423,
+      "mannwhitney_p_two_sided": 0.08791208791208792,
+      "welch_p_two_sided": 0.036850710338401746
+    },
+    {
+      "feature": "p1_specificity_residual",
+      "group_a": "control",
+      "group_b": "chronic_doc",
+      "n_a": 16,
+      "n_b": 6,
+      "mean_a": 0.2246477218609979,
+      "mean_b": -0.45649129577327296,
+      "median_a": 0.26365829881275343,
+      "median_b": -0.4601981774751454,
+      "cohens_d_a_minus_b": 3.3831834445883087,
+      "mannwhitney_p_two_sided": 5.360996073070377e-05,
+      "welch_p_two_sided": 0.0003422361969284668
+    }
+  ],
+  "longitudinal_tests": [
+    {
+      "feature": "p1_backbone_z",
+      "n_pairs": 9,
+      "mean_delta_late_minus_early": 0.03336974364736778,
+      "median_delta_late_minus_early": 0.0037682558565090146,
+      "wilcoxon_p_two_sided": 0.8203125,
+      "paired_t_p_two_sided": 0.6080478983664869
+    },
+    {
+      "feature": "p1_aan_core_z",
+      "n_pairs": 9,
+      "mean_delta_late_minus_early": 0.02404138323085876,
+      "median_delta_late_minus_early": 0.012790407985448837,
+      "wilcoxon_p_two_sided": 0.91015625,
+      "paired_t_p_two_sided": 0.8097610216141374
+    },
+    {
+      "feature": "p1_relay_tract_z",
+      "n_pairs": 9,
+      "mean_delta_late_minus_early": 0.0426981040638768,
+      "median_delta_late_minus_early": 0.09604467924994725,
+      "wilcoxon_p_two_sided": 0.734375,
+      "paired_t_p_two_sided": 0.527441011698914
+    },
+    {
+      "feature": "global_integrity_z",
+      "n_pairs": 9,
+      "mean_delta_late_minus_early": 0.1497923582792282,
+      "median_delta_late_minus_early": 0.17059141397476196,
+      "wilcoxon_p_two_sided": 0.91015625,
+      "paired_t_p_two_sided": 0.7112165093421936
+    },
+    {
+      "feature": "p1_specificity_residual",
+      "n_pairs": 9,
+      "mean_delta_late_minus_early": 0.03688981093407626,
+      "median_delta_late_minus_early": 0.007836856257549207,
+      "wilcoxon_p_two_sided": 0.8203125,
+      "paired_t_p_two_sided": 0.5918442786655327
+    }
+  ],
+  "model_comparison": {
+    "global_integrity": {
+      "auc": 0.6111111111111112,
+      "accuracy": 0.5333333333333333,
+      "permutation_p_upper": 0.2547452547452547,
+      "n_permutations": 1000,
+      "n": 15
+    },
+    "p1_backbone": {
+      "auc": 0.7222222222222221,
+      "accuracy": 0.6,
+      "permutation_p_upper": 0.08591408591408592,
+      "n_permutations": 1000,
+      "n": 15
+    },
+    "global_plus_p1": {
+      "auc": 0.7962962962962963,
+      "accuracy": 0.6666666666666666,
+      "permutation_p_upper": 0.04395604395604396,
+      "n_permutations": 1000,
+      "n": 15
+    },
+    "p1_components": {
+      "auc": 0.8703703703703703,
+      "accuracy": 0.7333333333333333,
+      "permutation_p_upper": 0.01898101898101898,
+      "n_permutations": 1000,
+      "n": 15
+    }
+  },
+  "random_backbone_controls": {
+    "n_random_backbones": 500,
+    "candidate_voxels": 127034,
+    "observed_cross_d_recovery_late_minus_chronic": 1.035043410615459,
+    "observed_longitudinal_mean_delta": 0.03336974364736778,
+    "random_cross_p_upper": 0.04590818363273453,
+    "random_longitudinal_p_upper": 0.3532934131736527,
+    "random_cross_d_mean": 0.06818884168452338,
+    "random_cross_d_sd": 0.6235262445491054,
+    "random_longitudinal_delta_mean": 0.008551556729073814,
+    "random_longitudinal_delta_sd": 0.07040113390020217
+  },
+  "non_claim": "Structural HARDI/QSDR proxy only; does not empirically test terminal lucidity or dynamic P1 re-entry."
+}

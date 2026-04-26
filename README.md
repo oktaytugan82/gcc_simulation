@@ -4,9 +4,25 @@ This repository contains the complete simulation and analysis code accompanying 
 
 > **The Gamma-Code Consensus: a dynamical regime model for level of consciousness and global access**
 > Mehmet Oktay Tugan (2026)
-> Submitted to PLOS Computational Biology.
+> Prepared for submission to Neuroscience of Consciousness.
 
-The Gamma-Code Consensus (GCC) is a dynamical regime model for level of consciousness and global access in a network of coupled neural populations. This code reproduces all numerical simulations (synthetic Kuramoto networks), the empirical pilot analysis on the publicly available Chennu et al. 2016 EEG dataset, the OpenNeuro ds004504 model-comparison analyses, and the HCP-derived Budapest Reference Connectome topology stress test added in release v1.1.0.
+The Gamma-Code Consensus (GCC) is a dynamical regime model for level of consciousness and global access in a network of coupled neural populations. This code reproduces the synthetic Kuramoto simulations, the empirical Chennu et al. 2016 EEG pilot, HCP-derived Budapest Reference Connectome topology stress tests, OpenNeuro ds006623 fMRI validation analyses, OpenNeuro ds003367 traumatic coma/DoC HARDI structural backbone analyses, and OpenNeuro ds004504 neurodegenerative EEG proxy tests.
+
+## Release v1.2.0 additions
+
+Version v1.2.0 adds:
+
+- `ds006623/`: OpenNeuro ds006623 downloader, audit, fMRI GCC feature extraction, leakage-free model comparison, robustness-grid, and permutation-control scripts.
+- `ds003367/run_ds003367_structural_p1_backbone.py`: structural P1-backbone constraint analysis for traumatic coma, recovery, chronic DoC, and control HARDI scans.
+- `ds004504/run_ds004504_p1_proxy_validation.py`: clinical P1-proxy stress test for MMSE prediction in AD/FTD using control-calibrated access windows and normative backbone features.
+- `results/ds006623_*`: derived fMRI feature tables, leakage-free model-comparison outputs, robustness-grid summaries, and permutation-control outputs.
+- `results/ds003367_structural_p1_*`: derived structural backbone scores, group tests, model comparison, random-backbone controls, and report.
+- `results/ds004504_p1_proxy_*`: derived neurodegenerative EEG P1-proxy result tables and report.
+- `figures/ds006623_robustness_grid_*`: fMRI robustness-grid figures.
+- `figures/ds003367_structural_p1_*`: structural backbone and random-control figures.
+- `figures/ds004504_p1_proxy_*`: P1-proxy model-comparison and scatter figures.
+- `manuscript/GCC_Paper_PlanB_v11_NoC_focused.*`: NoC-oriented manuscript source and compiled PDF including the focused ds006623, ds003367, ds004504, HCP, and EEG validation hierarchy.
+- `RELEASE_v1.2.0.md`: concise release notes and reproduction commands.
 
 ## Release v1.1.0 additions
 

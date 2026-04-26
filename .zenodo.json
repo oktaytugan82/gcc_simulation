@@ -1,6 +1,6 @@
 {
   "title": "GCC simulation and analysis code",
-  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v1.1.0 adds HCP-derived Budapest Reference Connectome preparation, GCC real-connectome topology stress tests with degree- and degree-plus-strength-preserving null controls, OpenNeuro ds004504 analysis scripts, derived result tables, figures, and the NoC-oriented manuscript version.",
+  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v1.2.0 adds OpenNeuro ds006623 fMRI validation scripts and derived results, robustness-grid and permutation-control outputs, OpenNeuro ds003367 traumatic coma/DoC HARDI structural backbone analyses, OpenNeuro ds004504 neurodegenerative EEG P1-proxy analyses, updated figures, and the focused NoC-oriented manuscript version including ds006623, ds003367, ds004504, HCP, and EEG validation layers.",
   "creators": [
     {
       "name": "Tugan, Mehmet Oktay",
@@ -10,12 +10,16 @@
   "license": "mit",
   "upload_type": "software",
   "access_right": "open",
-  "version": "v1.1.0",
+  "version": "v1.2.0",
   "keywords": [
     "global access",
     "consciousness",
     "neural dynamics",
     "EEG",
+    "fMRI",
+    "diffusion MRI",
+    "HARDI",
+    "disorders of consciousness",
     "Kuramoto model",
     "connectome",
     "Human Connectome Project",

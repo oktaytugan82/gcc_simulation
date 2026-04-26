@@ -1,0 +1,367 @@
+{
+  "analysis": "ds006623 leakage-free leave-one-subject-out phase-level model comparison",
+  "data_root": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\data\\ds006623-minimal",
+  "window_augmented": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_fmri_gcc_window_features_with_propofol.csv",
+  "phase_augmented": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_fmri_gcc_phase_features_with_propofol.csv",
+  "metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_model_metrics.csv",
+  "predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_model_predictions.csv",
+  "subject_losses": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_subject_losses.csv",
+  "model_delta_tests": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_model_delta_tests.csv",
+  "permutation_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_permutation_metrics.csv",
+  "permutation_pvalues": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_permutation_pvalues.csv",
+  "figure": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds006623_withGSR_4S256_leakage_free_model_comparison_auc.png",
+  "permutations": 100,
+  "permutation_tasks": [
+    "lor_vs_ror_task3",
+    "prelor_vs_lor_task2",
+    "responsive_vs_lor_all_phases"
+  ],
+  "permutation_models": [
+    "confounds_motion_propofol",
+    "full_standard_plus_gcc",
+    "gcc_core_plus_confounds",
+    "gcc_regime_plus_confounds",
+    "standard_fc_plus_confounds"
+  ],
+  "feature_blocks": {
+    "confounds_motion_propofol": [
+      "fd_mean",
+      "fd_max",
+      "esc_mean",
+      "esc_max",
+      "plas_mean",
+      "plas_max"
+    ],
+    "standard_fc_plus_confounds": [
+      "fd_mean",
+      "fd_max",
+      "esc_mean",
+      "esc_max",
+      "plas_mean",
+      "plas_max",
+      "mean_fc",
+      "mean_abs_fc"
+    ],
+    "gcc_core_plus_confounds": [
+      "fd_mean",
+      "fd_max",
+      "esc_mean",
+      "esc_max",
+      "plas_mean",
+      "plas_max",
+      "R_phase_mean",
+      "D_eff_mean",
+      "M_tau_mean"
+    ],
+    "gcc_regime_plus_confounds": [
+      "fd_mean",
+      "fd_max",
+      "esc_mean",
+      "esc_max",
+      "plas_mean",
+      "plas_max",
+      "R_phase_mean",
+      "D_eff_mean",
+      "M_tau_mean",
+      "Pi_fMRI"
+    ],
+    "full_standard_plus_gcc": [
+      "fd_mean",
+      "fd_max",
+      "esc_mean",
+      "esc_max",
+      "plas_mean",
+      "plas_max",
+      "mean_fc",
+      "mean_abs_fc",
+      "R_phase_mean",
+      "D_eff_mean",
+      "M_tau_mean",
+      "Pi_fMRI"
+    ]
+  },
+  "task_sizes": {
+    "awake_base1_vs_lor": {
+      "rows": 77,
+      "subjects": 26,
+      "positive_rate": 0.6623376623376623,
+      "note": "sanity check; Base1 is calibration source"
+    },
+    "responsive_vs_lor_all_phases": {
+      "rows": 147,
+      "subjects": 26,
+      "positive_rate": 0.3469387755102041,
+      "note": "broad responsiveness contrast across all phases"
+    },
+    "prelor_vs_lor_task2": {
+      "rows": 50,
+      "subjects": 25,
+      "positive_rate": 0.5,
+      "note": "primary: same run, pre-loss versus loss of responsiveness"
+    },
+    "lor_vs_ror_task3": {
+      "rows": 38,
+      "subjects": 19,
+      "positive_rate": 0.5,
+      "note": "primary: same run, loss versus recovery of responsiveness"
+    },
+    "base1_vs_base2_control": {
+      "rows": 50,
+      "subjects": 25,
+      "positive_rate": 0.5,
+      "note": "control: non-primary post-session/run-order contrast"
+    }
+  },
+  "topline": [
+    {
+      "task_name": "awake_base1_vs_lor",
+      "model": "confounds_motion_propofol",
+      "n_rows": 77,
+      "n_subjects": 26,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.9803921568627452,
+      "log_loss": 0.06063115933297442,
+      "brier": 0.012988387210928976
+    },
+    {
+      "task_name": "awake_base1_vs_lor",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 77,
+      "n_subjects": 26,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.9901960784313726,
+      "log_loss": 0.05504047367252612,
+      "brier": 0.010577384406955817
+    },
+    {
+      "task_name": "awake_base1_vs_lor",
+      "model": "gcc_core_plus_confounds",
+      "n_rows": 77,
+      "n_subjects": 26,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 1.0,
+      "log_loss": 0.05394349975006512,
+      "brier": 0.00998125050999389
+    },
+    {
+      "task_name": "awake_base1_vs_lor",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 77,
+      "n_subjects": 26,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 1.0,
+      "log_loss": 0.047575010957998744,
+      "brier": 0.00797392173521549
+    },
+    {
+      "task_name": "awake_base1_vs_lor",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 77,
+      "n_subjects": 26,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 1.0,
+      "log_loss": 0.047952149034111526,
+      "brier": 0.008297809727581264
+    },
+    {
+      "task_name": "base1_vs_base2_control",
+      "model": "confounds_motion_propofol",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.07389784744442993,
+      "brier": 0.015192538353915836
+    },
+    {
+      "task_name": "base1_vs_base2_control",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.08057330602554266,
+      "brier": 0.01811751647871637
+    },
+    {
+      "task_name": "base1_vs_base2_control",
+      "model": "gcc_core_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.08290946472076074,
+      "brier": 0.01921031807239281
+    },
+    {
+      "task_name": "base1_vs_base2_control",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.06766167092057297,
+      "brier": 0.014188763295264879
+    },
+    {
+      "task_name": "base1_vs_base2_control",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 1.0,
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.06778771343824147,
+      "brier": 0.014100736111185246
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9861495844875346,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.1784839959733287,
+      "brier": 0.055456762772284465
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9833795013850415,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.18089647209877202,
+      "brier": 0.057645854802729636
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9778393351800554,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.21712616353783987,
+      "brier": 0.07101679495972327
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "gcc_core_plus_confounds",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9778393351800554,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.2023564451087814,
+      "brier": 0.0665255924547256
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "confounds_motion_propofol",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9556786703601108,
+      "balanced_accuracy": 0.9210526315789473,
+      "log_loss": 0.26255704513648687,
+      "brier": 0.07842333065433685
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.9856,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.1603638272781667,
+      "brier": 0.0421469752719029
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "gcc_core_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.984,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.16932151535699105,
+      "brier": 0.04686785955291472
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.9823999999999999,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.18020155727236176,
+      "brier": 0.05034301315999439
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "confounds_motion_propofol",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.9808,
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.204285406101756,
+      "brier": 0.050116009133361006
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.9808,
+      "balanced_accuracy": 0.94,
+      "log_loss": 0.17980919113456195,
+      "brier": 0.05217210322640518
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "gcc_core_plus_confounds",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9685457516339869,
+      "balanced_accuracy": 0.8936887254901961,
+      "log_loss": 0.23308098611729064,
+      "brier": 0.07447334972301355
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "confounds_motion_propofol",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9675245098039216,
+      "balanced_accuracy": 0.889093137254902,
+      "log_loss": 0.2344014244692642,
+      "brier": 0.07331002925770355
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9671160130718954,
+      "balanced_accuracy": 0.8936887254901961,
+      "log_loss": 0.23403768384397963,
+      "brier": 0.07455132392351718
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.965890522875817,
+      "balanced_accuracy": 0.8936887254901961,
+      "log_loss": 0.23751000968644295,
+      "brier": 0.07593269754122417
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9642565359477124,
+      "balanced_accuracy": 0.8936887254901961,
+      "log_loss": 0.2415360752273605,
+      "brier": 0.07703368762636416
+    }
+  ]
+}

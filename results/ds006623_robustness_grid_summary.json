@@ -1,0 +1,184 @@
+{
+  "combos": [
+    "withoutGSR_4S156",
+    "withoutGSR_4S256",
+    "withGSR_4S156",
+    "withGSR_4S256"
+  ],
+  "primary_tasks": [
+    "prelor_vs_lor_task2",
+    "lor_vs_ror_task3",
+    "responsive_vs_lor_all_phases"
+  ],
+  "models": [
+    "confounds_motion_propofol",
+    "standard_fc_plus_confounds",
+    "gcc_core_plus_confounds",
+    "gcc_regime_plus_confounds",
+    "full_standard_plus_gcc"
+  ],
+  "primary_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_robustness_grid_primary_metrics.csv",
+  "best_models": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_robustness_grid_best_models.csv",
+  "delta_tests": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_robustness_grid_delta_tests.csv",
+  "permutation_pvalues": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_robustness_grid_permutation_pvalues.csv",
+  "gcc_core_improvements": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_robustness_grid_gcc_core_improvements.csv",
+  "figures": [
+    "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds006623_robustness_grid_prelor_vs_lor_task2_auc.png",
+    "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds006623_robustness_grid_lor_vs_ror_task3_auc.png",
+    "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds006623_robustness_grid_responsive_vs_lor_all_phases_auc.png"
+  ],
+  "best_models_records": [
+    {
+      "combo": "withGSR_4S156",
+      "task_name": "lor_vs_ror_task3",
+      "model": "gcc_regime_plus_confounds",
+      "roc_auc": 0.9778393351800554,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.208955332225533,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withGSR_4S156",
+      "task_name": "prelor_vs_lor_task2",
+      "model": "standard_fc_plus_confounds",
+      "roc_auc": 0.9856,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.1616943201057276,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withGSR_4S156",
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "gcc_core_plus_confounds",
+      "roc_auc": 0.9697712418300654,
+      "balanced_accuracy": 0.8838848039215685,
+      "log_loss": 0.227295808296623,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withGSR_4S256",
+      "task_name": "lor_vs_ror_task3",
+      "model": "gcc_regime_plus_confounds",
+      "roc_auc": 0.9861495844875346,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.1784839959733287,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withGSR_4S256",
+      "task_name": "prelor_vs_lor_task2",
+      "model": "standard_fc_plus_confounds",
+      "roc_auc": 0.9856,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.1603638272781667,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withGSR_4S256",
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "gcc_core_plus_confounds",
+      "roc_auc": 0.9685457516339868,
+      "balanced_accuracy": 0.8936887254901961,
+      "log_loss": 0.2330809861172906,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withoutGSR_4S156",
+      "task_name": "lor_vs_ror_task3",
+      "model": "full_standard_plus_gcc",
+      "roc_auc": 0.9806094182825486,
+      "balanced_accuracy": 0.9210526315789472,
+      "log_loss": 0.1928144094824688,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withoutGSR_4S156",
+      "task_name": "prelor_vs_lor_task2",
+      "model": "gcc_core_plus_confounds",
+      "roc_auc": 0.9888,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.1884160963288278,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withoutGSR_4S156",
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "gcc_core_plus_confounds",
+      "roc_auc": 0.9826388888888888,
+      "balanced_accuracy": 0.928921568627451,
+      "log_loss": 0.1803718294884091,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withoutGSR_4S256",
+      "task_name": "lor_vs_ror_task3",
+      "model": "full_standard_plus_gcc",
+      "roc_auc": 0.9722991689750692,
+      "balanced_accuracy": 0.8947368421052632,
+      "log_loss": 0.2339701606567897,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withoutGSR_4S256",
+      "task_name": "prelor_vs_lor_task2",
+      "model": "gcc_core_plus_confounds",
+      "roc_auc": 0.9904,
+      "balanced_accuracy": 0.96,
+      "log_loss": 0.1833730143222227,
+      "auc_permutation_p": 0.0099009900990099
+    },
+    {
+      "combo": "withoutGSR_4S256",
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "full_standard_plus_gcc",
+      "roc_auc": 0.979983660130719,
+      "balanced_accuracy": 0.9237132352941176,
+      "log_loss": 0.1932417898498757,
+      "auc_permutation_p": 0.0099009900990099
+    }
+  ],
+  "gcc_core_improvement_summary": {
+    "lor_vs_ror_task3": {
+      "gcc_core_auc_minus_confounds_min": 0.00831,
+      "gcc_core_auc_minus_confounds_mean": 0.015235,
+      "gcc_core_auc_minus_confounds_max": 0.022161,
+      "gcc_core_auc_minus_standard_fc_min": -0.00554,
+      "gcc_core_auc_minus_standard_fc_mean": 0.0,
+      "gcc_core_auc_minus_standard_fc_max": 0.00554,
+      "gcc_core_log_loss_minus_confounds_min": -0.060201,
+      "gcc_core_log_loss_minus_confounds_mean": -0.040276,
+      "gcc_core_log_loss_minus_confounds_max": -0.018341,
+      "gcc_core_log_loss_minus_standard_fc_min": -0.021243,
+      "gcc_core_log_loss_minus_standard_fc_mean": -0.013125,
+      "gcc_core_log_loss_minus_standard_fc_max": 0.000321
+    },
+    "prelor_vs_lor_task2": {
+      "gcc_core_auc_minus_confounds_min": 0.0016,
+      "gcc_core_auc_minus_confounds_mean": 0.0056,
+      "gcc_core_auc_minus_confounds_max": 0.0096,
+      "gcc_core_auc_minus_standard_fc_min": -0.0032,
+      "gcc_core_auc_minus_standard_fc_mean": 0.0,
+      "gcc_core_auc_minus_standard_fc_max": 0.0032,
+      "gcc_core_log_loss_minus_confounds_min": -0.041423,
+      "gcc_core_log_loss_minus_confounds_mean": -0.028292,
+      "gcc_core_log_loss_minus_confounds_max": -0.015869,
+      "gcc_core_log_loss_minus_standard_fc_min": -0.012052,
+      "gcc_core_log_loss_minus_standard_fc_mean": -0.002598,
+      "gcc_core_log_loss_minus_standard_fc_max": 0.008958
+    },
+    "responsive_vs_lor_all_phases": {
+      "gcc_core_auc_minus_confounds_min": 0.001021,
+      "gcc_core_auc_minus_confounds_mean": 0.007353,
+      "gcc_core_auc_minus_confounds_max": 0.015114,
+      "gcc_core_auc_minus_standard_fc_min": 0.00143,
+      "gcc_core_auc_minus_standard_fc_mean": 0.003268,
+      "gcc_core_auc_minus_standard_fc_max": 0.006332,
+      "gcc_core_log_loss_minus_confounds_min": -0.05403,
+      "gcc_core_log_loss_minus_confounds_mean": -0.02586,
+      "gcc_core_log_loss_minus_confounds_max": -0.00132,
+      "gcc_core_log_loss_minus_standard_fc_min": -0.019652,
+      "gcc_core_log_loss_minus_standard_fc_mean": -0.009039,
+      "gcc_core_log_loss_minus_standard_fc_max": -0.000957
+    }
+  }
+}

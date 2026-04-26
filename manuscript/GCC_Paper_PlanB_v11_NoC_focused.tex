@@ -1,0 +1,1200 @@
+\documentclass[11pt,a4paper]{article}
+
+% -- Encoding & Fonts --
+\usepackage[utf8]{inputenc}
+
+% -- Mathematics --
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+% -- Layout --
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{parskip}
+
+% -- Line numbers (PLOS requirement) --
+\IfFileExists{lineno.sty}{%
+  \usepackage{lineno}
+  \linenumbers
+}{}
+
+% -- Section formatting --
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{0.5em}{}
+
+% -- TOC formatting --
+% Table-of-contents styling was used during drafting but is not needed for submission.
+
+% -- Headers & footers (running title per PLOS requirement) --
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{GCC: A dynamical regime model for global access}}
+\fancyhead[R]{\small\textit{Tugan}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% -- Hyperlinks --
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+% -- Bibliography --
+\usepackage[numbers,sort&compress]{natbib}
+
+\usepackage{graphicx}
+
+% -- Theorem environments --
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{significance}{Significance}
+
+% -- Custom commands --
+\newcommand{\Deff}{D_{\mathrm{eff}}}
+\newcommand{\Mtau}{M_{\tau}}
+\newcommand{\Rmin}{R_{\min}}
+\newcommand{\Dmin}{D_{\min}}
+\newcommand{\Dmax}{D_{\max}}
+\newcommand{\Mmin}{M_{\min}}
+\newcommand{\Mmax}{M_{\max}}
+\newcommand{\Gmax}{G_{\max}}
+\newcommand{\Kcop}{K_c^{\mathrm{op}}}
+\newcommand{\Lobs}{L_{\mathrm{obs}}}
+
+% -- Title block --
+\title{%
+  \textbf{The Gamma-Code Consensus: a dynamical regime model for level of consciousness and global access}
+}
+\author{%
+  Mehmet Oktay Tugan\textsuperscript{1,*}
+}
+\date{}
+
+% ==================================================================
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+\noindent
+\textsuperscript{1} Independent Researcher, Zurich, Switzerland
+
+\noindent
+ORCID: 0009-0005-8665-3583
+
+\noindent
+\textsuperscript{*} Corresponding author: oktaytugan82@gmail.com
+
+\medskip
+\noindent\textbf{Article type:} Research Article
+
+\bigskip
+
+% -- Abstract --
+\begin{abstract}
+\noindent
+The Gamma-Code Consensus (GCC) models level of consciousness and global access as a dynamical regime in coupled neural populations: coordination must be present without collapsing into rigid synchrony. The model separates residual topology, global gain, and population-specific efficacy preservation, and defines three observables: coherence, effective dimensionality, and temporal variability. Its central prediction is a conditional selective-preservation re-entry regime in degraded systems; terminal or paradoxical lucidity is framed only as a future clinical hypothesis. We report a focused validation hierarchy. First, synthetic simulations test model-internal predictions and show residual-backbone re-entry beyond generic retuning (cluster-robust $p = 3.6 \times 10^{-5}$, Cohen's $d = 0.56$). Second, an independent propofol fMRI dataset (ds006623, $N = 26$) tests subject-held-out generalization against motion, propofol, and standard functional-connectivity baselines; the strongest support occurs for recovery of responsiveness (best AUC $=0.986$; permutation $p=0.0099$). Third, traumatic coma/DoC HARDI data (ds003367, 50 scans) test structural plausibility of a predefined ascending-arousal/thalamocortical P1 backbone: recovery-late scans exceeded chronic DoC (Cohen's $d=1.04$; random-backbone $p=0.046$), whereas early-to-late longitudinal change was not significant. Additional HCP-topology, propofol EEG, and neurodegenerative EEG analyses are treated as stress tests and constraints. Together, the results support operational access-regime observables and a structural residual-backbone constraint, but do not empirically validate selective-preservation re-entry or terminal lucidity.
+\end{abstract}
+
+\noindent\textbf{Keywords:} consciousness; global access; computational modeling; metastability; anesthesia; disorders of consciousness; structural connectivity; traumatic coma
+
+% The table of contents used during drafting has been removed for journal submission.
+
+% ==================================================================
+% ======================= INTRODUCTION =============================
+% ==================================================================
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+
+\noindent\textit{This introductory block (Sections~\ref{sec:ziel}--\ref{sec:abbau}) presents the conceptual motivation, the core intuition, and the formal model definition, including the separation of structural degradation from functional loss of efficacy. The observables, access region, predictions, and the proposed re-entry mechanism are developed under Methods and Materials below.}
+
+% ==================================================================
+\section{Aim and Scope}
+\label{sec:ziel}
+
+The GCC is a principled model of level of consciousness and global access. It describes the conditions under which a heterogeneous, noisy, and structurally degradable network of coupled neural populations reaches an integrated but non-rigid macroscopic state. The model does not claim biophysical completeness and does not directly explain the specific content or phenomenal character of individual experiences. Its scope is narrower: it asks when distributed activity passes into a regime in which contents can become globally available. In this sense it is closer to theories of global access, integration/differentiation, dynamic complexity, and disorders-of-consciousness biomarkers than to content or qualia theories in the narrow sense \citep{dehaene1998,tononi2004,mashour2020,boly2013,casali2013,sitt2014,naccache2018,northoff2018}.
+
+This restriction is central. It avoids the overreach of turning a simple dynamical model into a full theory of consciousness, and positions the GCC as a testable working model for state transitions such as wakefulness, sedation, anesthesia, severe network degradation, and possible short-term re-integration in structurally compromised systems.
+
+Within this framework, the model formulates a conditional computational prediction:
+
+\begin{quote}
+\itshape
+In degraded neural systems near the lower edge of an access-compatible regime, global access may arise not only from increased overall activity but also from selective preservation of efficacy on a residual backbone structure. Functional re-integration is then predicted to follow from relative gain redistribution onto that backbone rather than from a global energy surge.
+\end{quote}
+
+This claim is conditional. It concerns degraded systems near the lower edge of the access region, not healthy systems that already lie stably within it. In the healthy range, the relationship between activity and access remains non-monotonic but not inverse. The central empirical consequence of the claim --- formulated as testable prediction~P1 --- remains a future target for structurally degraded clinical datasets.
+
+\paragraph{Focused validation hierarchy.}
+The model is evaluated in three main layers: synthetic internal-consistency simulations (Section~\ref{sec:numerics}), an independent ds006623 fMRI model comparison against motion, propofol, and standard functional-connectivity baselines (Section~\ref{sec:fmri-validation}), and a structural P1-backbone constraint analysis in traumatic coma/DoC HARDI data from ds003367 (Section~\ref{sec:structural-p1}). Two additional analyses are treated as bounded stress tests rather than main evidence: an HCP-derived topology stress test (Section~\ref{sec:hcp-connectome}) and EEG proxy analyses in Chennu 2016 and ds004504 (Sections~\ref{sec:pilot}--\ref{sec:p1-proxy}). This ordering is intentional: it keeps the strongest independent validation in the foreground while preserving negative and mixed constraints that limit overclaiming. Direct validation of P1 still requires structurally degraded cohorts with matched structural maps and functional access or responsiveness measurements \citep{laureys2004,giacino2014}.
+
+
+% ==================================================================
+\section{Core Intuition}
+\label{sec:intuition}
+
+The model rests on a simple but strong assumption: consciousness is optimally described neither by maximal desynchronization nor by maximal synchronization. Too little coordination prevents global integration. Too much rigid coordination collapses the dynamics onto a few inflexible modes. The functionally favourable range lies in between: in a regime in which global coordination, reduced but not collapsed dimensionality, and preserved temporal variability co-occur. This intuition aligns with work on communication through coherence, integration versus segregation, metastable brain dynamics, dynamic complexity in conscious states, and entropy-based markers of brain function \citep{fries2015,kelso2012,deco2017,demertzi2019,carhartharris2014,tagliazucchi2016}.
+
+The central claim is therefore not ``consciousness is synchrony'' but:
+
+\begin{quote}
+\itshape
+Level of consciousness and global access arise in a regime of balanced consensus formation within a noisy, heterogeneous network.
+\end{quote}
+
+
+% ==================================================================
+\section{Core Dynamical Model}
+\label{sec:core}
+\label{sec:kernmodell}
+
+We model $N$ neural populations as phase oscillators on a weighted network. The dynamics of population~$i$ is given by
+
+\begin{equation}
+\label{eq:dynamics}
+\mathrm{d}\theta_i(t)
+= \biggl[\,\omega_i
++ K \cdot G(t) \cdot g_i(t) \sum_{j} W_{ij}(t)\,\sin\!\bigl(\theta_j(t) - \theta_i(t) - \varphi_{ij}(t)\bigr)
+\biggr]\,\mathrm{d}t
++ \sigma_i(t)\,\mathrm{d}B_i(t)
+\end{equation}
+
+where:
+\begin{itemize}
+  \item $\theta_i(t)$: phase of population~$i$
+  \item $\omega_i$: intrinsic frequency
+  \item $K$: global coupling scale
+  \item $G(t) > 0$: global gain or excitability factor
+  \item $g_i(t) \in [0,1]$: population-specific preservation factor of afferent efficacy
+  \item $W_{ij}(t) \geq 0$: normalized residual topology
+  \item $\varphi_{ij}(t)$: effective phase delays
+  \item $\sigma_i(t) \geq 0$: population-specific noise amplitude
+  \item $B_i(t)$: independent standard Brownian motions
+\end{itemize}
+
+The matrix~$W(t)$ is obtained from a raw residual adjacency~$A(t)$ by row normalization:
+
+\begin{equation}
+\label{eq:normierung}
+W_{ij}(t) = \frac{A_{ij}(t)}{m_i(t)}, \qquad m_i(t) = \sum_j A_{ij}(t),
+\end{equation}
+
+provided $m_i(t) > 0$; otherwise $W_{ij}(t) = 0$.
+
+The decisive structural move of the model is the explicit separation of topology~$W$, global excitability~$G$, local preservation~$g_i$, and noise~$\sigma_i$. This separation is not merely interpretive but mathematically relevant. Row normalization alone makes the incoming structure comparable, but would partially mask structural loss. The factor~$g_i$ prevents exactly that: it retains the loss of afferent efficacy explicitly in the model. The choice of a network-based phase-oscillator framework builds on established results for the synchronization threshold in heterogeneous networks \citep{restrepo2005,arenas2008}.
+
+
+% ==================================================================
+\section{Degradation as Topology and Gain Loss}
+\label{sec:abbau}
+\label{sec:degradation}
+
+The GCC does not model degradation as pure edge removal. Structural and functional damage are separated at two levels:
+
+\begin{enumerate}
+  \item $A(t)$ or $W(t)$ describes which connections are topologically preserved.
+  \item $g_i(t)$ describes how strongly the remaining inputs remain functionally effective.
+\end{enumerate}
+
+A simple working definition is
+
+\begin{equation}
+\label{eq:gain}
+g_i(t) = \frac{m_i(t)}{m_i^{\mathrm{ref}}},
+\end{equation}
+
+where $m_i^{\mathrm{ref}}$ denotes the raw incoming mass of the reference connectivity and $m_i(t)$ the currently preserved raw mass. Hence: even if $W(t)$ is renormalized to row-sum one after lesioning, the loss of afferent efficacy does not disappear but is retained in $g_i(t)$.
+
+For degenerative conditions, the model takes the defensive form:
+
+\begin{quote}
+\itshape
+In families of degraded networks, the operational access threshold typically shifts toward higher effective coupling, higher gain, or more favourable noise conditions.
+\end{quote}
+
+This is a model-internal, empirically testable tendency, not an unconditional universal claim.
+
+
+% ==================================================================
+% ===================== MATERIALS AND METHODS ======================
+% ==================================================================
+\section*{Methods and Materials}
+\addcontentsline{toc}{section}{Methods and Materials}
+
+\noindent\textit{The following sections (\ref{sec:observablen}--\ref{sec:falsifizierbarkeit}) define the three operational observables, the calibrated access region, the operational access threshold, the basic mathematical properties of the dynamics, the proposed re-entry mechanism, and the predictions derived from the model together with their falsifiability conditions. Additional formal material (proofs of well-posedness, bounds, Lipschitz continuity, stability, and the sufficient condition for re-entry) is provided in the Mathematical Appendix. Details of the HCP-derived connectome stress test and the EEG dataset are contained in Sections~\ref{sec:hcp-connectome} and~\ref{sec:pilot}.}
+
+% ==================================================================
+\section{Three Operational Observables}
+\label{sec:observablen}
+
+\subsection{Global Coherence}
+
+\begin{equation}
+\label{eq:R}
+R(t) = \frac{1}{N}\,\biggl|\sum_{j} e^{i\,\theta_j(t)}\biggr|
+\end{equation}
+
+$R(t)$ measures macroscopic phase coherence. High values are consistent with global coordination but are not, on their own, sufficient to diagnose functional global access. Rigid pathological high coherence and flexible integration must be distinguished by further quantities.
+
+\subsection{Effective Dimensionality}
+
+For a window of length~$\tau_D$, define the centred activity
+
+\begin{equation}
+X_i(s) = \cos\!\bigl(\theta_i(s)\bigr) - \bigl\langle\cos(\theta_i)\bigr\rangle_{[t-\tau_D,\,t]}
+\end{equation}
+
+and the unregularized window covariance matrix $\hat{C}_D(t) = \mathrm{Cov}(X_1,\ldots,X_N)$. To avoid numerical problems in low-rank states, we use a scaled ridge regularization:
+
+\begin{equation}
+\label{eq:ridge}
+\varepsilon_D^{\lambda}(t) = \max\!\biggl(\lambda\,\frac{\mathrm{tr}\bigl(\hat{C}_D(t)\bigr)}{N},\;\varepsilon_{\mathrm{floor}}\biggr),
+\end{equation}
+
+with a dimensionless parameter $\lambda > 0$ and an absolute floor $\varepsilon_{\mathrm{floor}} > 0$. The regularized covariance matrix is
+
+\begin{equation}
+C_D^{\lambda}(t) = \hat{C}_D(t) + \varepsilon_D^{\lambda}(t)\cdot I.
+\end{equation}
+
+The effective dimensionality is then the participation ratio:
+
+\begin{equation}
+\label{eq:Deff}
+\boxed{\;\Deff^{\lambda}(t) = \frac{\bigl[\mathrm{tr}\,C_D^{\lambda}(t)\bigr]^2}{\mathrm{tr}\!\bigl[\bigl(C_D^{\lambda}(t)\bigr)^2\bigr]}\;}
+\end{equation}
+
+Small values mean compression onto few dominant modes; large values indicate highly distributed activity. The relevant range lies between extreme fragmentation and rigid collapse. Related neural-complexity and signal-diversity measures have been used in consciousness research \citep{schartner2015,luppi2019}.
+
+\subsection{Temporal Variability (Metastability)}
+
+For a window~$\tau_M$ define:
+
+\begin{equation}
+\label{eq:Mtau}
+\Mtau(t) = \mathrm{Var}\!\bigl(\,R(s) : s \in [t - \tau_M,\, t]\,\bigr)
+\end{equation}
+
+$\Mtau$ measures the temporal variability of the global coherence level. Small values can indicate either rigid disintegration or rigid high coherence. Only in combination with $R$ and $\Deff$ does $\Mtau$ become interpretable.
+
+
+% ==================================================================
+\section{Operational Access Region}
+\label{sec:access-region}
+\label{sec:zugang}
+
+The GCC does not define an ontological criterion for consciousness but an operational access region in the space of observables. Relative to a pre-specified calibration, window choice, and regularization, a system is internally deemed \emph{access-compatible} if
+
+\begin{equation}
+\label{eq:zugang}
+\boxed{\;
+R(t) > \Rmin, \quad
+\Dmin < \Deff^{\lambda}(t) < \Dmax, \quad
+\Mmin < \Mtau(t) < \Mmax
+\;}
+\end{equation}
+
+These inequalities are not a metaphysical definition of consciousness. They are an empirical working description of a dynamical regime that is favourable for global access. The regime statement is thus explicitly data- and scale-relative: it describes not consciousness ``as such'' but testable conditions of a dynamical range in which global access becomes possible.
+
+\subsection{Multiscale Robustness Formulation}
+
+Let $\mathcal{T}_D$, $\mathcal{T}_M$, and $\Lambda$ be finite sets of admissible window lengths and ridge parameters, respectively. For each triple $(\tau_D, \tau_M, \lambda)$ define the indicator
+
+\begin{equation}
+\mathcal{A}(t;\,\tau_D,\tau_M,\lambda) =
+\begin{cases}
+1, & \text{if all three inequalities~\eqref{eq:zugang} are satisfied,}\\
+0, & \text{otherwise.}
+\end{cases}
+\end{equation}
+
+The multiscale access index is
+
+\begin{equation}
+\label{eq:Pi}
+\Pi(t) = \frac{1}{|\mathcal{T}_D|\,|\mathcal{T}_M|\,|\Lambda|}\,\sum \mathcal{A}(t;\,\tau_D,\tau_M,\lambda).
+\end{equation}
+
+A state is called window-robustly access-compatible if $\Pi(t) \geq q^*$ for a pre-specified fraction $q^*$ close to~1 (e.g.\ 0.8).
+
+\subsection{Data-Driven Calibration of Regime Boundaries}
+
+The regime boundaries should be estimated from a reference ensemble~$\mathcal{H}$ of access-compatible state segments. A robust baseline calibration is quantile-based. For a pre-chosen $\alpha \in (0,\,0.5)$:
+
+\begin{align}
+\Rmin &= Q_{\alpha}(R \mid \mathcal{H}), \notag\\
+\Dmin &= Q_{\alpha}(\Deff^{\lambda} \mid \mathcal{H}), \qquad
+\Dmax = Q_{1-\alpha}(\Deff^{\lambda} \mid \mathcal{H}), \label{eq:kalib}\\
+\Mmin &= Q_{\alpha}(\Mtau \mid \mathcal{H}), \qquad\;\;
+\Mmax = Q_{1-\alpha}(\Mtau \mid \mathcal{H}). \notag
+\end{align}
+
+\subsection{Two Positive Reference Levels: $\mathcal{H}_{\mathrm{full}}$ and $\mathcal{H}_{+}$}
+
+For a publication-ready operationalization, the GCC recommends two positive reference levels:
+
+\begin{itemize}
+\item $\mathcal{H}_{\mathrm{full}}$: healthy or near-healthy access segments with high macroscopic integration.
+\item $\mathcal{H}_{+}$: broader positive ensemble including partial access segments (mildly sedated, mildly degraded).
+\end{itemize}
+
+In addition, an exclusion ensemble~$\mathcal{U}$ is used. This allows two empirically distinct statements to be separated:
+
+\begin{itemize}
+\item \textbf{full-access-compatible:} $\Pi_{\mathrm{full}}(t) \geq q_{\mathrm{full}}$
+\item \textbf{partial-re-entry-compatible:} $\Pi_{+}(t) \geq q_{+}$, even if $\Pi_{\mathrm{full}}(t) < q_{\mathrm{full}}$
+\end{itemize}
+
+For lucidity-related analyses, this separation is crucial.
+
+
+% ==================================================================
+\section{Operational Access Threshold Instead of a Universal~$K_c$}
+\label{sec:schwelle}
+
+For finite, noisy, and topologically heterogeneous networks, $K_c$ is not a universal single number. The GCC uses an operational access threshold~$\Kcop$:
+
+\begin{equation}
+\label{eq:Kcop}
+\Kcop = \operatorname*{arg\,max}_{K}\;\frac{\mathrm{d}\langle R \rangle}{\mathrm{d}K}
+\qquad\text{or}\qquad
+\Kcop = \operatorname*{arg\,max}_{K}\;\chi_R(K), \quad \chi_R(K) = \mathrm{Var}_t\!\bigl(R(t;K)\bigr).
+\end{equation}
+
+The threshold is thereby treated as an observable regime transition rather than as an a priori constant \citep{restrepo2005,arenas2008}.
+
+
+% ==================================================================
+\section{Basic Mathematical Properties}
+\label{sec:grundsaetze}
+
+Under the assumptions $W_{ij} \geq 0$, $\sum_j W_{ij} = 1$, and $|\sin(\cdot)| \leq 1$, the deterministic coupling term is bounded:
+
+\begin{equation}
+\bigl|K \cdot G(t) \cdot g_i(t) \sum_j W_{ij}(t)\,\sin(\cdots)\bigr| \;\leq\; K \cdot G(t) \cdot g_i(t).
+\end{equation}
+
+For the observables the elementary bounds hold:
+
+\begin{equation}
+1 \leq \Deff(t) \leq \mathrm{rank}\bigl(C_D(t)\bigr) \leq N,
+\end{equation}
+
+and if $R(s)$ is constant on a window $[t-\tau_M,\,t]$, then $\Mtau(t) = 0$. High coherence alone is therefore not enough; a rigid system is low in metastability.
+
+
+% ==================================================================
+\section{Selective-Preservation Re-Entry as a Clinical Hypothesis}
+\label{sec:TL}
+
+The GCC introduces a gain-based re-entry mechanism that may be relevant to structurally degraded systems. Terminal or paradoxical lucidity is used here as a motivating clinical phenomenon and future empirical target. It is important not to conflate two literatures: the clinical literature on terminal or paradoxical lucidity is thin, heterogeneous, and case-based \citep{nahm2012,gilmore2023,batthyany2017}, whereas the literature on high-frequency coherence in the dying brain comes primarily from neurophysiological studies \citep{borjigin2013,xu2023}. The present paper does not empirically test terminal lucidity.
+
+\subsection{Residual Backbone Structure}
+
+Let $S$ be a subset of populations that carries representation-relevant networks. ``Residual'' does not mean that $S$ is healthy, but that a connected residual scaffold is present on $S$. An algorithmic definition:
+
+\begin{equation}
+\label{eq:backbone}
+S(t;\,g_*) = \text{largest connected component of the subgraph on } \{i : g_i(t) \geq g_*\}.
+\end{equation}
+
+\subsection{Selective Gain Preservation Instead of a Global Energy Surge}
+
+The central mechanism is:
+
+\begin{quote}
+\itshape
+A lucidity-like re-entry, if it occurs by the mechanism proposed here, need not correspond to a global energy surge. It may instead reflect short-term functional concentration of remaining efficacy on a residual backbone structure.
+\end{quote}
+
+The effective afferent drive of population~$i$ is proportional to
+
+\begin{equation}
+\label{eq:Lambda}
+\Lambda_i(t) = K \cdot G(t) \cdot g_i(t).
+\end{equation}
+
+Even if $G(t)$ decreases overall, the difference between preserved and collapsing populations can increase. The result is a temporary reorganization on a residual backbone.
+
+\subsection{Three Conditions for a Re-Entry}
+
+The model predicts a lucidity-like re-entry only if three conditions are simultaneously satisfied:
+
+\begin{enumerate}
+\item \textbf{Structural residual condition:} A residual backbone structure $S$ is still present.
+\item \textbf{Gain condition:} For populations in $S$, $\Lambda_i(t)$ remains sufficiently high during a short interval.
+\item \textbf{Dynamical admissibility:} Noise, delay dispersion, and frequency spread prevent neither integration nor flexible dynamics.
+\end{enumerate}
+
+These conditions are intentionally strict. The model does not claim that \emph{every} dying process produces a final moment of clarity.
+
+\subsection{What the Model Explicitly Does Not Claim}
+
+The model does \emph{not} claim
+\begin{itemize}
+\item that terminal lucidity has been empirically demonstrated in the present study,
+\item that every terminal-lucidity episode has the same mechanism,
+\item that global noise reduction is the sole cause,
+\item that high coherence alone explains autobiographical memory,
+\item or that every dying process necessarily produces a final consensus-like peak.
+\end{itemize}
+
+
+% ==================================================================
+\section{Predictions}
+\label{sec:predictions}
+\label{sec:vorhersagen}
+
+Six publishable, conservatively stated predictions follow from the model.
+
+\medskip
+\noindent\textbf{P1.\;Functional re-integration through selective preservation.} \emph{(Central empirical target.)}\quad
+In severely degraded systems, states with reduced overall activity but elevated relative integration within a residual subnetwork should correlate with improved access-compatible dynamics. This prediction is conditional: it concerns degraded systems near the lower edge of the access region, not healthy systems that already lie stably within it.
+
+\medskip
+\noindent\textbf{P2.\;Critical range rather than arbitrary gradualism.}\quad
+Near the access threshold the system shows a sharp non-linear reorganization. This need not be strictly discontinuous but should not be arbitrarily smooth.
+
+\medskip
+\noindent\textbf{P3.\;Degradation shifts the access region.}\quad
+In ensembles of degraded networks, $\Kcop$ typically shifts toward higher effective coupling or higher gain.
+
+\medskip
+\noindent\textbf{P4.\;Global access lies in an interval.}\quad
+Neither maximal desynchronization nor maximal rigid synchrony correlates optimally with global access. An intermediate range is expected.
+
+\medskip
+\noindent\textbf{P5.\;Anesthesia and awakening are trajectories in parameter space.}\quad
+State transitions can be described as motion in the space spanned by $W$, $G$, $g_i$, $\sigma_i$, and $\varphi_{ij}$.
+
+\medskip
+\noindent\textbf{P6.\;Lucidity-like re-entry is a future clinical target of P1.}\quad
+If paradoxical or terminal lucidity is driven by the mechanism proposed here, it should occur preferentially when a residual backbone structure and selective gain preservation make a short re-entry possible. It need not be healthy-like; partial re-entry at a lower functional level would also count. P6 is therefore a specific, future empirical target of P1, not a result established by the present dataset.
+
+
+% ==================================================================
+\section{Empirical Falsifiability}
+\label{sec:falsifizierbarkeit}
+
+The model fails if robust contrary findings emerge:
+\begin{itemize}
+\item Global conscious access systematically occurs without elevated macroscopic integration.
+\item Severe degradation does not shift the operational access region.
+\item Rigid high coherence correlates systematically better with global access than an intermediate range does.
+\item Well-documented lucidity-like episodes in structurally degraded cohorts show no indication of transiently improved global integration.
+\item The predictions turn out to be highly artifactual without ensemble robustness.
+\end{itemize}
+
+Falsifiability is here not a side issue but part of the model: the GCC does not fail only at a single counter-intuition, but already if its regime boundaries, after calibration and robustness analysis, show no reliable empirical discriminatory power.
+
+
+% ==================================================================
+% ==================================================================
+% ========================== RESULTS ===============================
+% ==================================================================
+\section*{Results}
+\addcontentsline{toc}{section}{Results}
+
+\noindent\textit{The following sections report the numerical validation of predictions P2--P6 on synthetic Kuramoto networks (Section~\ref{sec:numerics}), a topology-generalization stress test on HCP-derived consensus structural connectomes (Section~\ref{sec:hcp-connectome}), and the pilot application of the GCC observables to publicly available EEG data (Section~\ref{sec:pilot}).}
+
+% ==================================================================
+\section{Numerical Validation on Synthetic Networks}
+\label{sec:numerics}
+
+To verify the internal consistency of the model and the formal correctness of the predictions in Section~\ref{sec:predictions}, we implement the full dynamical system on synthetic networks and test the five model-internal predictions P2--P6 under controlled conditions. P1 remains the central empirical target for structurally degraded biological cohorts; the present simulations test a controlled instantiation of that mechanism, and the EEG pilot tests only operational state sensitivity. This section establishes that (i) the predicted signatures follow from the model equations, (ii) the observables distinguish regimes, and (iii) gain-mediated re-entry is reproducible in simulated data on an ensemble level. This is a \emph{proof of internal consistency}, not an empirical validation against biological data.
+
+\subsection{Calibration of Regime Boundaries}
+
+We realize the core dynamical model (Section~\ref{sec:core}) on Watts--Strogatz networks with $N = 100$ nodes, mean degree~10 and rewiring probability~0.1. The coupling matrix $W_{ij}$ is binary. Integration proceeds via Euler--Maruyama with $dt = 0.01$ over $T = 100$ time units. Natural frequencies $\omega_i$ are drawn from a standard normal distribution; the gains $g_i$ are initialized to~1 and modified only in specific experiments.
+
+Calibration of the regime boundaries $R_{\min}$, $D_{\min}$, $D_{\max}$, $M_{\min}$, $M_{\max}$ follows the procedure in Section~\ref{sec:access-region}. We generate an ensemble of 12 networks under canonical parameters ($K = 2.5$, $\sigma = 0.2$) as the positive reference $\mathcal{H}_{\mathrm{full}}$, extract the observables over a stationary window, and compute the $\alpha = 0.1$ quantiles. The lower bound $M_{\min}$ degenerates to zero in this ensemble configuration, indicating that some healthy systems lock into quasi-stable states. For all subsequent tests, $M_{\min} = 0$ is used; the metastability condition thus effectively reduces to $M_\tau < M_{\max}$.
+
+\subsection{P2 --- Nonlinear Reorganization and Susceptibility Peak}
+
+Prediction P2 states that the access indicator $\Pi$ should increase nonlinearly with the coupling strength $K$ along a sigmoidal curve rather than a linear one. We sweep $K \in [0, 4]$ and fit both a sigmoid and a linear function to the resulting $\Pi(K)$ curve. The sigmoidal fit achieves $R^2 = 0.982$, the linear fit $R^2 = 0.948$; $\Delta R^2 = 0.034$. The curvature is clearly present but not abrupt, consistent with the ``nonlinear but not strictly discontinuous'' character that the model predicts. A susceptibility peak (standard deviation of $R$ across network realizations) is visible in the midrange of the transition. P2 is confirmed.
+
+\subsection{P3 and P4 --- Shift of Access Threshold and Bounded Interval (Ensemble)}
+
+Predictions P3 and P4 concern the behavior of the access threshold under degradation. We introduce graded degradation by removing a fraction $f \in \{0, 15, 30, 45\}\%$ of network edges (topological degradation). For each $(K, f)$ combination, we run $N_{\mathrm{seeds}} = 10$ independent network seeds and record $K_c^{\mathrm{op}}$ (first $K$-crossing of $R_{\min}$) and $\max_K \Pi(K)$ per seed, then average over the ensemble (Table~\ref{tab:v2}).
+
+\begin{table}[t]
+\centering
+\caption{P3/P4 Ensemble ($N_{\mathrm{seeds}} = 10$ per cell): shift of $\langle K_c^{\mathrm{op}}\rangle$ and maximum access index $\langle\max_K \Pi(K)\rangle$ with increasing degradation. Values are means $\pm$ standard deviations over the seed ensemble. Both quantities behave monotonically under increasing lesion.}
+\label{tab:v2}
+\begin{tabular}{ccc}
+\hline
+Lesion $f$ & $\langle K_c^{\mathrm{op}}\rangle \pm $ SD & $\langle\max_K \Pi(K)\rangle \pm $ SD \\
+\hline
+$0.00$ & $1.38 \pm 0.57$ & $0.83 \pm 0.29$ \\
+$0.15$ & $1.49 \pm 0.44$ & $0.81 \pm 0.24$ \\
+$0.30$ & $1.80 \pm 0.40$ & $0.71 \pm 0.30$ \\
+$0.45$ & $2.15 \pm 0.33$ & $0.58 \pm 0.38$ \\
+\hline
+\end{tabular}
+\end{table}
+
+P3 is confirmed by the monotonic upward shift of $\langle K_c^{\mathrm{op}}\rangle$: with increasing lesion the system requires stronger coupling to reach the access region. Pairwise Wilcoxon tests between lesion levels show a significant shift for $f=0.00$ vs.\ $f=0.45$ ($p = 0.002$). P4 is confirmed by the bounded maximum of $\Pi(K)$: even at optimal $K$, no state reaches $\Pi = 1$, and the attainable maximum fraction decreases monotonically from $\langle\max\Pi\rangle = 0.83$ (intact) to $0.58$ (45\% lesion), a total reduction of $-30\%$ (Figure~\ref{fig:v2v3}). Empirically this means: the access region is a bounded range, not an open half-space, and it quantitatively shrinks under increasing degradation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_v2_v3_ensemble.png}
+\caption{P3 and P4 Ensemble ($N_{\mathrm{seeds}} = 10$): Left --- $\langle R \rangle$ vs.\ $K$ for four degradation levels, shaded bands $\pm$ SD; horizontal line marks $R_{\min}$. Middle --- shift of $\langle K_c^{\mathrm{op}}\rangle$ with lesion fraction, error bars SD. Right --- maximum access index $\langle\max_K \Pi(K)\rangle$ vs.\ lesion fraction.}
+\label{fig:v2v3}
+\par\noindent\textit{Alt text:} Three side-by-side line plots. The left panel shows mean order parameter $\langle R\rangle$ rising with coupling $K$ from near zero to about 0.7--0.8, with four colored curves for lesion fractions 0.0, 0.15, 0.30, and 0.45 falling progressively below the intact baseline; a horizontal dotted line marks the access threshold $R_{\min}$. The middle panel shows the access threshold $\langle K_c^{\mathrm{op}}\rangle$ rising monotonically from about 1.4 at lesion 0 to about 2.15 at lesion 0.45. The right panel shows the maximum access index $\langle\max_K \Pi(K)\rangle$ falling from about 0.83 at lesion 0 to about 0.58 at lesion 0.45. Error bars indicate ensemble standard deviations.
+\end{figure}
+
+\subsection{P5 --- Anesthesia Trajectory in Parameter Space (Ensemble)}
+
+Prediction P5 describes the expected trajectory under a dynamic anesthesia protocol: the state should decrease smoothly during induction, collapse at maximal effect, and recover upon washout. To capture the ensemble-statistical nature of $\Pi$ correctly, the trajectory was repeated with $N_{\mathrm{seeds}} = 20$ independent network seeds; reported values are means and standard deviations across the seed ensemble. We implement a time-varying gain $G(t)$ with schedule: baseline ($G = 1.0$, $t < 3$s), induction ($G: 1.0 \to 0.2$), deep ($G = 0.2$), emergence ($G: 0.2 \to 1.0$), recovery ($G = 1.0$). The ensemble-averaged access indicator follows the expected course: baseline $\langle\Pi\rangle = 0.47 \pm 0.41$, deep $\langle\Pi\rangle = 0.00 \pm 0.00$, recovery $\langle\Pi\rangle = 0.46 \pm 0.29$. The trajectory in $(R, D_{\mathrm{eff}})$ space leaves the access region and re-enters it smoothly, without jumps (Figure~\ref{fig:v4}). P5 is confirmed: state transitions are motion in parameter space, not jumps between discrete states.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.95\textwidth]{fig_v4_ensemble.png}
+\caption{P5: Ensemble-averaged anesthesia trajectory ($N_{\mathrm{seeds}} = 20$). Left top to bottom: $G(t)$ schedule, $\langle R(t)\rangle \pm $ SD, ensemble-averaged $\langle\Pi(t)\rangle$. Right: ensemble-averaged trajectory in $(R, D_{\mathrm{eff}})$ space, color-coded by time; shaded region marks the access region.}
+\label{fig:v4}
+\par\noindent\textit{Alt text:} A four-panel figure showing a simulated anesthesia trajectory over time. Three stacked time-series panels on the left display: a global gain schedule $G(t)$ that drops from 1.0 to 0.2 during induction and returns to 1.0 during emergence; an ensemble-mean order parameter $\langle R(t)\rangle$ with shaded standard-deviation band, falling from about 0.6 to 0.2 and recovering; and a histogram-like $\langle\Pi(t)\rangle$ trace that goes to zero during deep anesthesia and recovers afterwards. The right panel shows a two-dimensional trajectory in $(R, D_{\mathrm{eff}})$ space, color-coded by time, that loops out of and back into a shaded region marking the access window without abrupt jumps.
+\end{figure}
+
+\subsection{P6 and P1 --- Gain-Mediated Re-Entry on a Residual Backbone (Ensemble)}
+
+P6 is the sharpest prediction of the model and tests the central claim P1 in its most specific form: functional re-integration through selective loss, concretely as a transient re-entry on a residual backbone. The system is placed in severe collective degradation, and we test whether a small subnetwork $S$ (30 nodes out of 100), in which the gains are selectively boosted ($g_i: 0.5 \to 0.8$) while all non-$S$ gains simultaneously collapse ($g_i: 0.5 \to 0.1$), can transiently reach the access region. The comparison condition is a uniform gain decay in which all $g_i$ drop by the same factor.
+
+To capture the ensemble-statistical nature of $\Pi$ correctly, both conditions were simulated pairwise with $N_{\mathrm{seeds}} = 20$ independent seeds. Reported values are ensemble means and standard deviations plus a paired statistical test. Results are summarized in Table~\ref{tab:v5} and Figure~\ref{fig:v5}.
+
+\begin{table}[t]
+\centering
+\caption{P6/P1: Phase-wise access indices $\Pi$ (fraction of time inside the access region), averaged across $N_{\mathrm{seeds}} = 20$ independent seeds (mean~$\pm$~SD). \textbf{Critical finding:} In phase~3 (re-entry window), condition~B (selective preservation) shows a significantly higher access index on backbone~$S$ than condition~A (uniform).}
+\label{tab:v5}
+\begin{tabular}{lcccc}
+\hline
+Phase & $\Pi$ A full & $\Pi$ B full & $\Pi$ A on $S$ & $\Pi$ B on $S$ \\
+\hline
+Phase 1 healthy   & $0.53 \pm 0.38$ & $0.53 \pm 0.38$ & $0.54 \pm 0.38$ & $0.54 \pm 0.38$ \\
+Phase 2 decline   & $0.69 \pm 0.33$ & $0.69 \pm 0.33$ & $0.61 \pm 0.33$ & $0.61 \pm 0.33$ \\
+Phase 3 re-entry  & $0.09 \pm 0.12$ & $0.09 \pm 0.13$ & $\mathbf{0.15 \pm 0.19}$ & $\mathbf{0.27 \pm 0.27}$ \\
+Phase 4 final     & $0.00 \pm 0.00$ & $0.00 \pm 0.00$ & $0.00 \pm 0.00$ & $0.07 \pm 0.11$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth]{fig_v5_ensemble.png}
+\caption{P6/P1: Ensemble results of the gain-mediated re-entry simulation ($N_{\mathrm{seeds}} = 20$). Left: phase-wise $\Pi_S$ in condition A (uniform, blue) and condition B (selective preservation, orange); error bars show ensemble SD. Right: paired comparison across seeds in phase~3 (re-entry); each line connects a seed pair.}
+\label{fig:v5}
+\par\noindent\textit{Alt text:} Two panels. The left panel is a grouped bar chart showing the phase-wise access index $\Pi_S$ on the residual backbone across four phases (P1 healthy, P2 decline, P3 re-entry, P4 final), with two bars per phase (blue for the uniform-decline condition A, orange for the selective-preservation condition B); in phase 3 the orange bar reaches roughly twice the height of the blue bar, with error bars indicating ensemble standard deviation. The right panel is a paired-comparison scatter plot for phase 3 across 20 seeds, with each pair of points connected by a thin line; the orange (B) points sit on average above the blue (A) points, illustrating the per-seed re-entry effect of about $+81\%$.
+\end{figure}
+
+The quantitative difference in the re-entry window $\langle\Pi_S^B\rangle - \langle\Pi_S^A\rangle = 0.122$ is significant by paired t-test ($t = 3.57$, $p = 0.002$) and paired Wilcoxon ($W = 9.0$, $p = 0.006$). The relative increase is $+81\%$, Cohen's $d = 0.82$. Sixteen of 20 seeds show $\Pi_S^B \geq \Pi_S^A$. Crucially, this effect occurs \emph{while overall gain decreases} --- it arises not from a global energy surge but from selective preservation of efficacy on a subset.
+
+\subsection{P6 Retuning Control: Separating Re-Entry from Retuning}
+\label{sec:retuning-control}
+
+A second concern deserves explicit testing. In Table~\ref{tab:v5}, $\langle\Pi_{\mathrm{full}}^A\rangle$ rises from $0.53$ (P1 healthy) to $0.69$ (P2 decline) in \emph{both} conditions. That is: uniform gain decline alone already improves the access index. Part of the $+81\%$ re-entry effect could therefore be explained simply by the system starting at $K = 1.6$ \emph{below} its optimal access range and being shifted into a more favorable regime by uniformly lowering gains (\emph{retuning effect}).
+
+To separate retuning from re-entry, the P6 protocol was repeated at four baseline coupling strengths $K_{\mathrm{baseline}} \in \{1.6, 2.0, 2.5, 3.0\}$ with $N_{\mathrm{seeds}} = 20$ each (Table~\ref{tab:retuning}, Figure~\ref{fig:retuning}).
+
+\begin{table}[h]
+\centering
+\caption{Retuning vs.\ re-entry effect across four baseline coupling strengths ($N_{\mathrm{seeds}} = 20$ per $K$).}
+\label{tab:retuning}
+\begin{tabular}{ccccccc}
+\hline
+$K_{\mathrm{baseline}}$ & Retuning $\Delta\Pi$ & $\langle\Pi_S^A\rangle$ & $\langle\Pi_S^B\rangle$ & B$-$A & Rel.\ increase & Wilcoxon $p$ \\
+\hline
+$1.6$ & $+0.16$ & $0.15$ & $0.27$ & $+0.12$ & $+81\%$  & $0.006$ \\
+$2.0$ & $+0.07$ & $0.26$ & $0.53$ & $+0.27$ & $+102\%$ & $0.0009$ \\
+$2.5$ & $+0.19$ & $0.52$ & $0.75$ & $+0.23$ & $+44\%$  & $0.004$ \\
+$3.0$ & $+0.15$ & $0.73$ & $0.76$ & $+0.04$ & $+5\%$   & $0.54$ n.s. \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.98\linewidth]{fig_v5_retuning_control.png}
+\caption{P6 retuning control. Left: retuning effect (gray) and re-entry effect (red) across baseline coupling strength. Right: full-system $\Pi$ in P1 (healthy) and P2 (uniform decline) across $K$.}
+\label{fig:retuning}
+\par\noindent\textit{Alt text:} Two panels showing how the retuning and re-entry effects vary with the baseline coupling strength $K_{\mathrm{baseline}}$. The left panel plots two curves with error bars across $K \in \{1.6, 2.0, 2.5, 3.0\}$: a gray line tracing the retuning effect (consistently positive, around $+0.07$ to $+0.19$) and a red line tracing the re-entry effect (largest at $K = 2.0$ with $+0.27$ and collapsing toward zero at $K = 3.0$). The right panel shows two curves with error bars across the same $K$ range: blue for full-system $\Pi$ in phase P1 (healthy baseline), orange for phase P2 (uniform decline); both curves rise gently with $K$ and the P2 curve sits consistently above P1.
+\end{figure}
+
+Three descriptive findings follow from this sweep. \emph{First:} the re-entry effect is significant at three of the four $K$ values. \emph{Second:} retuning and re-entry are separate quantities at all $K$, with the cleanest dissociation at $K = 2.0$ (retuning $+0.07$, re-entry $+0.27$, factor~4). \emph{Third:} at $K = 3.0$ the re-entry effect collapses to ceiling level ($+5\%$, n.s.), while retuning persists.
+
+\paragraph{Primary analysis: pooled sweep statistic.} To avoid post-hoc selection, we report the entire $K$-sweep as the main result through a pooled regression with seed clustering. The model $\Pi \sim \mathrm{Condition} \cdot K_{\mathrm{baseline}} + (1|\mathrm{Seed})$ over all 80 paired observations yields a highly significant main effect of Condition, $\hat{\beta}_{\mathrm{Cond}} = +0.164$, cluster-robust SE $= 0.040$, $p = 3.6 \times 10^{-5}$. The Condition$\times$$K$ interaction is not significant ($p = 0.32$).
+
+\paragraph{Secondary, descriptive plausibility check.} As a complementary, non-primary statistic, we report a pooled paired Wilcoxon test across all 80 pairs ($W = 353.5$, $p = 5.5 \times 10^{-7}$, Cohen's $d_\mathrm{paired} = 0.56$). We explicitly note that this test pools non-independent observations (each seed appears four times, once per $K$ value) and serves only as a descriptive consistency check.
+
+\paragraph{Interpretation.} The re-entry effect is robust across the sweep and not adequately captured by a simple retuning explanation. The result at $K = 2.0$ is retained as a \emph{point of maximum sensitivity} within the sweep, not as a primary result selected from it.
+
+\subsection{HCP-Derived Real-Connectome Stress Test}
+\label{sec:hcp-connectome}
+
+The synthetic validation uses controlled Watts--Strogatz networks, so we added a bounded topology stress test on Human Connectome Project-derived Budapest Reference Connectome v3.0 consensus graphs \citep{szalkai2015,szalkai2017}. These are healthy consensus topologies, not patient data. Six graph variants were tested with the same pre-defined top-strength backbone under degree-preserving and degree-plus-strength-preserving null ensembles. The primary statistic was the event-minus-baseline change in backbone order advantage, $\Delta A_R=(R_S-R_{\bar S})_{\mathrm{event}}-(R_S-R_{\bar S})_{\mathrm{baseline}}$.
+
+The result is deliberately treated as secondary. Against degree-preserving controls, empirical connectomes showed larger $\Delta A_R$ in 21/24 variant-by-coupling comparisons. Against the stricter degree-plus-strength-preserving controls, the sign remained positive in 17/24 comparisons, but only one reached $p<0.05$ (1m fiber-count, 50\% consensus, $K=2.4$: real $\Delta A_R=0.135$, null $\Delta A_R=0.043$, real-minus-null $=0.091$, $p=0.020$). The conservative structural isolation diagnostic $\alpha_S$ was not improved relative to the stricter nulls. The mixed results under strict nulls delimit the conditions under which the mechanism can plausibly operate: the signature is not confined to toy graphs, but the HCP analysis is a topology-generalization stress test, not biological validation of P1.
+
+\subsection{Assessment of the Numerical Validation}
+
+Five of the six predictions are directly testable within the synthetic network model. P1 receives model-internal support through the P6 re-entry simulation, but it remains empirically untested in the present biological data.
+
+\begin{itemize}
+  \item \textbf{P2}: Nonlinear reorganization, not strictly discontinuous.
+  \item \textbf{P3}: $K_c^{\mathrm{op}}$ shifts monotonically from $1.38$ (intact) to $2.15$ (45\% lesion), using the ensemble values reported in Table~\ref{tab:v2}.
+  \item \textbf{P4}: $\langle\max_K \Pi(K)\rangle$ stays below 1 and decreases monotonically with degradation.
+  \item \textbf{P5}: Ensemble-averaged trajectory through the access region runs smoothly.
+  \item \textbf{P6}: Differential degradation produces an ensemble-level transient re-entry within the model. Mixed regression over the sweep: $\hat{\beta}_{\mathrm{Cond}} = +0.164$, $p = 3.6 \times 10^{-5}$, $d_{\mathrm{paired}} = 0.56$.
+\end{itemize}
+
+\paragraph{Limits of this validation.} (i)~The main mechanism tests remain simulations, not direct clinical validation. The HCP-derived stress test uses biologically grounded healthy structural topologies, but not patient data, neurodegeneration, or lucidity episodes. (ii)~Calibration and tests use the same ensemble paradigm. (iii)~The precision of the regime boundaries depends on $\alpha$ and window length. (iv)~The synthetic re-entry was tested with a fixed backbone size of 30 nodes and a specific boost factor; full parameter sensitivity remains an explicit item of the next research phase. (v)~The lower metastability bound degenerates to zero, reducing the formally three-dimensional access criterion to an effectively two-dimensional one. (vi)~The real-connectome stress test produced mixed results against the stricter degree-plus-strength-preserving nulls and did not support a simple structural-isolation interpretation via lower $\alpha_S$.
+
+
+% ==================================================================
+\section{Pilot Demonstration on Public EEG Data (Chennu 2016)}
+\label{sec:pilot}
+
+This secondary analysis is retained only as an operational computability check. We re-analyzed the public propofol EEG dataset from \citet{chennu2016}: 20 healthy participants, 91-channel EEG, and four resting states per person. Hilbert phases were extracted in gamma (30--45~Hz) and alpha (8--15~Hz), and the GCC observables $R(t)$, $D_{\mathrm{eff}}(t)$, $M_\tau(t)$, and the baseline-relative access indicator $\Pi$ were calibrated separately for each participant. The analysis falls within the original public-data license and ethics scope reported by \citet{chennu2016}; no new data were collected.
+
+The pilot shows state sensitivity but not mechanism validation. Baseline-relative $\Pi$ decreased under moderate sedation in gamma (0.661 to 0.543, Cohen's $d=0.99$, Wilcoxon $p=6.3\times10^{-5}$; 18/20 participants showing the decline) and in alpha (0.659 to 0.561, $d=0.69$, $p=0.0037$). Bootstrap, leave-one-out, permutation, and hyperparameter-sweep checks preserved the sign of the effect. However, the calibration is in-sample and channel-level, volume conduction is not removed, and healthy propofol sedation does not instantiate structural degradation or selective preservation on a residual backbone. The EEG result is therefore a necessary but limited pipeline demonstration; the independent ds006623 fMRI analysis below carries the main empirical validation weight.
+
+
+% ==================================================================
+\section{Independent fMRI Validation in OpenNeuro ds006623}
+\label{sec:fmri-validation}
+
+The EEG pilot establishes that the observables are computable on biological signals, but it remains a single-modality, in-sample-calibrated demonstration. We therefore performed an independent fMRI validation on OpenNeuro ds006623, a public propofol dataset with 26 healthy volunteers performing mental-imagery and hand-squeeze tasks across awake baseline, pre-loss, loss, recovery, and post-recovery phases \citep{huang2026,huangopenneuro2025}. This analysis tests whether GCC-style access-regime observables generalize to a different modality, laboratory, preprocessing pipeline, and behavioral target. It still does \emph{not} test structural degradation or terminal lucidity.
+
+We used XCP-D ROI mean time series from the public derivatives and computed fMRI analogues of the GCC observables in sliding windows: Hilbert-phase global coherence $R_{\mathrm{phase}}$, effective dimensionality $D_{\mathrm{eff}}$, temporal variability $M_\tau$, and a baseline-calibrated access-regime fraction $\Pi_{\mathrm{fMRI}}$. Leave-one-subject-out logistic regression was used throughout: imputation, scaling, and model fitting were performed inside each training fold. Three baseline model families were compared: (i) motion and propofol concentration only, (ii) these confounds plus standard functional-connectivity summaries, and (iii) these confounds plus GCC-derived dynamic-regime features. Robustness was tested across two denoising choices (with and without global signal regression), two atlas resolutions (4S156 and 4S256), and 100 subject-wise label permutations per task and model.
+
+The main ds006623 model-comparison results are summarized in Table~\ref{tab:fmri-validation}.
+
+\begin{table}[h]
+\centering
+\caption{Independent ds006623 fMRI validation. Values summarize leave-one-subject-out prediction across the four preprocessing/atlas variants. All reported observed AUC values exceeded 100 subject-wise label-permutation controls ($p = 0.0099$).}
+\label{tab:fmri-validation}
+\small
+\begin{tabular}{p{3.1cm}p{3.3cm}p{3.1cm}p{4.6cm}}
+\hline
+Task & Strongest model pattern & AUC range & Interpretation \\
+\hline
+PreLOR vs.\ LOR (task 2) & Standard FC or GCC-core, depending on preprocessing & $0.981$--$0.990$ & Loss of responsiveness during induction is highly predictable, but motion/propofol and standard FC already carry substantial information; GCC adds only small incremental value. \\
+LOR vs.\ ROR (task 3) & GCC-regime or full model & $0.972$--$0.986$ & Recovery-related classification shows the clearest GCC-relevant gain beyond confounds and standard FC, with robust performance across GSR and atlas choices. \\
+All phases: responsive vs.\ LOR & GCC-core or full model & $0.968$--$0.983$ & Broad state classification generalizes across subjects; the added GCC benefit is strongest without global signal regression and attenuates under GSR. \\
+\hline
+\end{tabular}
+\end{table}
+
+The ds006623 results are therefore supportive in a specific sense. They show that GCC-derived dynamic-regime observables are not restricted to synthetic simulations or EEG Hilbert phases, and that they provide subject-held-out information about loss and recovery of responsiveness in an independent fMRI dataset. The strongest incremental evidence is the recovery contrast (LOR vs.\ ROR), where GCC/full models achieved AUCs up to $0.986$ and improved calibration loss relative to motion--propofol baselines across all tested variants. The effect should nevertheless be interpreted conservatively: propofol concentration and motion already predict the main state transitions well, standard FC remains competitive, and the all-phase result is preprocessing-sensitive. Thus ds006623 validates the operational access-regime machinery more strongly than the EEG pilot, but it does not validate P1 in structurally degraded clinical cohorts.
+
+
+\section{Structural P1-Backbone Constraint in OpenNeuro ds003367}
+\label{sec:structural-p1}
+
+Because P1 specifically concerns structurally degraded systems, we added a separate HARDI-based structural constraint analysis using OpenNeuro ds003367, the traumatic coma/recovery dataset of \citet{snider2020,snideropenneuro2020}. The dataset contains DSI Studio QSDR/connectometry files for 50 scans: 16 healthy controls, 9 recovery subjects scanned early and late, 6 chronic post-traumatic DoC subjects scanned late, and 10 acute-only scans. This dataset does not contain EEG or fMRI time series in the released files and therefore cannot test dynamic re-entry. It can test a narrower structural prerequisite: whether a pre-defined ascending-arousal/thalamocortical residual backbone is more preserved in recovered than chronic DoC scans.
+
+We defined 12 a-priori spherical ROIs in QSDR/MNI space covering mesopontine and midbrain tegmentum, bilateral intralaminar thalamus, hypothalamic/basal-forebrain regions, internal capsule, thalamocortical corona, and temporal-stem relay regions. For each scan, quantitative anisotropy and DTI-FA were averaged within each ROI and z-scored relative to controls. The primary P1 structural score was the mean control-z preservation across the full ROI set; secondary scores separated AAN-core and relay-tract components. Specificity was tested against global diffusion integrity, 500 equal-size random-backbone controls, and leave-one-out classification of recovery-late versus chronic DoC with scaling fit inside each training fold.
+
+Table~\ref{tab:ds003367} reports the compact structural P1-backbone constraint analysis.
+
+\begin{table}[h]
+\centering
+\caption{OpenNeuro ds003367 structural P1-backbone constraint. Positive values indicate stronger preservation in recovery-late than chronic DoC scans. The analysis tests structural plausibility only; it does not test dynamic re-entry or terminal/paradoxical lucidity.}
+\label{tab:ds003367}
+\small
+\begin{tabular}{p{5.1cm}p{3.0cm}p{5.0cm}}
+\hline
+Analysis & Result & Interpretation \\
+\hline
+P1 structural backbone, recovery-late vs.\ chronic DoC & Cohen's $d=1.04$; Welch $p=0.045$; Mann--Whitney $p=0.113$ & Moderate-to-large cross-sectional separation, fragile under nonparametric testing because $n=15$. \\
+AAN-core component & Cohen's $d=1.42$; Mann--Whitney $p=0.0495$ & Strongest anatomically targeted component. \\
+Global diffusion integrity & AUC $=0.611$; permutation $p=0.255$ & Whole-brain integrity alone was weak. \\
+P1 components, leave-one-out classification & AUC $=0.870$; permutation $p=0.019$ & Compact P1 structural features carried subject-held-out recovery/DoC information. \\
+Random-backbone specificity & observed $d=1.04$; random-backbone $p=0.046$ & The targeted backbone effect exceeded most equal-size random ROI backbones. \\
+Paired recovery early-to-late change & mean $\Delta=0.033$; Wilcoxon $p=0.820$ & No convincing longitudinal recovery signal in this released structural proxy. \\
+\hline
+\end{tabular}
+\end{table}
+
+This layer strengthens the manuscript in a different way from ds006623. It provides public, structurally degraded clinical data in which the a-priori arousal/thalamocortical backbone behaves more specifically than global diffusion integrity and random backbones. At the same time, the negative longitudinal result and absence of released functional time series prevent a strong P1 claim. The present study therefore does not empirically test P1; ds003367 provides structural plausibility and anatomical specificity for a future direct P1 validation.
+
+
+\section{Neurodegenerative EEG Constraint in OpenNeuro ds004504}
+\label{sec:p1-proxy}
+
+As a secondary negative-control layer, we performed an adversarial proxy test in OpenNeuro ds004504, a resting-state EEG dataset with Alzheimer's disease, frontotemporal dementia, controls, and MMSE scores. Controls defined normative access windows and a normative functional backbone; MMSE prediction was tested only in AD+FTD patients ($n=59$). Repeated stratified 5-fold cross-validation over 100 repeats compared clinical covariates, global EEG activity, standard EEG/connectivity features, P1-core true-backbone features, standard features plus P1 features, and random-backbone controls.
+
+The result constrains rather than supports the strongest P1 reading. Low-gamma mean wPLI was associated with MMSE after adjustment for age, diagnosis, sex, and band power ($\rho = 0.410$, $p = 0.0012$), and low-gamma normative-backbone on-strength showed a weaker adjusted association ($\rho = 0.291$, $p = 0.0253$). However, the P1 composite was null after the same adjustment ($\rho = 0.018$, $p = 0.892$), and P1 features did not improve out-of-sample MMSE prediction. Subject-level MAE was $3.014$ for clinical covariates, $3.086$ for global activity, $3.194$ for standard EEG/connectivity, $3.122$ for the P1 true-backbone core model, and $3.309$ for standard EEG/connectivity plus P1 features. Thus ds004504 supports only the weaker claim that preserved low-gamma connectivity tracks cognitive preservation; it does not show that selective preservation on a residual backbone explains that preservation.
+
+
+% ==================================================================
+% ==================================================================
+% ========================= DISCUSSION =============================
+% ==================================================================
+\section*{Discussion}
+\addcontentsline{toc}{section}{Discussion}
+
+\section{Discussion}
+\label{sec:diskussion}
+
+The GCC claims no monopoly on integration, synchrony, critical dynamics, global availability, metastability, or complexity-based markers \citep{dehaene1998,tononi2004,fries2015,kelso2012,deco2017,casali2013,demertzi2019,carhartharris2014,schartner2015,luppi2019}. Its relative contribution is narrower: it assembles these components into an operational regime model for global access under degradation and asks whether selective-preservation re-entry can be distinguished from generic retuning. The central computational claim is that functional re-integration in degraded neural systems can arise from selective preservation and gain redistribution, not only from increased global activity.
+
+The revised evidence hierarchy has three main pillars. First, model-internal simulations show that the proposed dynamics generate threshold shifts, bounded access intervals, anesthesia-like trajectories, and transient residual-backbone re-entry beyond generic retuning. Second, the independent ds006623 fMRI analysis provides the strongest functional validation in this manuscript: GCC-derived dynamic-regime features generalize across subjects in loss/recovery-of-responsiveness classification, with robustness across atlas resolution, global-signal-regression choice, and subject-wise label permutations. Third, the ds003367 traumatic coma/DoC analysis adds a structural clinical constraint: an a-priori ascending-arousal/thalamocortical P1 backbone separates recovery-late from chronic DoC scans better than global diffusion integrity and most random backbones. The HCP topology stress test, Chennu EEG pilot, and ds004504 neurodegenerative EEG proxy are retained as secondary stress tests and constraints rather than as co-equal validation layers.
+
+The biological interpretation must remain narrow. The ds006623 and Chennu datasets contain healthy participants under propofol sedation. The ds003367 dataset is clinically and structurally relevant, but the released files are HARDI/QSDR structural data without matched functional time series or lucidity/access events. The ds004504 cohort is clinically degraded, but it is resting EEG without direct structural degeneration maps, source-level connectivity, or lucidity/access events. For that reason, the empirical components validate operational observables, state sensitivity, and a structural residual-backbone constraint, but they do not validate the central selective-preservation re-entry mechanism in a matched structural-functional clinical cohort. A stronger empirical test would require structurally degraded cohorts \citep{laureys2004,giacino2014,naccache2018}, pre-registered access-region calibration, leakage-controlled functional connectivity, individual structural backbone measures, and independent held-out validation.
+
+\section{Evidence Map and Claim Boundaries}
+\label{sec:evidence-map}
+
+Table~\ref{tab:evidence-map} maps each analysis layer to the claim it supports and the claim it does not support.
+
+\begin{table}[h]
+\centering
+\caption{Evidence map. Each analysis layer is linked to the claim it supports and to the claim it does not support.}
+\label{tab:evidence-map}
+\small
+\begin{tabular}{p{3.1cm}p{4.2cm}p{5.4cm}}
+\hline
+Analysis layer & Supports & Does not show \\
+\hline
+Synthetic simulations & Internal consistency of predictions P2--P6, including residual-backbone re-entry beyond generic retuning. & Biological truth, clinical validity, or terminal/paradoxical lucidity. \\
+ds006623 fMRI validation & Independent, subject-held-out generalization of GCC-style dynamic-regime features to loss/recovery of responsiveness. & Selective preservation in damaged brains, covert consciousness as a clinical biomarker, or lucidity. \\
+ds003367 structural HARDI constraint & A pre-defined arousal/thalamocortical backbone is more preserved in recovery-late than chronic DoC scans and exceeds random-backbone controls. & Dynamic re-entry, functional access, terminal/paradoxical lucidity, or longitudinal recovery. \\
+HCP-derived topology stress test & The selective-preservation signature can appear on human-derived structural topologies and is partly robust to stringent null models. & Structural degeneration, clinical re-entry, or a uniformly positive topology effect. \\
+Chennu EEG pilot & GCC observables are computable on biological time series and sensitive to propofol-induced state changes. & P1, structural degradation, or an absolute biomarker scale. \\
+ds004504 neurodegenerative EEG proxy & Preserved low-gamma connectivity is associated with MMSE in AD/FTD after adjustment for clinical covariates and power. & P1-specific selective preservation; the P1 composite does not improve out-of-sample MMSE prediction. \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{What This Paper Does Not Show}
+\label{sec:not-show}
+
+To make the evidential boundaries explicit, the present paper does \emph{not} show:
+\begin{enumerate}
+\item that terminal or paradoxical lucidity is caused by, or even necessarily involves, selective preservation on a residual backbone --- the present work treats this only as a future empirical hypothesis;
+\item that the EEG pilot tests structural degradation, residual topology, terminal lucidity, or the P1 mechanism directly;
+\item that the HCP-derived connectome stress test tests structural degeneration, lucidity, or clinical re-entry directly;
+\item that the ds006623 fMRI validation tests structural degradation, selective preservation on a damaged backbone, terminal lucidity, or disorders of consciousness directly;
+\item that the ds003367 structural analysis tests dynamic re-entry, conscious report, terminal lucidity, or functional access; it provides only a structural P1-backbone constraint;
+\item that the ds004504 clinical proxy test validates P1; it constrains P1 because the selective-preservation composite did not improve MMSE prediction;
+\item that the synthetic simulations establish biological truth rather than model-internal consistency;
+\item that the HCP-derived topology result is uniformly positive against degree-plus-strength-preserving null models;
+\item that GCC-derived fMRI features dominate all baseline models; propofol concentration, motion, and standard functional connectivity remain strong and sometimes competitive predictors;
+\item that the fMRI generalization is preprocessing-invariant in every respect; the broad all-phase result is stronger without global signal regression than with global signal regression;
+\item that subject-specific EEG calibration defines an absolute cross-subject scale of global access;
+\item that channel-level Hilbert phases are identical to the theoretical oscillator phases of the model;
+\item that the proposed access index is already a validated biomarker.
+\end{enumerate}
+
+These limits are not incidental. They define the next empirical step: a preregistered multi-dataset study in structurally degraded clinical cohorts, with independent calibration, leakage-corrected measures of functional integration, individual structural backbone definitions, and functional access or responsiveness outcomes specified before model fitting.
+
+% ==================================================================
+\section{Conclusion}
+\label{sec:schluss}
+
+The GCC is not a full model of consciousness and does not empirically explain terminal lucidity in the present study. It is a formal, operationalized, and falsifiable model of access-compatible dynamics. Its principal theoretical move is the separation of residual topology, global gain, and local efficacy preservation. Its strongest computational result is that selective preservation can produce residual-backbone re-entry beyond generic retuning in a controlled simulation sweep. Its strongest empirical result is the ds006623 fMRI validation, where GCC-style dynamic-regime features generalize across subjects in loss/recovery-of-responsiveness classification beyond motion, propofol, and standard functional-connectivity baselines in the strongest contrasts. Its most relevant structural constraint is ds003367, where a pre-defined arousal/thalamocortical backbone is selectively reduced in chronic DoC relative to recovery-late scans and exceeds random-backbone controls. The secondary HCP, Chennu EEG, and ds004504 analyses add useful boundary conditions rather than additional headline claims. Direct validation of selective-preservation re-entry therefore requires matched structural-functional clinical datasets and remains future work.
+
+
+% ==================================================================
+\newpage
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+
+The author thanks the Chennu et al.\ (2016) team for making their EEG dataset publicly available, which made the EEG pilot demonstration in this study possible. The author acknowledges the Budapest Reference Connectome project for providing public HCP-derived consensus structural connectomes, the ds006623 investigators for releasing the Michigan Human Anesthesia fMRI Dataset-1 as an openly reusable BIDS dataset \citep{huang2026,huangopenneuro2025}, the ds003367 investigators for releasing the traumatic coma/recovery HARDI dataset \citep{snider2020,snideropenneuro2020}, and the ds004504 investigators for releasing the neurodegenerative EEG dataset used for the clinical proxy constraint.
+AI-assisted tools were used to support language editing, code development and debugging, and manuscript consistency checks; the author reviewed all outputs and takes full responsibility for the analyses, interpretations, and final manuscript.
+
+\paragraph{Funding.} This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+\section*{Author Contributions}
+\addcontentsline{toc}{section}{Author Contributions}
+
+Mehmet Oktay Tugan: conceptualization, methodology, software, formal analysis, investigation, data curation, visualization, writing--original draft, writing--review and editing, and project administration.
+
+\section*{Ethics Statement}
+\addcontentsline{toc}{section}{Ethics Statement}
+
+No new human participants were recruited and no new human data were collected for this study. The manuscript reports computational simulations and secondary analyses of publicly available, de-identified datasets. The original human-participant studies reported their own ethics approvals and consent procedures. The present secondary analysis used only open de-identified data and therefore did not require separate institutional review board approval.
+
+% ==================================================================
+\section*{Data Availability}
+\addcontentsline{toc}{section}{Data Availability}
+
+The EEG dataset re-analyzed in the pilot part of this study is publicly available from the University of Cambridge Data Repository (\citealp{chennu2016}, DOI: \href{https://doi.org/10.17863/CAM.68959}{10.17863/CAM.68959}) under a CC BY 2.0 UK license. The independent fMRI validation uses OpenNeuro ds006623, version 1.0.0, the Michigan Human Anesthesia fMRI Dataset-1 \citep{huang2026,huangopenneuro2025}, available under DOI \href{https://doi.org/10.18112/openneuro.ds006623.v1.0.0}{10.18112/openneuro.ds006623.v1.0.0}. The structural P1-backbone constraint uses OpenNeuro ds003367, version 1.0.0 \citep{snider2020,snideropenneuro2020}, available under DOI \href{https://doi.org/10.18112/openneuro.ds003367.v1.0.0}{10.18112/openneuro.ds003367.v1.0.0}. The neurodegenerative EEG constraint uses OpenNeuro ds004504, version 1.0.8 \citep{miltiadous2023}, available under DOI \href{https://doi.org/10.18112/openneuro.ds004504.v1.0.8}{10.18112/openneuro.ds004504.v1.0.8}. The HCP-derived connectome stress test uses public Budapest Reference Connectome v3.0 graph downloads \citep{szalkai2015,szalkai2017}; the exact download URLs, graph parameters, preprocessing steps, and generated matrix metadata are recorded in the accompanying data manifest.
+
+Author-generated simulation code, analysis scripts, manifests, derived result tables, and figure-generation scripts are available at \url{https://github.com/oktaytugan82/gcc_simulation} and archived on Zenodo under the GCC software concept DOI \href{https://doi.org/10.5281/zenodo.19744969}{10.5281/zenodo.19744969}. The present extended manuscript requires a new \texttt{v1.2.0} GitHub--Zenodo snapshot before final submission, with the version DOI to be inserted here once minted. The author intends to apply for Open Data and Open Materials badges.
+
+% ==================================================================
+\section*{Competing Interests}
+\addcontentsline{toc}{section}{Competing Interests}
+
+The author has declared that no competing interests exist.
+
+% ==================================================================
+\appendix
+\makeatletter
+\providecommand*{\@removefromreset}[2]{%
+  \let\@tempa\@elt
+  \let\@elt\relax
+  \expandafter\let\expandafter\@tempb\csname cl@#2\endcsname
+  \expandafter\def\csname cl@#2\endcsname{}%
+  \def\@elt##1{%
+    \ifx ##1#1\else
+      \expandafter\@temptokena\expandafter{\csname cl@#2\endcsname}%
+      \edef\x{\noexpand\expandafter\noexpand\def\noexpand\csname cl@#2\noexpand\endcsname{\the\@temptokena \noexpand\@elt{##1}}}\x
+    \fi}%
+  \@tempb
+  \let\@elt\@tempa}
+\@removefromreset{theorem}{section}
+\makeatother
+\section*{Supplementary Mathematical Appendix}
+\addcontentsline{toc}{section}{Supplementary Mathematical Appendix}
+\label{sec:appendix}
+\setcounter{section}{0}
+\setcounter{theorem}{0}
+\renewcommand{\thesection}{A.\arabic{section}}
+\renewcommand{\thesubsection}{A.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thetheorem}{A.\arabic{theorem}}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+
+This appendix is intended for submission as supplementary material. It supplements the GCC with mathematical results that address three common lines of attack: (1)~Is the dynamics well-posed? (2)~Are the observables controlled? (3)~Can the gain-based re-entry idea be formulated as a sufficient condition?
+
+\section{Assumptions}
+\label{app:voraussetzungen}
+
+We consider, over a finite horizon $t \in [0,T]$, the GCC dynamics~\eqref{eq:dynamics} under the following assumptions.
+
+\paragraph{A1.\;Structure.}
+$W_{ij}(t) \geq 0$, \;\;$\sum_j W_{ij}(t) = 1$ for all $i$ with non-empty rows, \;\;$W_{ii}(t) = 0$.
+
+\paragraph{A2.\;Boundedness.}
+There exist finite constants $\Gmax$, $\Sigma_{\max}$, $\Phi_{\max}$ such that
+\[
+0 \leq G(t) \leq \Gmax, \quad
+0 \leq g_i(t) \leq 1, \quad
+0 \leq \sigma_i(t) \leq \Sigma_{\max}, \quad
+|\varphi_{ij}(t)| \leq \Phi_{\max}.
+\]
+
+\paragraph{A3.\;Temporal regularity.}
+All control functions are measurable and bounded; for stability statements, piecewise continuity suffices.
+
+\paragraph{A4.\;Observation windows.}
+$\Deff^{\lambda}$ and $\Mtau$ are computed on fixed window lengths $\tau_D > 0$ and $\tau_M > 0$, with ridge regularization according to~\eqref{eq:ridge}.
+
+\section{Elementary Bounds of the Observables}
+
+\begin{proposition}[Elementary bounds]
+\label{prop:schranken}
+For all times $t$:
+\begin{equation}
+0 \leq R(t) \leq 1, \qquad
+1 \leq \Deff(t) \leq N, \qquad
+0 \leq \Mtau(t) \leq \tfrac{1}{4}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$R(t)$ is the modulus of a mean of unit complex numbers. $\Deff(t)$ is the participation ratio of a positive semi-definite matrix. $\Mtau(t)$ is the variance of a time series with values in $[0,1]$; its maximum is $\frac{1}{4}$.
+\end{proof}
+
+\section{Well-Posedness of the Dynamics}
+
+\begin{theorem}[Global Lipschitz property and well-posedness]
+\label{satz:lipschitz}
+Define the drift vector $b(\theta,t)$ component-wise by
+\begin{equation}
+b_i(\theta,t) = \omega_i + K\,G(t)\,g_i(t)\sum_j W_{ij}(t)\,\sin\!\bigl(\theta_j - \theta_i - \varphi_{ij}(t)\bigr).
+\end{equation}
+Then, for all $\theta,\psi \in \mathbb{R}^N$ and all $t \in [0,T]$,
+\begin{equation}
+\label{eq:lipschitz}
+\|b(\theta,t) - b(\psi,t)\|_{\infty} \;\leq\; 2\,|K|\,\Gmax\,\|\theta - \psi\|_{\infty}.
+\end{equation}
+Under \textup{A1--A3}, the GCC dynamics has a unique global strong solution on $[0,T]$ for every initial condition $\theta(0)$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Using $|\sin(x) - \sin(y)| \leq |x - y|$ and $\sum_j W_{ij}(t) = 1$:
+\begin{equation}
+|b_i(\theta,t) - b_i(\psi,t)| \leq |K|\,\Gmax \cdot 2\,\|\theta - \psi\|_{\infty}.
+\end{equation}
+Standard SDE results yield existence and uniqueness.
+\end{proof}
+
+\section{Finite-Horizon Stability}
+
+\begin{theorem}[Stability under drift perturbations]
+\label{satz:stabilitaet}
+Consider two systems driven by the same Brownian motion with globally $L$-Lipschitz drifts $b$ and $\tilde{b}$ satisfying $\|b(x,t) - \tilde{b}(x,t)\|_{\infty} \leq \varepsilon(t)$. Then
+\begin{equation}
+\label{eq:gronwall}
+\|\theta(t) - \vartheta(t)\|_{\infty}
+\;\leq\; e^{Lt}\,\biggl(\|\theta(0) - \vartheta(0)\|_{\infty} + \int_0^t \varepsilon(s)\,\mathrm{d}s\biggr)
+\end{equation}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The diffusion terms cancel in the difference equation. Gronwall's inequality applied to the deterministic remainder yields the claim.
+\end{proof}
+
+\section{Continuity of the Observables}
+
+\begin{proposition}[Local Lipschitz property]
+\label{prop:stetigkeit}
+For fixed $\tau_D$, $\tau_M$, $\lambda$, and $\varepsilon_{\mathrm{floor}}$, the observables $R(t)$, $\Deff^{\lambda}(t)$, and $\Mtau(t)$ are continuous functions of the window trajectory. On compact tubes there exists a constant $\Lobs$ such that
+\begin{equation}
+\label{eq:Lobs}
+\|O(\mathrm{traj}_1) - O(\mathrm{traj}_2)\|_{\infty} \;\leq\; \Lobs \cdot \|\mathrm{traj}_1 - \mathrm{traj}_2\|_{\infty}.
+\end{equation}
+\end{proposition}
+
+\section{Residual-Backbone Re-Entry}
+
+\begin{theorem}[Sufficient condition for re-entry]
+\label{satz:reentry}
+Let $S = S(t_1;\,g_*)$ be the residual backbone structure as in~\eqref{eq:backbone}. On $I = [t_1,t_2]$, consider the system restricted to $S$ with external coupling switched off. Define the external residual mass
+\begin{equation}
+\alpha_S(t) = \max_{i \in S}\sum_{j \notin S} W_{ij}(t).
+\end{equation}
+Assume: (i)~the reduced system lies within the access region with safety margin $\rho$; (ii)~initial states coincide; (iii)~$\Lobs$ exists; (iv)~
+\begin{equation}
+\label{eq:eta}
+\int_{t_1}^{t_2} \alpha_S(s)\,\mathrm{d}s \;<\; \frac{\rho}{\Lobs \cdot |K| \cdot \Gmax \cdot e^{2|K|\Gmax(t_2 - t_1)}}.
+\end{equation}
+Then the full system restricted to $S$ remains in the access region throughout $I$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Apply Theorem~\ref{satz:stabilitaet} with $L = 2|K|\Gmax$ and $\varepsilon(t) = |K|\Gmax\,\alpha_S(t)$, then use $\Lobs$.
+\end{proof}
+
+\section{Corollary: Gain-Mediated Lucidity}
+
+\begin{corollary}
+\label{kor:lucidity}
+If a subset $S$ and an interval $I$ exist on which $\alpha_S(t)$ is small, the effective drives $\Lambda_i(t)$ for $i \in S$ stay above the reduced access threshold, and the reduced dynamics on $S$ remains in the access region with margin, then a transient re-entry of the full system onto $S$ is internally sufficiently possible within the model.
+\end{corollary}
+
+\section{What This Appendix Delivers and What It Does Not}
+
+\paragraph{Delivers.}
+Well-posedness of the GCC as an SDE; controlled bounds for the core observables; finite-horizon stability; a sufficient re-entry condition.
+
+\paragraph{Does not deliver.}
+No mathematical proof that real terminal lucidity exists; no general theorem that every form of dementia shifts the access region; no proof of a universal $K_c$; no identifiability result for real EEG/MEG data.
+
+
+% ==================================================================
+\section*{Supporting Information}
+\addcontentsline{toc}{section}{Supporting Information}
+
+\noindent\textbf{S1 Code. GCC simulation and analysis code} (\texttt{gcc\_simulation\_v1.2.0.zip})\textbf{.} Complete Python codebase for the GCC dynamical model, EEG pipeline, ds006623 fMRI downloader and feature-extraction scripts, ds003367 structural P1-backbone analysis, ds004504 P1-proxy analysis, leakage-free model comparison, robustness-grid and permutation-control analyses, ensemble simulations, retuning-control sweep, HCP-derived Budapest Reference Connectome preparation, null-model stress tests, statistical analyses, and figure-generation scripts. Includes \texttt{requirements.txt}, data manifests, derived result tables, and \texttt{README.md} with reproduction instructions. The ds006623/ds003367/ds004504-extended manuscript requires release \texttt{v1.2.0} of the public repository \url{https://github.com/oktaytugan82/gcc_simulation}, archived on Zenodo under the GCC software concept DOI \href{https://doi.org/10.5281/zenodo.19744969}{10.5281/zenodo.19744969}; the version-specific DOI should be inserted after the final snapshot is minted.
+
+
+% ==================================================================
+\newpage
+\begin{thebibliography}{99}
+
+\bibitem[Arenas et~al.(2008)]{arenas2008}
+Arenas,~A., D{\'i}az-Guilera,~A., Kurths,~J., Moreno,~Y., \& Zhou,~C.\ (2008).
+Synchronization in complex networks.
+\textit{Physics Reports}, \textbf{469}(3), 93--153.
+\url{https://doi.org/10.1016/j.physrep.2008.09.002}
+
+\bibitem[Batthyány \& Greyson(2017)]{batthyany2017}
+Batthy{\'a}ny,~A., \& Greyson,~B.\ (2017).
+Spontaneous remission of dementia before death: Results from a study on paradoxical lucidity.
+\textit{Psychology of Consciousness: Theory, Research, and Practice}, \textbf{8}(1), 1--8.
+\url{https://doi.org/10.1037/cns0000259}
+
+\bibitem[Boly et~al.(2013)]{boly2013}
+Boly,~M., Seth,~A.\,K., Wilke,~M., Ingmundson,~P., Baars,~B., Laureys,~S., Edelman,~D.\,B., \& Tsuchiya,~N.\ (2013).
+Consciousness in humans and non-human animals: recent advances and future directions.
+\textit{Frontiers in Psychology}, \textbf{4}, 625.
+\url{https://doi.org/10.3389/fpsyg.2013.00625}
+
+\bibitem[Borjigin et~al.(2013)]{borjigin2013}
+Borjigin,~J., Lee,~U., Liu,~T., et~al.\ (2013).
+Surge of neurophysiological coherence and connectivity in the dying brain.
+\textit{Proceedings of the National Academy of Sciences}, \textbf{110}(35), 14432--14437.
+\url{https://doi.org/10.1073/pnas.1308285110}
+
+\bibitem[Carhart-Harris et~al.(2014)]{carhartharris2014}
+Carhart-Harris,~R.\,L., Leech,~R., Hellyer,~P.\,J., Shanahan,~M., Feilding,~A., Tagliazucchi,~E., Chialvo,~D.\,R., \& Nutt,~D.\ (2014).
+The entropic brain: a theory of conscious states informed by neuroimaging research with psychedelic drugs.
+\textit{Frontiers in Human Neuroscience}, \textbf{8}, 20.
+\url{https://doi.org/10.3389/fnhum.2014.00020}
+
+\bibitem[Casali et~al.(2013)]{casali2013}
+Casali,~A.\,G., Gosseries,~O., Rosanova,~M., et~al.\ (2013).
+A theoretically based index of consciousness independent of sensory processing and behavior.
+\textit{Science Translational Medicine}, \textbf{5}(198), 198ra105.
+\url{https://doi.org/10.1126/scitranslmed.3006294}
+
+\bibitem[Chennu et~al.(2016)]{chennu2016}
+Chennu,~S., O'Connor,~S., Adapa,~R., Menon,~D.\,K., \& Bekinschtein,~T.\,A.\ (2016).
+Brain connectivity dissociates responsiveness from drug exposure during propofol-induced transitions of consciousness.
+\textit{PLoS Computational Biology}, \textbf{12}(1), e1004669.
+\url{https://doi.org/10.1371/journal.pcbi.1004669}
+
+\bibitem[Deco et~al.(2017)]{deco2017}
+Deco,~G., Kringelbach,~M.\,L., Jirsa,~V.\,K., \& Ritter,~P.\ (2017).
+The dynamics of resting fluctuations in the brain: Metastability and its dynamical cortical core.
+\textit{Scientific Reports}, \textbf{7}, 3095.
+\url{https://doi.org/10.1038/s41598-017-03073-5}
+
+\bibitem[Dehaene et~al.(1998)]{dehaene1998}
+Dehaene,~S., Kerszberg,~M., \& Changeux,~J.-P.\ (1998).
+A neuronal model of a global workspace in effortful cognitive tasks.
+\textit{PNAS}, \textbf{95}(24), 14529--14534.
+\url{https://doi.org/10.1073/pnas.95.24.14529}
+
+\bibitem[Demertzi et~al.(2019)]{demertzi2019}
+Demertzi,~A., Tagliazucchi,~E., Dehaene,~S., et~al.\ (2019).
+Human consciousness is supported by dynamic complex patterns of brain signal coordination.
+\textit{Science Advances}, \textbf{5}(2), eaat7603.
+\url{https://doi.org/10.1126/sciadv.aat7603}
+
+\bibitem[Fries(2015)]{fries2015}
+Fries,~P.\ (2015).
+Rhythms for cognition: Communication through coherence.
+\textit{Neuron}, \textbf{88}(1), 220--235.
+\url{https://doi.org/10.1016/j.neuron.2015.09.034}
+
+\bibitem[Giacino et~al.(2014)]{giacino2014}
+Giacino,~J.\,T., Fins,~J.\,J., Laureys,~S., \& Schiff,~N.\,D.\ (2014).
+Disorders of consciousness after acquired brain injury: the state of the science.
+\textit{Nature Reviews Neurology}, \textbf{10}(2), 99--114.
+\url{https://doi.org/10.1038/nrneurol.2013.279}
+
+\bibitem[Gilmore et~al.(2023)]{gilmore2023}
+Gilmore-Bykovskyi,~A., Griffin,~J.\,M., Mueller,~K.\,D., Parnia,~S., \& Kolanowski,~A.\ (2023).
+Toward harmonization of strategies for investigating lucidity in AD/ADRD.
+\textit{Alzheimer's \& Dementia}, \textbf{19}(1), 343--352.
+\url{https://doi.org/10.1002/alz.12709}
+
+\bibitem[Huang et~al.(2026)]{huang2026}
+Huang,~Z., Tarnal,~V., Fotiadis,~P., et~al.\ (2026).
+An open fMRI resource for studying human brain function and covert consciousness under anesthesia.
+\textit{Scientific Data}, \textbf{13}, 127.
+\url{https://doi.org/10.1038/s41597-025-06442-2}
+
+\bibitem[Huang et~al.(2025)]{huangopenneuro2025}
+Huang,~Z., et~al.\ (2025).
+OpenNeuro Dataset ds006623 (Michigan Human Anesthesia fMRI Dataset-1), version 1.0.0.
+\textit{OpenNeuro}.
+\url{https://doi.org/10.18112/openneuro.ds006623.v1.0.0}
+
+\bibitem[Kelso(2012)]{kelso2012}
+Kelso,~J.\,A.\,S.\ (2012).
+Multistability and metastability: Understanding dynamic coordination in the brain.
+\textit{Phil.\ Trans.\ R.\ Soc.\ B}, \textbf{367}(1591), 906--918.
+\url{https://doi.org/10.1098/rstb.2011.0351}
+
+\bibitem[Laureys(2004)]{laureys2004}
+Laureys,~S.\ (2004).
+Functional neuroimaging in the vegetative state.
+\textit{NeuroRehabilitation}, \textbf{19}(4), 335--341.
+
+\bibitem[Luppi et~al.(2019)]{luppi2019}
+Luppi,~A.\,I., Craig,~M.\,M., Pappas,~I., et~al.\ (2019).
+Consciousness-specific dynamic interactions of brain integration and functional diversity.
+\textit{Nature Communications}, \textbf{10}, 4616.
+\url{https://doi.org/10.1038/s41467-019-12658-9}
+
+\bibitem[Mashour et~al.(2020)]{mashour2020}
+Mashour,~G.\,A., Roelfsema,~P., Changeux,~J.-P., \& Dehaene,~S.\ (2020).
+Conscious processing and the global neuronal workspace hypothesis.
+\textit{Neuron}, \textbf{105}(5), 776--798.
+\url{https://doi.org/10.1016/j.neuron.2020.01.026}
+
+\bibitem[Miltiadous et~al.(2023)]{miltiadous2023}
+Miltiadous,~A., Tzimourta,~K.\,D., Afrantou,~T., Ioannidis,~P., Grigoriadis,~N., Tsalikakis,~D.\,G., Angelidis,~P., Tsipouras,~M.\,G., Glavas,~E., Giannakeas,~N., \& Tzallas,~A.\,T.\ (2023).
+A dataset of EEG recordings from Alzheimer's disease, frontotemporal dementia and healthy subjects.
+\textit{OpenNeuro}.
+\url{https://doi.org/10.18112/openneuro.ds004504.v1.0.8}
+
+\bibitem[Naccache(2018)]{naccache2018}
+Naccache,~L.\ (2018).
+Why and how access consciousness can account for phenomenal consciousness.
+\textit{Phil.\ Trans.\ R.\ Soc.\ B}, \textbf{373}(1755), 20170357.
+\url{https://doi.org/10.1098/rstb.2017.0357}
+
+\bibitem[Nahm et~al.(2012)]{nahm2012}
+Nahm,~M., Greyson,~B., Kelly,~E.\,W., \& Haraldsson,~E.\ (2012).
+Terminal lucidity: A review and a case collection.
+\textit{Archives of Gerontology and Geriatrics}, \textbf{55}(1), 138--142.
+
+\bibitem[Northoff \& Huang(2017)]{northoff2018}
+Northoff,~G., \& Huang,~Z.\ (2017).
+How do the brain's time and space mediate consciousness and its different dimensions?
+\textit{Neuroscience and Biobehavioral Reviews}, \textbf{80}, 630--645.
+\url{https://doi.org/10.1016/j.neubiorev.2017.07.013}
+
+\bibitem[Restrepo et~al.(2005)]{restrepo2005}
+Restrepo,~J.\,G., Ott,~E., \& Hunt,~B.\,R.\ (2005).
+Onset of synchronization in large networks of coupled oscillators.
+\textit{Physical Review E}, \textbf{71}(3), 036151.
+
+\bibitem[Schartner et~al.(2015)]{schartner2015}
+Schartner,~M., Seth,~A., Noirhomme,~Q., et~al.\ (2015).
+Complexity of multi-dimensional spontaneous EEG decreases during propofol induced general anaesthesia.
+\textit{PLoS ONE}, \textbf{10}(8), e0133532.
+\url{https://doi.org/10.1371/journal.pone.0133532}
+
+\bibitem[Snider et~al.(2020a)]{snider2020}
+Snider,~S.\,B., Bodien,~Y.\,G., Frau-Pascual,~A., Bianciardi,~M., Foulkes,~A.\,S., \& Edlow,~B.\,L.\ (2020).
+Ascending arousal network connectivity during recovery from traumatic coma.
+\textit{NeuroImage: Clinical}, \textbf{28}, 102503.
+\url{https://doi.org/10.1016/j.nicl.2020.102503}
+
+\bibitem[Snider et~al.(2020b)]{snideropenneuro2020}
+Snider,~S.\,B., Bodien,~Y.\,G., Frau-Pascual,~A., Bianciardi,~M., Foulkes,~A.\,S., \& Edlow,~B.\,L.\ (2020).
+OpenNeuro Dataset ds003367: Ascending arousal network connectivity during recovery from traumatic coma, version 1.0.0.
+\textit{OpenNeuro}.
+\url{https://doi.org/10.18112/openneuro.ds003367.v1.0.0}
+
+\bibitem[Sitt et~al.(2014)]{sitt2014}
+Sitt,~J.\,D., King,~J.-R., El Karoui,~I., et~al.\ (2014).
+Large scale screening of neural signatures of consciousness in patients in a vegetative or minimally conscious state.
+\textit{Brain}, \textbf{137}(8), 2258--2270.
+
+\bibitem[Szalkai et~al.(2015)]{szalkai2015}
+Szalkai,~B., Kerepesi,~C., Varga,~B., \& Grolmusz,~V.\ (2015).
+The Budapest Reference Connectome Server v2.0.
+\textit{Neuroscience Letters}, \textbf{595}, 60--62.
+\url{https://doi.org/10.1016/j.neulet.2015.03.071}
+
+\bibitem[Szalkai et~al.(2017)]{szalkai2017}
+Szalkai,~B., Kerepesi,~C., Varga,~B., \& Grolmusz,~V.\ (2017).
+Parameterizable consensus connectomes from the Human Connectome Project: The Budapest Reference Connectome Server v3.0.
+\textit{Cognitive Neurodynamics}, \textbf{11}(1), 113--116.
+\url{https://doi.org/10.1007/s11571-016-9407-z}
+
+\bibitem[Tagliazucchi(2016)]{tagliazucchi2016}
+Tagliazucchi,~E.\ (2017).
+The signatures of conscious access and its phenomenology are consistent with large-scale brain communication at criticality.
+\textit{Consciousness and Cognition}, \textbf{55}, 136--147.
+\url{https://doi.org/10.1016/j.concog.2017.08.008}
+
+\bibitem[Tononi(2004)]{tononi2004}
+Tononi,~G.\ (2004).
+An information integration theory of consciousness.
+\textit{BMC Neuroscience}, \textbf{5}, 42.
+
+\bibitem[Xu et~al.(2023)]{xu2023}
+Xu,~G., Mihaylova,~T., Li,~D., et~al.\ (2023).
+Surge of neurophysiological coupling and connectivity of gamma oscillations in the dying human brain.
+\textit{Proceedings of the National Academy of Sciences}, \textbf{120}(19), e2216268120.
+\url{https://doi.org/10.1073/pnas.2216268120}
+
+\end{thebibliography}
+
+\end{document}

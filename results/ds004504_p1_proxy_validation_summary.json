@@ -1,0 +1,296 @@
+{
+  "analysis": "ds004504 P1-lite clinical proxy validation: MMSE prediction in AD+FTD patients from control-calibrated access-regime occupancy and normative residual-backbone preservation.",
+  "interpretation_rule": "P1-compatible support would require true-backbone P1 features to predict MMSE beyond age/sex/diagnosis, global activity, standard EEG/FC features, and random-backbone controls.",
+  "n_subjects_total": 88,
+  "n_controls": 29,
+  "n_patients": 59,
+  "n_ad": 36,
+  "n_ftd": 23,
+  "cv": {
+    "n_splits": 5,
+    "n_repeats": 100,
+    "n_folds": 500,
+    "ridge_alphas": [
+      0.0001,
+      10000.0,
+      41
+    ]
+  },
+  "calibration": {
+    "controls_only_for_pi_and_normative_backbone": true,
+    "p1_bands": [
+      "alpha",
+      "low_gamma"
+    ],
+    "backbone_top_fraction": 0.2,
+    "n_random_backbones_per_band": 200
+  },
+  "models_subject_mean_out_of_sample": {
+    "A_clinical": {
+      "n_test": 59,
+      "mae": 3.014050416358721,
+      "rmse": 4.013604172897377,
+      "r2": 0.16387598413845994,
+      "spearman_rho": 0.43520690713343113,
+      "pearson_r": 0.4059286113021134
+    },
+    "B_global_activity": {
+      "n_test": 59,
+      "mae": 3.086210881375995,
+      "rmse": 4.136098630787891,
+      "r2": 0.1120604677954461,
+      "spearman_rho": 0.3852271579211784,
+      "pearson_r": 0.3423169746541341
+    },
+    "C_standard_eeg_fc": {
+      "n_test": 59,
+      "mae": 3.1942057487099484,
+      "rmse": 4.27827858904458,
+      "r2": 0.049964703230453766,
+      "spearman_rho": 0.3336437803919549,
+      "pearson_r": 0.25879933387989545
+    },
+    "D_p1_core_true_backbone": {
+      "n_test": 59,
+      "mae": 3.1224753952628697,
+      "rmse": 4.18477599285011,
+      "r2": 0.09103732540967402,
+      "spearman_rho": 0.37337812646800617,
+      "pearson_r": 0.3314931446595299
+    },
+    "E_standard_plus_p1": {
+      "n_test": 59,
+      "mae": 3.3092982682935617,
+      "rmse": 4.417108532990446,
+      "r2": -0.012692887077019765,
+      "spearman_rho": 0.14337625026545245,
+      "pearson_r": 0.09985924573771093
+    },
+    "F_random_backbone_control": {
+      "n_test": 59,
+      "mae": 3.2755916570841253,
+      "rmse": 4.324193680378439,
+      "r2": 0.02946345271428441,
+      "spearman_rho": 0.253462364543421,
+      "pearson_r": 0.19438376374205316
+    }
+  },
+  "subject_level_mae_improvements_positive_means_candidate_better": {
+    "standard_minus_standard_plus_p1": {
+      "mean": -0.10695802080863827,
+      "ci95_low": -0.31605978500438076,
+      "ci95_high": 0.11422029537512192,
+      "signflip_p_one_sided": 0.840057997100145,
+      "positive_mean_means_candidate_better": true,
+      "baseline": "C_standard_eeg_fc",
+      "candidate": "E_standard_plus_p1"
+    },
+    "global_minus_p1_core": {
+      "mean": -0.15717718950779763,
+      "ci95_low": -0.4318193991243993,
+      "ci95_high": 0.1228614985980881,
+      "signflip_p_one_sided": 0.8622568871556422,
+      "positive_mean_means_candidate_better": true,
+      "baseline": "B_global_activity",
+      "candidate": "D_p1_core_true_backbone"
+    },
+    "random_minus_p1_core": {
+      "mean": 0.045863445805777094,
+      "ci95_low": -0.22288749053394893,
+      "ci95_high": 0.311022434759056,
+      "signflip_p_one_sided": 0.3743812809359532,
+      "positive_mean_means_candidate_better": true,
+      "baseline": "F_random_backbone_control",
+      "candidate": "D_p1_core_true_backbone"
+    },
+    "clinical_minus_p1_core": {
+      "mean": -0.25450395864112185,
+      "ci95_low": -0.6255791256007678,
+      "ci95_high": 0.10981746139808332,
+      "signflip_p_one_sided": 0.9107544622768862,
+      "positive_mean_means_candidate_better": true,
+      "baseline": "A_clinical",
+      "candidate": "D_p1_core_true_backbone"
+    }
+  },
+  "fold_level_mean_mae": {
+    "A_clinical": 3.036286352411812,
+    "B_global_activity": 3.133814588542252,
+    "C_standard_eeg_fc": 3.2792755849998634,
+    "D_p1_core_true_backbone": 3.2902297157284592,
+    "E_standard_plus_p1": 3.386168154997477,
+    "F_random_backbone_control": 3.336602027854797
+  },
+  "fold_level_sd_mae": {
+    "A_clinical": 0.7047564343213013,
+    "B_global_activity": 0.7421801180780297,
+    "C_standard_eeg_fc": 0.7876733691860934,
+    "D_p1_core_true_backbone": 0.7513438996336447,
+    "E_standard_plus_p1": 0.7857469278258787,
+    "F_random_backbone_control": 0.745538994699168
+  },
+  "fold_level_mae_improvements_positive_means_candidate_better": {
+    "standard_minus_standard_plus_p1": {
+      "mean": -0.10689256999761398,
+      "sd": 0.33773790225809636,
+      "wilcoxon_p_two_sided": 4.849602577810463e-16
+    },
+    "global_minus_p1_core": {
+      "mean": -0.1564151271862071,
+      "sd": 0.4061376306431751,
+      "wilcoxon_p_two_sided": 2.55925777362479e-15
+    },
+    "random_minus_p1_core": {
+      "mean": 0.04637231212633819,
+      "sd": 0.4036837869701794,
+      "wilcoxon_p_two_sided": 8.495076983517544e-05
+    }
+  },
+  "partial_spearman": {
+    "p1_composite_adjusted_for_clinical": {
+      "rho": -0.021252170458801116,
+      "p_value": 0.8730651840242281,
+      "n": 59
+    },
+    "p1_composite_adjusted_for_clinical_and_power": {
+      "rho": 0.018120530331528738,
+      "p_value": 0.8916477463772439,
+      "n": 59
+    },
+    "low_gamma_mean_wpli_unadjusted": {
+      "rho": 0.32918925728925863,
+      "p_value": 0.01090153143553761,
+      "n": 59
+    }
+  },
+  "key_feature_partial_spearman": {
+    "low_gamma_mean_wpli": {
+      "unadjusted": {
+        "rho": 0.32918925728925863,
+        "p_value": 0.01090153143553761,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": 0.4370133352925877,
+        "p_value": 0.0005387503482679397,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": 0.4104573268111969,
+        "p_value": 0.0012427062237749464,
+        "n": 59
+      }
+    },
+    "low_gamma_norm_backbone_on": {
+      "unadjusted": {
+        "rho": 0.27184469654721455,
+        "p_value": 0.03726925619004866,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": 0.33382335369668537,
+        "p_value": 0.009769949862466291,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": 0.29104455909983923,
+        "p_value": 0.025326937755403834,
+        "n": 59
+      }
+    },
+    "low_gamma_norm_backbone_ratio": {
+      "unadjusted": {
+        "rho": -0.07305417888421976,
+        "p_value": 0.5824090976843067,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": -0.1607310323584274,
+        "p_value": 0.22394365993148307,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": -0.10754261097486695,
+        "p_value": 0.4175199773673724,
+        "n": 59
+      }
+    },
+    "low_gamma_control_pi": {
+      "unadjusted": {
+        "rho": 0.020907783760513964,
+        "p_value": 0.8751055626272923,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": 0.003036467888772168,
+        "p_value": 0.981790216817028,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": 0.06909310233578322,
+        "p_value": 0.6030767689877277,
+        "n": 59
+      }
+    },
+    "low_gamma_selective_preservation": {
+      "unadjusted": {
+        "rho": -0.18815905585789286,
+        "p_value": 0.153540583092123,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": -0.2710011980887871,
+        "p_value": 0.0378860098353869,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": -0.20455441192375465,
+        "p_value": 0.12016593861500059,
+        "n": 59
+      }
+    },
+    "alpha_control_pi": {
+      "unadjusted": {
+        "rho": 0.017268953552486983,
+        "p_value": 0.8967113053349729,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": 0.06547836677924014,
+        "p_value": 0.6222125330445301,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": 0.05339245647901109,
+        "p_value": 0.6879585096175718,
+        "n": 59
+      }
+    },
+    "alpha_selective_preservation": {
+      "unadjusted": {
+        "rho": 0.08620987044751624,
+        "p_value": 0.5161880068584769,
+        "n": 59
+      },
+      "adjusted_for_clinical": {
+        "rho": 0.029805167303843597,
+        "p_value": 0.8226878991193046,
+        "n": 59
+      },
+      "adjusted_for_clinical_and_power": {
+        "rho": 0.05339155579347413,
+        "p_value": 0.6879635036469156,
+        "n": 59
+      }
+    }
+  },
+  "outputs": {
+    "subject_features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds004504_p1_proxy_subject_features.csv",
+    "predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds004504_p1_proxy_cv_predictions.csv",
+    "subject_mean_predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds004504_p1_proxy_subject_mean_predictions.csv",
+    "fold_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds004504_p1_proxy_fold_metrics.csv",
+    "report": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds004504_p1_proxy_report.md",
+    "model_comparison_plot": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds004504_p1_proxy_model_comparison.png",
+    "p1_proxy_scatter": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds004504_p1_proxy_scatter.png"
+  }
+}

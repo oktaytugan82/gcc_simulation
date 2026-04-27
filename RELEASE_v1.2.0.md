@@ -11,7 +11,7 @@ This release extends the GCC simulation repository with the independent fMRI val
   - GCC-style fMRI feature extraction from XCP-D ROI time series
   - leakage-free subject-held-out model comparison
   - robustness grid over with-GSR vs without-GSR and 4S156 vs 4S256 atlas variants
-  - subject-wise permutation controls
+  - subject-wise permutation controls, updated to 10,000 permutations per task/model for the ds006623 robustness grid
 - Added OpenNeuro ds003367 structural P1-backbone analysis:
   - traumatic coma, recovery, chronic DoC, and healthy-control HARDI scans
   - predefined ascending-arousal/thalamocortical backbone score
@@ -24,7 +24,7 @@ This release extends the GCC simulation repository with the independent fMRI val
 
 ## Key derived results
 
-- ds006623: GCC-derived dynamic-regime features generalize across subjects for loss/recovery-of-responsiveness classification; the strongest recovery-related model reached AUC 0.986 with 100-permutation p = 0.0099.
+- ds006623: GCC-derived dynamic-regime features generalize across subjects for loss/recovery-of-responsiveness classification; the strongest recovery-related model reached AUC 0.986 with 10,000-permutation p = 9.999e-05.
 - ds003367: the predefined arousal/thalamocortical structural backbone is lower in chronic DoC than recovery-late scans (Cohen's d = 1.04; random-backbone p = 0.046), and P1 components classify recovery-late versus chronic DoC in leave-one-out testing (AUC = 0.870; permutation p = 0.019). The paired recovery early-to-late change is not significant.
 - ds004504: low-gamma connectivity is associated with MMSE after clinical and power adjustment, but P1-specific selective-preservation features do not improve out-of-sample MMSE prediction.
 
@@ -55,5 +55,7 @@ python ds003367/run_ds003367_structural_p1_backbone.py
 
 python ds004504/run_ds004504_p1_proxy_validation.py
 ```
+
+For the released ds006623 robustness-grid evidence, run the leakage-free comparison for each GSR/atlas feature table with `--permutations 10000`; `--permutation-backend process --permutation-jobs 3` can be used to reproduce the faster local 10k run.
 
 The scripts expect the public OpenNeuro data to be available locally. The repository stores derived tables and figures used in the manuscript, not the full raw datasets.

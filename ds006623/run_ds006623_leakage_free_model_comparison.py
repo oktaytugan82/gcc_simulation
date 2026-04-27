@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from pathlib import Path
 
 import numpy as np
@@ -140,6 +141,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-prefix", default="ds006623_leakage_free")
     parser.add_argument("--clip-eps", type=float, default=1e-6)
     parser.add_argument("--permutations", type=int, default=0)
+    parser.add_argument("--permutation-backend", choices=["serial", "thread", "process"], default="serial")
+    parser.add_argument("--permutation-jobs", type=int, default=1)
     parser.add_argument("--permutation-seed", type=int, default=20260426)
     parser.add_argument(
         "--permutation-tasks",
@@ -298,9 +301,18 @@ def compute_metrics(pred: pd.DataFrame, eps: float) -> dict[str, float]:
     y = pred["target"].to_numpy(dtype=int)
     p = np.clip(pred["probability"].to_numpy(dtype=float), eps, 1 - eps)
     yhat = pred["prediction"].to_numpy(dtype=int)
+    return compute_metrics_arrays(y, p, yhat, pred["subject"].to_numpy())
+
+
+def compute_metrics_arrays(
+    y: np.ndarray,
+    p: np.ndarray,
+    yhat: np.ndarray,
+    subjects: np.ndarray,
+) -> dict[str, float]:
     return {
-        "n_rows": int(len(pred)),
-        "n_subjects": int(pred["subject"].nunique()),
+        "n_rows": int(len(y)),
+        "n_subjects": int(len(np.unique(subjects))),
         "positive_rate": float(np.mean(y)),
         "roc_auc": safe_auc(y, p),
         "average_precision": safe_ap(y, p),
@@ -411,6 +423,122 @@ def permute_targets_within_subject(data: pd.DataFrame, rng: np.random.Generator)
     return permuted
 
 
+def evaluate_permutation_targets(
+    perm_id: int,
+    y_perm: np.ndarray,
+    x: np.ndarray,
+    subjects: np.ndarray,
+    fold_indices: list[tuple[np.ndarray, np.ndarray]],
+    eps: float,
+) -> dict[str, float] | None:
+    y_all: list[np.ndarray] = []
+    p_all: list[np.ndarray] = []
+    yhat_all: list[np.ndarray] = []
+    subject_all: list[np.ndarray] = []
+    for train_idx, test_idx in fold_indices:
+        y_train = y_perm[train_idx]
+        if len(np.unique(y_train)) < 2 or len(test_idx) == 0:
+            continue
+        model = make_model()
+        model.fit(x[train_idx], y_train)
+        proba = model.predict_proba(x[test_idx])[:, 1]
+        y_test = y_perm[test_idx]
+        y_all.append(y_test)
+        p_all.append(proba)
+        yhat_all.append((proba >= 0.5).astype(int))
+        subject_all.append(subjects[test_idx])
+    if not y_all:
+        return None
+
+    metrics = compute_metrics_arrays(
+        np.concatenate(y_all),
+        np.clip(np.concatenate(p_all), eps, 1 - eps),
+        np.concatenate(yhat_all),
+        np.concatenate(subject_all),
+    )
+    return {"permutation": perm_id, **metrics}
+
+
+def evaluate_permutation_chunk(
+    chunk: list[tuple[int, np.ndarray]],
+    x: np.ndarray,
+    subjects: np.ndarray,
+    fold_indices: list[tuple[np.ndarray, np.ndarray]],
+    eps: float,
+) -> list[dict[str, float]]:
+    rows = [
+        evaluate_permutation_targets(perm_id, y_perm, x, subjects, fold_indices, eps)
+        for perm_id, y_perm in chunk
+    ]
+    return [row for row in rows if row is not None]
+
+
+def make_chunks(items: list[tuple[int, np.ndarray]], n_chunks: int) -> list[list[tuple[int, np.ndarray]]]:
+    n_chunks = max(1, min(n_chunks, len(items)))
+    boundaries = np.linspace(0, len(items), n_chunks + 1, dtype=int)
+    return [items[int(start) : int(stop)] for start, stop in zip(boundaries[:-1], boundaries[1:]) if stop > start]
+
+
+def permutation_metrics_fast(
+    data: pd.DataFrame,
+    features: list[str],
+    n_permutations: int,
+    rng: np.random.Generator,
+    eps: float,
+    n_jobs: int = 1,
+    backend: str = "serial",
+) -> list[dict[str, float]]:
+    x = data[features].to_numpy(dtype=float)
+    y_base = data["target"].to_numpy(dtype=int)
+    subjects = data["subject"].to_numpy()
+    subject_values = sorted(pd.unique(data["subject"]))
+    subject_indices = [np.flatnonzero(subjects == subject) for subject in subject_values]
+    fold_indices = [
+        (np.flatnonzero(subjects != subject), np.flatnonzero(subjects == subject)) for subject in subject_values
+    ]
+
+    permuted_targets: list[tuple[int, np.ndarray]] = []
+    for perm_id in range(1, n_permutations + 1):
+        y_perm = y_base.copy()
+        for indices in subject_indices:
+            labels = y_perm[indices].copy()
+            rng.shuffle(labels)
+            y_perm[indices] = labels
+        permuted_targets.append((perm_id, y_perm))
+
+    if backend == "process" and n_jobs != 1:
+        chunks = make_chunks(permuted_targets, n_jobs * 4)
+        with ProcessPoolExecutor(max_workers=n_jobs) as executor:
+            chunk_results = list(
+                executor.map(
+                    evaluate_permutation_chunk,
+                    chunks,
+                    [x] * len(chunks),
+                    [subjects] * len(chunks),
+                    [fold_indices] * len(chunks),
+                    [eps] * len(chunks),
+                )
+            )
+        results = [row for chunk in chunk_results for row in chunk]
+    elif backend == "thread" and n_jobs != 1:
+        chunks = make_chunks(permuted_targets, n_jobs * 4)
+        with ThreadPoolExecutor(max_workers=n_jobs) as executor:
+            chunk_results = list(
+                executor.map(
+                    lambda chunk: evaluate_permutation_chunk(chunk, x, subjects, fold_indices, eps),
+                    chunks,
+                )
+            )
+        results = [row for chunk in chunk_results for row in chunk]
+    else:
+        results = [
+            evaluate_permutation_targets(perm_id, y_perm, x, subjects, fold_indices, eps)
+            for perm_id, y_perm in permuted_targets
+        ]
+
+    return [row for row in results if row is not None]
+
+
 def permutation_p_values(metrics_df: pd.DataFrame, permutation_df: pd.DataFrame) -> pd.DataFrame:
     rows: list[dict[str, object]] = []
     if metrics_df.empty or permutation_df.empty:
@@ -491,17 +619,29 @@ def main() -> int:
             loss_rows.append(losses)
 
             if args.permutations > 0 and task_name in permutation_tasks and model_name in permutation_models:
-                for perm_id in range(1, args.permutations + 1):
-                    perm_task_df = permute_targets_within_subject(task_df, rng)
-                    perm_pred = loso_predict(perm_task_df, features)
-                    if perm_pred.empty:
-                        continue
-                    perm_metrics = compute_metrics(perm_pred, args.clip_eps)
+                print(
+                    f"[permutation] {task_name}/{model_name}: {args.permutations} "
+                    f"permutations ({args.permutation_backend}, jobs={args.permutation_jobs})",
+                    flush=True,
+                )
+                permutation_metrics = permutation_metrics_fast(
+                    task_df,
+                    features,
+                    args.permutations,
+                    rng,
+                    args.clip_eps,
+                    args.permutation_jobs,
+                    args.permutation_backend,
+                )
+                print(
+                    f"[permutation] {task_name}/{model_name}: done {len(permutation_metrics)} rows",
+                    flush=True,
+                )
+                for perm_metrics in permutation_metrics:
                     permutation_rows.append(
                         {
                             "task_name": task_name,
                             "model": model_name,
-                            "permutation": perm_id,
                             **perm_metrics,
                         }
                     )
@@ -540,6 +680,8 @@ def main() -> int:
         "permutation_pvalues": str(permutation_p_path.resolve()),
         "figure": str(figure_path.resolve()) if figure_path else None,
         "permutations": args.permutations,
+        "permutation_backend": args.permutation_backend,
+        "permutation_jobs": args.permutation_jobs,
         "permutation_tasks": sorted(permutation_tasks),
         "permutation_models": sorted(permutation_models),
         "feature_blocks": FEATURE_BLOCKS,

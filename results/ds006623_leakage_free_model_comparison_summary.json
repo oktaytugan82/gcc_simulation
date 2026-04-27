@@ -1,16 +1,18 @@
 {
   "analysis": "ds006623 leakage-free leave-one-subject-out phase-level model comparison",
   "data_root": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\data\\ds006623-minimal",
-  "window_augmented": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_fmri_gcc_window_features_with_propofol.csv",
-  "phase_augmented": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_fmri_gcc_phase_features_with_propofol.csv",
-  "metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_model_metrics.csv",
-  "predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_model_predictions.csv",
-  "subject_losses": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_subject_losses.csv",
-  "model_delta_tests": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_model_delta_tests.csv",
-  "permutation_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_permutation_metrics.csv",
-  "permutation_pvalues": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withGSR_4S256_leakage_free_permutation_pvalues.csv",
-  "figure": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds006623_withGSR_4S256_leakage_free_model_comparison_auc.png",
-  "permutations": 100,
+  "window_augmented": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_window_features_with_propofol.csv",
+  "phase_augmented": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_phase_features_with_propofol.csv",
+  "metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_model_metrics.csv",
+  "predictions": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_model_predictions.csv",
+  "subject_losses": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_subject_losses.csv",
+  "model_delta_tests": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_model_delta_tests.csv",
+  "permutation_metrics": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_permutation_metrics.csv",
+  "permutation_pvalues": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\results\\ds006623_withoutGSR_4S156_leakage_free_permutation_pvalues.csv",
+  "figure": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\figures\\ds006623_withoutGSR_4S156_leakage_free_model_comparison_auc.png",
+  "permutations": 10000,
+  "permutation_backend": "process",
+  "permutation_jobs": 3,
   "permutation_tasks": [
     "lor_vs_ror_task3",
     "prelor_vs_lor_task2",
@@ -129,9 +131,9 @@
       "n_rows": 77,
       "n_subjects": 26,
       "roc_auc": 1.0,
-      "balanced_accuracy": 0.9901960784313726,
-      "log_loss": 0.05504047367252612,
-      "brier": 0.010577384406955817
+      "balanced_accuracy": 0.9803921568627452,
+      "log_loss": 0.058163369687707626,
+      "brier": 0.011929094785570265
     },
     {
       "task_name": "awake_base1_vs_lor",
@@ -139,9 +141,9 @@
       "n_rows": 77,
       "n_subjects": 26,
       "roc_auc": 1.0,
-      "balanced_accuracy": 1.0,
-      "log_loss": 0.05394349975006512,
-      "brier": 0.00998125050999389
+      "balanced_accuracy": 0.9901960784313726,
+      "log_loss": 0.05520570389347348,
+      "brier": 0.010751654715196334
     },
     {
       "task_name": "awake_base1_vs_lor",
@@ -149,9 +151,9 @@
       "n_rows": 77,
       "n_subjects": 26,
       "roc_auc": 1.0,
-      "balanced_accuracy": 1.0,
-      "log_loss": 0.047575010957998744,
-      "brier": 0.00797392173521549
+      "balanced_accuracy": 0.9803921568627452,
+      "log_loss": 0.06694176265697771,
+      "brier": 0.016393899068257146
     },
     {
       "task_name": "awake_base1_vs_lor",
@@ -159,9 +161,9 @@
       "n_rows": 77,
       "n_subjects": 26,
       "roc_auc": 1.0,
-      "balanced_accuracy": 1.0,
-      "log_loss": 0.047952149034111526,
-      "brier": 0.008297809727581264
+      "balanced_accuracy": 0.9803921568627452,
+      "log_loss": 0.06488652438182295,
+      "brier": 0.015571112111908751
     },
     {
       "task_name": "base1_vs_base2_control",
@@ -179,9 +181,9 @@
       "n_rows": 50,
       "n_subjects": 25,
       "roc_auc": 1.0,
-      "balanced_accuracy": 0.96,
-      "log_loss": 0.08057330602554266,
-      "brier": 0.01811751647871637
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.07823711433834861,
+      "brier": 0.016781523897603
     },
     {
       "task_name": "base1_vs_base2_control",
@@ -189,9 +191,9 @@
       "n_rows": 50,
       "n_subjects": 25,
       "roc_auc": 1.0,
-      "balanced_accuracy": 0.96,
-      "log_loss": 0.08290946472076074,
-      "brier": 0.01921031807239281
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.07818747488674745,
+      "brier": 0.01657903888337252
     },
     {
       "task_name": "base1_vs_base2_control",
@@ -200,8 +202,8 @@
       "n_subjects": 25,
       "roc_auc": 1.0,
       "balanced_accuracy": 0.98,
-      "log_loss": 0.06766167092057297,
-      "brier": 0.014188763295264879
+      "log_loss": 0.07850474018222232,
+      "brier": 0.017451671987939767
     },
     {
       "task_name": "base1_vs_base2_control",
@@ -210,48 +212,48 @@
       "n_subjects": 25,
       "roc_auc": 1.0,
       "balanced_accuracy": 0.98,
-      "log_loss": 0.06778771343824147,
-      "brier": 0.014100736111185246
-    },
-    {
-      "task_name": "lor_vs_ror_task3",
-      "model": "gcc_regime_plus_confounds",
-      "n_rows": 38,
-      "n_subjects": 19,
-      "roc_auc": 0.9861495844875346,
-      "balanced_accuracy": 0.8947368421052632,
-      "log_loss": 0.1784839959733287,
-      "brier": 0.055456762772284465
+      "log_loss": 0.08002361091490862,
+      "brier": 0.01799606703798265
     },
     {
       "task_name": "lor_vs_ror_task3",
       "model": "full_standard_plus_gcc",
       "n_rows": 38,
       "n_subjects": 19,
-      "roc_auc": 0.9833795013850415,
-      "balanced_accuracy": 0.8947368421052632,
-      "log_loss": 0.18089647209877202,
-      "brier": 0.057645854802729636
+      "roc_auc": 0.9806094182825486,
+      "balanced_accuracy": 0.9210526315789473,
+      "log_loss": 0.19281440948246883,
+      "brier": 0.0562108469553597
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9778393351800554,
+      "balanced_accuracy": 0.9210526315789473,
+      "log_loss": 0.19785768581271973,
+      "brier": 0.057122172956411275
+    },
+    {
+      "task_name": "lor_vs_ror_task3",
+      "model": "gcc_core_plus_confounds",
+      "n_rows": 38,
+      "n_subjects": 19,
+      "roc_auc": 0.9750692520775623,
+      "balanced_accuracy": 0.9210526315789473,
+      "log_loss": 0.21395910194377113,
+      "brier": 0.06377978264254602
     },
     {
       "task_name": "lor_vs_ror_task3",
       "model": "standard_fc_plus_confounds",
       "n_rows": 38,
       "n_subjects": 19,
-      "roc_auc": 0.9778393351800554,
-      "balanced_accuracy": 0.8947368421052632,
-      "log_loss": 0.21712616353783987,
-      "brier": 0.07101679495972327
-    },
-    {
-      "task_name": "lor_vs_ror_task3",
-      "model": "gcc_core_plus_confounds",
-      "n_rows": 38,
-      "n_subjects": 19,
-      "roc_auc": 0.9778393351800554,
-      "balanced_accuracy": 0.8947368421052632,
-      "log_loss": 0.2023564451087814,
-      "brier": 0.0665255924547256
+      "roc_auc": 0.9695290858725761,
+      "balanced_accuracy": 0.9210526315789473,
+      "log_loss": 0.23520217806481478,
+      "brier": 0.06943001549853581
     },
     {
       "task_name": "lor_vs_ror_task3",
@@ -265,33 +267,43 @@
     },
     {
       "task_name": "prelor_vs_lor_task2",
-      "model": "standard_fc_plus_confounds",
-      "n_rows": 50,
-      "n_subjects": 25,
-      "roc_auc": 0.9856,
-      "balanced_accuracy": 0.96,
-      "log_loss": 0.1603638272781667,
-      "brier": 0.0421469752719029
-    },
-    {
-      "task_name": "prelor_vs_lor_task2",
       "model": "gcc_core_plus_confounds",
       "n_rows": 50,
       "n_subjects": 25,
-      "roc_auc": 0.984,
+      "roc_auc": 0.9888,
       "balanced_accuracy": 0.96,
-      "log_loss": 0.16932151535699105,
-      "brier": 0.04686785955291472
+      "log_loss": 0.18841609632882786,
+      "brier": 0.04930647760287993
     },
     {
       "task_name": "prelor_vs_lor_task2",
       "model": "gcc_regime_plus_confounds",
       "n_rows": 50,
       "n_subjects": 25,
-      "roc_auc": 0.9823999999999999,
-      "balanced_accuracy": 0.96,
-      "log_loss": 0.18020155727236176,
-      "brier": 0.05034301315999439
+      "roc_auc": 0.9888,
+      "balanced_accuracy": 0.94,
+      "log_loss": 0.19578035825193724,
+      "brier": 0.052396164656764915
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.9888,
+      "balanced_accuracy": 0.94,
+      "log_loss": 0.19705921826040815,
+      "brier": 0.05312160042848233
+    },
+    {
+      "task_name": "prelor_vs_lor_task2",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 50,
+      "n_subjects": 25,
+      "roc_auc": 0.9871999999999999,
+      "balanced_accuracy": 0.98,
+      "log_loss": 0.19688118424652112,
+      "brier": 0.050182927406834034
     },
     {
       "task_name": "prelor_vs_lor_task2",
@@ -304,24 +316,44 @@
       "brier": 0.050116009133361006
     },
     {
-      "task_name": "prelor_vs_lor_task2",
-      "model": "full_standard_plus_gcc",
-      "n_rows": 50,
-      "n_subjects": 25,
-      "roc_auc": 0.9808,
-      "balanced_accuracy": 0.94,
-      "log_loss": 0.17980919113456195,
-      "brier": 0.05217210322640518
-    },
-    {
       "task_name": "responsive_vs_lor_all_phases",
       "model": "gcc_core_plus_confounds",
       "n_rows": 147,
       "n_subjects": 26,
-      "roc_auc": 0.9685457516339869,
-      "balanced_accuracy": 0.8936887254901961,
-      "log_loss": 0.23308098611729064,
-      "brier": 0.07447334972301355
+      "roc_auc": 0.9826388888888888,
+      "balanced_accuracy": 0.928921568627451,
+      "log_loss": 0.18037182948840916,
+      "brier": 0.05553507611525126
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "gcc_regime_plus_confounds",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9797794117647058,
+      "balanced_accuracy": 0.928921568627451,
+      "log_loss": 0.18883874793725033,
+      "brier": 0.058474089703062546
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "full_standard_plus_gcc",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9789624183006536,
+      "balanced_accuracy": 0.928921568627451,
+      "log_loss": 0.18953847763480303,
+      "brier": 0.058718605820816824
+    },
+    {
+      "task_name": "responsive_vs_lor_all_phases",
+      "model": "standard_fc_plus_confounds",
+      "n_rows": 147,
+      "n_subjects": 26,
+      "roc_auc": 0.9763071895424836,
+      "balanced_accuracy": 0.9237132352941176,
+      "log_loss": 0.2000237407604448,
+      "brier": 0.061750664009859145
     },
     {
       "task_name": "responsive_vs_lor_all_phases",
@@ -332,36 +364,6 @@
       "balanced_accuracy": 0.889093137254902,
       "log_loss": 0.2344014244692642,
       "brier": 0.07331002925770355
-    },
-    {
-      "task_name": "responsive_vs_lor_all_phases",
-      "model": "standard_fc_plus_confounds",
-      "n_rows": 147,
-      "n_subjects": 26,
-      "roc_auc": 0.9671160130718954,
-      "balanced_accuracy": 0.8936887254901961,
-      "log_loss": 0.23403768384397963,
-      "brier": 0.07455132392351718
-    },
-    {
-      "task_name": "responsive_vs_lor_all_phases",
-      "model": "gcc_regime_plus_confounds",
-      "n_rows": 147,
-      "n_subjects": 26,
-      "roc_auc": 0.965890522875817,
-      "balanced_accuracy": 0.8936887254901961,
-      "log_loss": 0.23751000968644295,
-      "brier": 0.07593269754122417
-    },
-    {
-      "task_name": "responsive_vs_lor_all_phases",
-      "model": "full_standard_plus_gcc",
-      "n_rows": 147,
-      "n_subjects": 26,
-      "roc_auc": 0.9642565359477124,
-      "balanced_accuracy": 0.8936887254901961,
-      "log_loss": 0.2415360752273605,
-      "brier": 0.07703368762636416
     }
   ]
 }

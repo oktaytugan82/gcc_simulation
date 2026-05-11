@@ -8,6 +8,14 @@ This repository contains the complete simulation and analysis code accompanying 
 
 The Gamma-Code Consensus (GCC) is a dynamical regime model for level of consciousness and global access in a network of coupled neural populations. This code reproduces the synthetic Kuramoto simulations, the empirical Chennu et al. 2016 EEG pilot and gamma baseline-holdout analysis, HCP-derived Budapest Reference Connectome topology stress tests, OpenNeuro ds006623 fMRI validation analyses, OpenNeuro ds003367 traumatic coma/DoC HARDI structural backbone analyses, OpenNeuro ds004504 neurodegenerative EEG proxy tests, and the Hermann et al. 2021 FDG-PET/EEG disorders-of-consciousness proxy analysis.
 
+## Release v1.3.2 additions
+
+Version v1.3.2 is a metadata patch over v1.3.1:
+
+- Updates the final manuscript and supplement from `v1.3.1` to `v1.3.2`.
+- Replaces generic repository links in the manuscript data-availability statements with direct frozen-tag links to `https://github.com/oktaytugan82/gcc_simulation/tree/v1.3.2`.
+- Keeps the Zenodo concept DOI as `10.5281/zenodo.19744969`.
+
 ## Release v1.3.1 additions
 
 Version v1.3.1 is a metadata patch over v1.3.0:

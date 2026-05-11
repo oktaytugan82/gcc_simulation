@@ -1,0 +1,14 @@
+{
+  "dataset": "Chennu et al. 2016, Brain Connectivity Dissociates Responsiveness from Drug Exposure during Propofol-Induced Transitions of Consciousness",
+  "repository": "University of Cambridge Data Repository",
+  "dataset_doi": "10.17863/CAM.68959",
+  "dataset_url": "https://doi.org/10.17863/CAM.68959",
+  "raw_bundle_filename": "sedation-restingstate.zip",
+  "raw_bundle_size_bytes": 3694326663,
+  "raw_bundle_md5": "C38293499CDFE090FE2C1AAFA687785C",
+  "license": "CC BY 2.0 UK",
+  "metadata_file_in_repository": "data_manifests/chennu2016_datainfo.mat",
+  "metadata_file_in_raw_bundle": "Sedation-RestingState/datainfo.mat",
+  "github_policy": "The raw EEG ZIP is not redistributed in this GitHub repository because of its 3.7 GB size. Download it from the Cambridge repository and verify the MD5 checksum before reproducing raw-data analyses.",
+  "used_for": "Gamma-band baseline-holdout validation reported in results/chennu2016_gamma_baseline_holdout_summary.json"
+}

@@ -1,0 +1,109 @@
+DEMOGRAPHIC CHARACTERISTICS;;;;;"BEHAVIORAL EXAMINATION
+Coma Recovery Scale - revised (CRS-r)";;;;;;;;;;"FLUORODEOXYGLUCOSE POSITRON EMISSION TOMOGRAPHY
+(FDG-PET)";;;;;;;"ELECTROENCEPHALOGRAM
+(EEG)";;;;;;;;;6-MONTH OUTCOME;
+Patient_ID;"Age 
+(years)";Gender;Etiology;"Time since injury 
+(days)";Number of CRS-r;"PET/CRS-r 
+delay
+(days)";"CRS-r 
+total score";"CRS-r 
+auditory subscore";"CRS-r 
+visual subscore";"CRS-r 
+motor subscore";"CRS-r 
+verbal subscore";"CRS-r
+communication subscore";"CRS-r
+arousal subscore";"State
+of
+consciousness";"Acquisition
+protocol";"Time from
+tracer injecton
+(min)";"Tracer
+dose
+(MBq)";"Weight
+(kg)";"Blood
+glucose
+(mmol/L)";Quality;"Metabolic
+index of the best
+preserved hemisphere";"Available
+Recording";"Successful
+preprocessing";"EEG/PET
+delay
+(days)";"EEG/CRS-r
+delay
+(days)";"In-sample
+SVM
+prediction";"In-sample
+SVM
+classification";"Out-of-sample
+SVM
+prediction";"Out-of-sample
+SVM
+classification";"Local-Global
+paradigm";"Glasgow Outcome
+Scale Extended";"State of 
+Consciousness"
+P1;24;Male;Traumatic;742;4;8;21;4;5;6;1;2;3;EMCS;Static;33.55;191;95;3;Good;5.39;Yes;Yes;-7;1;;;0.76;MCS;Local;3;Concious
+P2;28.5;Male;Other;123;4;-2;8;2;1;1;2;0;2;VS/UWS;Static;55.4;135;35;4.2;Good;3.87;Yes;Yes;2;0;0.73;MCS;0.42;VS/UWS;None;2;VS/UWS
+P3;42;Male;Vascular;2068;3;0;10;2;3;2;1;0;2;MCS-;Static;30.8;119;60;4.4;Good;4.46;Yes;Yes;1;1;0.77;MCS;0.74;MCS;Local;1;Dead
+P4;29;Male;Traumatic;58;3;0;19;3;5;6;2;1;2;EMCS;Static;39.95;104;53;4.7;Good;3.25;Yes;Yes;1;1;;;0.99;MCS;None;5;Concious
+P5;21.6;Male;Traumatic;353;3;-1;8;2;2;1;1;0;2;MCS-;Static;37.58;120;49;3.9;Good;3.72;Yes;Yes;1;0;0.36;VS/UWS;0.16;VS/UWS;Global;2;VS/UWS
+P6;21.5;Male;Vascular;190;3;0;21;4;5;6;3;2;1;EMCS;Static;34.13;122;59;5.1;Good;3.66;Yes;Yes;-6;-6;;;0.74;MCS;Global;3;Concious
+P7;56.2;Female;Vascular;209;3;7;13;2;3;5;1;0;2;MCS-;Static;36.7;204;65;6.1;Intermediate;2.62;Yes;No;-6;1;0.768326204;MCS;0.770973923;MCS;None;3;MCS+
+P8;31.2;Female;Anoxic;95;5;-10;11;3;1;2;2;1;2;MCS+;Static;30.97;123;59;5.7;Good;3.42;Yes;No;6;-4;0.736670713;MCS;0.22551653;VS/UWS;None;1;Dead
+P9;16.7;Male;Traumatic;171;6;1;7;1;1;2;1;0;2;VS/UWS;Dynamic;49.55;120;50;6.2;Good;4.16;Yes;Yes;-1;0;0.81;MCS;0.74;MCS;None;2;VS/UWS
+P10;65.6;Male;Anoxic;326;3;1;12;3;3;1;1;0;2;MCS+;Dynamic;33.18;151;76;4.6;Good;3.96;Yes;Yes;-1;0;0.68;MCS;0.7;MCS;Local;3;Concious
+P11;50.3;Male;Traumatic;1928;3;-1;12;2;3;5;1;0;1;MCS-;Static;37.63;206;76;4.8;Good;3.67;Yes;Yes;1;0;0.75;MCS;0.64;MCS;Local;3;MCS+
+P12;17.6;Female;Traumatic;1063;3;0;9;4;1;2;1;0;1;MCS+;Static;33.12;134;60;5.3;Good;4.06;Yes;No;2;2;0.426468271;VS/UWS;0.27636343;VS/UWS;Global;3;MCS+
+P13;61.3;Male;Anoxic;58;3;-2;5;1;1;1;1;0;1;VS/UWS;Static;38.57;151;78;8;Good;2.32;Yes;No;2;0;0.358800561;VS/UWS;0.050569355;VS/UWS;None;1;Dead
+P14;26.5;Male;Other;209;3;-1;12;2;3;5;1;0;1;MCS-;Static;42.1;116;55;3.5;Intermediate;2.53;Yes;Yes;1;0;0.68;MCS;0.22;VS/UWS;Local;2;VS/UWS
+P15;45.6;Male;Traumatic;2230;2;2;15;3;5;2;2;1;2;MCS+;Static;27.98;171;81;4.8;Intermediate;3.28;Yes;Yes;-1;1;0.74;MCS;0.74;MCS;Local;2;MCS-
+P16;34.6;Male;Traumatic;579;2;-1;6;2;0;2;1;0;1;VS/UWS;Static;39.25;133;71;7.2;Good;2.21;Yes;Yes;1;0;0.36;VS/UWS;0.2;VS/UWS;None;2;VS/UWS
+P17;36;Male;Other;187;1;6;12;2;3;3;2;0;2;MCS-;Dynamic;42.4;119;37;5.3;Good;2.7;Yes;No;-6;0;;;;;;2;MCS-
+P18;49;Male;Anoxic;88;1;6;3;1;0;1;0;0;1;VS/UWS;Static;35;159;80;4.8;Good;2.56;Yes;No;-6;0;0.5;VS/UWS;0.221594612;VS/UWS;None;2;VS/UWS
+P19;58.9;Female;Anoxic;134;4;1;9;2;1;2;2;0;2;VS/UWS;Static;37.47;168;94;5.4;Good;2.69;Yes;No;-1;0;;;;;;1;Dead
+P20;76.5;Male;Anoxic;38;3;-1;17;3;5;3;3;1;2;MCS+;Dynamic;58.5;163;82;5.8;Good;4;Yes;No;1;0;0.73656318;MCS;0.77519267;MCS;Global;1;Dead
+P21;47.4;Female;Vascular;777;2;-1;9;2;0;3;2;0;2;MCS-;Static;32;123;64;5.4;Good;3.18;Yes;Yes;1;0;0.8;MCS;0.74;MCS;None;2;MCS-
+P22;28.8;Male;Anoxic;511;4;-1;7;1;1;2;1;0;2;VS/UWS;Dynamic;32.48;122;60;4.7;Good;2.91;Yes;Yes;-1;-2;0.32;VS/UWS;0.28;VS/UWS;None;2;VS/UWS
+P23;36.1;Male;Traumatic;40;2;5;9;1;0;5;2;0;1;MCS-;Dynamic;41.87;207;55;6.2;Good;3.4;Yes;Yes;-5;0;0.74;MCS;0.25;VS/UWS;None;4;Concious
+P24;44.9;Male;Anoxic;221;4;1;13;2;3;5;1;0;2;MCS-;Static;42.08;155;80;5.1;Good;3.13;Yes;No;-1;0;;;;;;3;MCS+
+P25;70.1;Male;Other;195;4;-2;8;0;3;2;1;0;2;MCS-;Static;39.23;154;89.5;6;Good;3.39;Yes;Yes;-1;-3;0.89;MCS;0.2;VS/UWS;Local;1;Dead
+P26;27.3;Female;Traumatic;380;4;1;9;2;3;1;1;0;2;MCS-;Static;26.65;115;53;4.6;Intermediate;3.93;Yes;Yes;-6;-5;0.51;VS/UWS;0.36;VS/UWS;Global;2;MCS-
+P27;30.4;Female;Traumatic;644;5;1;16;3;5;5;1;0;2;MCS+;Dynamic;51.88;108;45;5.3;Good;5.66;Yes;Yes;-1;0;0.74;MCS;0.51;MCS;None;3;MCS+
+P28;46.5;Male;Traumatic;2488;4;0;10;2;3;2;2;0;1;MCS-;Static;37;130;60;5.1;Good;3.86;Yes;Yes;1;1;0.67;MCS;0.7;MCS;None;3;MCS+
+P29;68.4;Male;Other;46;1;-1;12;3;3;3;1;0;2;MCS+;Static;26.7;133;68;4.3;Intermediate;3.43;Yes;Yes;1;0;0.76;MCS;0.82;MCS;Global;3;Concious
+P30;31.6;Male;Traumatic;810;2;-1;10;2;0;4;2;0;2;MCS-;Static;37;160;81;4.7;Good;2.77;Yes;Yes;1;0;0.79;MCS;0.52;MCS;None;3;MCS+
+P31;51;Male;Traumatic;488;4;1;7;2;0;2;1;0;2;VS/UWS;Static;31.85;114;52;7.9;Good;2.7;Yes;Yes;-1;0;0.48;VS/UWS;0.26;VS/UWS;None;2;VS/UWS
+P32;69.3;Male;Anoxic;316;3;-1;5;2;0;1;1;0;1;VS/UWS;Dynamic;43.6;159;75;6.7;Intermediate;1.55;Yes;No;1;0;0.317954384;VS/UWS;0.275844534;VS/UWS;Local;2;VS/UWS
+P33;70.4;Male;Vascular;113;3;-2;8;1;3;2;1;0;1;MCS-;Static;32.13;143;75;5.3;Good;3.63;Yes;Yes;1;-1;0.82;MCS;0.52;MCS;Global;3;Concious
+P34;28.8;Male;Anoxic;194;2;2;5;1;0;1;1;0;2;VS/UWS;Static;26;186;51;7;Good;1.93;Yes;Yes;-3;0;0.32;VS/UWS;0.08;VS/UWS;Local;2;VS/UWS
+P35;68.3;Female;Anoxic;53;2;1;6;1;0;2;1;0;2;VS/UWS;Static;50.32;126;61;6.5;Good;2.5;Yes;Yes;-1;0;0.38;VS/UWS;0.14;VS/UWS;Local;2;VS/UWS
+P36;67.6;Male;Vascular;56;2;-1;8;2;3;1;1;0;1;MCS-;Static;39.83;122;80;6.9;Good;3.09;Yes;Yes;1;0;0.71;MCS;0.74;MCS;Global;1;Dead
+P37;51;Female;Anoxic;725;2;1;6;1;0;2;1;0;2;VS/UWS;Static;29.8;143;73;6.3;Good;2.15;Yes;Yes;-1;0;0.31;VS/UWS;0.13;VS/UWS;Local;2;MCS-
+P38;67.3;Male;Anoxic;197;3;1;4;0;0;1;1;0;2;VS/UWS;Dynamic;49.68;190;94;6.1;Good;2.95;Yes;Yes;-1;0;0.54;VS/UWS;0.5;MCS;None;2;VS/UWS
+P39;38.3;Male;Traumatic;180;3;-3;7;1;1;2;1;0;2;VS/UWS;Dynamic;28.55;112;70;4.9;Good;2.48;Yes;No;1;-2;0.358878786;VS/UWS;0.300123208;VS/UWS;None;2;MCS-
+P40;68.2;Female;Vascular;103;1;-1;13;2;3;4;2;0;2;MCS-;Static;50.38;122;58;6;Good;3.87;Yes;Yes;1;0;0.75;MCS;0.43;VS/UWS;Local;2;MCS-
+P41;47.2;Male;Anoxic;122;3;1;6;1;1;2;1;0;1;VS/UWS;Static;21.95;143;77;7.1;Good;1.98;Yes;Yes;-1;0;0.29;VS/UWS;0.11;VS/UWS;None;1;Dead
+P42;30.7;Female;Anoxic;208;2;-6;8;1;1;2;2;0;2;VS/UWS;Static;50.67;110;52;5.5;Good;2.55;Yes;No;6;0;;;;;;2;VS/UWS
+P43;36.2;Female;Vascular;46;5;-1;17;3;5;5;1;1;2;MCS+;Static;38.93;143;50;5.9;Good;4.74;Yes;No;-12;-13;0.60468718;MCS;0.54999725;MCS;Global;4;Concious
+P44;28.9;Female;Anoxic;1630;3;-1;4;1;0;1;1;0;1;VS/UWS;Static;42;140;78;5.1;Good;2.95;Yes;Yes;2;1;0.54;VS/UWS;0.8;MCS;Global;2;VS/UWS
+P45;48.8;Female;Traumatic;980;4;-1;14;4;3;3;1;1;2;MCS+;Static;25.38;175;75;5.8;Good;3.85;Yes;Yes;-1;0;0.74;MCS;0.72;MCS;Local;3;MCS+
+P46;22.4;Male;Other;39;6;-30;15;3;3;5;2;0;2;MCS+;Static;53.48;134;53;5.9;Good;4.08;Yes;Yes;-27;-57;0.81;MCS;0.34;VS/UWS;Local;6;Concious
+P47;53.4;Female;Anoxic;329;5;-1;6;1;0;2;1;0;2;VS/UWS;Static;35.7;126;48;5.4;Good;3.87;Yes;Yes;-1;0;0.36;VS/UWS;0.45;VS/UWS;Global;2;VS/UWS
+P48;23.5;Female;Traumatic;69;5;1;5;1;0;2;1;0;1;VS/UWS;Static;33.25;162;90;5.9;Good;3.88;Yes;Yes;-1;0;0.57;MCS;0.58;MCS;Global;2;MCS-
+P49;53.3;Male;Other;1495;3;-2;8;2;1;2;1;0;2;VS/UWS;Dynamic;46.82;134;69;4.7;Good;3.34;Yes;No;1;-1;0.237701725;VS/UWS;0.313986502;VS/UWS;Global;3;MCS+
+P50;25.5;Male;Other;31;2;8;9;2;3;2;1;0;1;MCS-;Static;32.9;122;58;5.6;Good;3.34;Yes;Yes;2;10;0.74;MCS;0.26;VS/UWS;Global;4;Concious
+P51;44.4;Female;Vascular;1956;2;1;15;2;4;6;1;0;2;EMCS;Static;41.8;133;59;4.2;Good;4.94;Yes;No;1;2;;;0.636875199;MCS;None;3;Concious
+P52;55;Male;Traumatic;2088;3;-1;11;3;3;2;1;0;2;MCS+;Static;44.7;152;76;4.3;Good;5.72;Yes;Yes;1;0;0.79;MCS;0.7;MCS;None;2;MCS-
+P53;53.6;Female;Anoxic;106;3;3;12;2;1;5;2;0;2;MCS-;Dynamic;35.55;166;82;5.2;Intermediate;4.61;Yes;No;-1;2;;;;;;2;MCS-
+P54;34.1;Female;Traumatic;688;3;7;8;1;3;1;1;0;2;MCS-;Static;32;132;54;5.1;Good;2.71;Yes;Yes;-7;0;0.62;MCS;0.37;VS/UWS;Global;2;MCS-
+P55;48;Female;Vascular;368;3;-1;10;2;2;3;1;0;2;MCS-;Static;41.95;117;60;5.7;Good;3.26;Yes;Yes;-27;-28;0.61;MCS;0.45;VS/UWS;Local;3;MCS+
+P56;62.8;Female;Anoxic;42;4;1;5;0;0;2;1;0;2;VS/UWS;Static;31.1;187;54;6.2;Good;3.01;Yes;Yes;-1;0;0.21;VS/UWS;0.25;VS/UWS;Local;2;VS/UWS
+P57;20.7;Female;Other;482;3;13;23;4;5;6;3;2;3;EMCS;Static;33.35;188;89.5;4.9;Good;4.39;Yes;No;-9;4;;;0.464410704;VS/UWS;Local;4;Concious
+P58;56.7;Female;Other;995;3;-6;6;1;2;1;1;0;1;MCS-;Static;34;98;55;7.3;Good;3.41;Yes;Yes;1;-5;0.84;MCS;0.79;MCS;Global;2;VS/UWS
+P59;45.4;Male;Traumatic;3196;2;-1;21;4;5;6;2;2;2;EMCS;Dynamic;47;113;70;4.1;Good;6.5;Yes;Yes;-1;-2;;;0.43;VS/UWS;Global;3;Concious
+P60;17.5;Male;Anoxic;62;4;0;6;1;0;2;1;0;2;VS/UWS;Static;28.75;193;105;5.6;Good;2.77;Yes;Yes;-3;-3;0.34;VS/UWS;0.21;VS/UWS;Global;1;Dead
+P61;24.1;Female;Anoxic;822;3;-1;10;2;3;2;1;0;2;MCS-;Static;33;123;63;4.8;Good;4.48;Yes;No;-5;-6;0.526051165;VS/UWS;0.479958408;VS/UWS;None;2;MCS-
+P62;53.6;Female;Vascular;1340;2;-1;21;3;5;5;3;2;3;EMCS;Dynamic;30.55;144;65;5.9;Good;3.76;Yes;Yes;1;0;;;0.72;MCS;Global;3;Concious
+P63;21.1;Male;Traumatic;846;2;-1;5;1;0;1;2;0;1;VS/UWS;Static;50.47;137;69;5.2;Good;3.05;Yes;Yes;1;0;0.44;VS/UWS;0.13;VS/UWS;None;2;VS/UWS
+P64;38.7;Male;Other;1039;3;1;11;4;0;5;1;0;1;MCS+;Static;59;118;60;4.8;Good;4.51;Yes;Yes;-6;-5;0.75;MCS;0.78;MCS;None;2;MCS-

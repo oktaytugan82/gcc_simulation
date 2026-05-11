@@ -4,5 +4,8 @@ __pycache__/
 .venv/
 venv/
 data/ds004504-main/
+data/chennu2016/
+data/chennu_2016_raw/
+results/pilot_results.pkl
 connectome/data/budapest_connectome/*.csv
 connectome/data/budapest_connectome/*.graphml

@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the archived Zenodo release."
 title: "GCC simulation and analysis code"
-version: "v1.2.0"
-date-released: "2026-04-26"
+version: "v1.3.0"
+date-released: "2026-05-11"
 type: software
 authors:
   - family-names: "Tugan"
@@ -10,7 +10,7 @@ authors:
     orcid: "https://orcid.org/0009-0005-8665-3583"
 repository-code: "https://github.com/oktaytugan82/gcc_simulation"
 license: MIT
-abstract: "Simulation and analysis code for the Gamma-Code Consensus (GCC), including synthetic Kuramoto network experiments, EEG pilot analysis, HCP-derived Budapest Reference Connectome topology stress tests, OpenNeuro ds006623 fMRI validation, OpenNeuro ds003367 traumatic coma/DoC HARDI structural backbone analyses, and OpenNeuro ds004504 neurodegenerative EEG P1-proxy analyses."
+abstract: "Simulation and analysis code for the Gamma-Code Consensus (GCC), including synthetic Kuramoto network experiments, EEG pilot analysis with Chennu 2016 baseline-holdout validation, HCP-derived Budapest Reference Connectome topology stress tests, OpenNeuro ds006623 fMRI validation, OpenNeuro ds003367 traumatic coma/DoC HARDI structural backbone analyses, OpenNeuro ds004504 neurodegenerative EEG P1-proxy analyses, and Hermann 2021 FDG-PET/EEG disorders-of-consciousness proxy analyses."
 keywords:
   - consciousness
   - global access
@@ -22,4 +22,5 @@ keywords:
   - HARDI
   - disorders of consciousness
   - EEG
+  - FDG-PET
   - terminal lucidity

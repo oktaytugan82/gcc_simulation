@@ -1,0 +1,65 @@
+{
+  "source_observables": "results/pilot_results.pkl",
+  "downloaded_raw_zip": "Chennu et al. 2016 Cambridge raw bundle, DOI 10.17863/CAM.68959; file not redistributed in GitHub",
+  "metadata_source": "data_manifests/chennu2016_datainfo.mat",
+  "metadata_note": "Sedation labels are read from the Cambridge datainfo.mat table: 1=baseline, 2=mild, 3=moderate, 4=recovery.",
+  "band": "gamma",
+  "calibration": "first half of each subject's baseline recording",
+  "holdout": "second half of the same baseline recording",
+  "n_subjects": 20,
+  "level_summary": {
+    "baseline_holdout": {
+      "n": 20,
+      "mean": 0.6580885944325007,
+      "sd": 0.03202698905075142,
+      "median": 0.6592207317073171
+    },
+    "mild": {
+      "n": 20,
+      "mean": 0.5991700266125927,
+      "sd": 0.08461251877896432,
+      "median": 0.6262112659698025
+    },
+    "moderate": {
+      "n": 20,
+      "mean": 0.5302758728405037,
+      "sd": 0.11632594555776599,
+      "median": 0.5434484657749803
+    },
+    "recovery": {
+      "n": 20,
+      "mean": 0.5720619218286382,
+      "sd": 0.15341729931525405,
+      "median": 0.6484749999999999
+    }
+  },
+  "paired_tests_vs_baseline_holdout": {
+    "mild": {
+      "n": 20,
+      "mean_baseline_minus_level": 0.05891856781990803,
+      "median_baseline_minus_level": 0.03555666666666668,
+      "wilcoxon_W": 19.0,
+      "wilcoxon_p": 0.0005855560302734375,
+      "cohens_dz": 0.7528389869056785,
+      "n_declines": 16
+    },
+    "moderate": {
+      "n": 20,
+      "mean_baseline_minus_level": 0.12781272159199697,
+      "median_baseline_minus_level": 0.11098652434781464,
+      "wilcoxon_W": 11.0,
+      "wilcoxon_p": 0.0001049041748046875,
+      "cohens_dz": 1.0477572239964505,
+      "n_declines": 17
+    },
+    "recovery": {
+      "n": 20,
+      "mean_baseline_minus_level": 0.08602667260386251,
+      "median_baseline_minus_level": 0.028915483831530087,
+      "wilcoxon_W": 52.0,
+      "wilcoxon_p": 0.04844093322753906,
+      "cohens_dz": 0.5469980101132697,
+      "n_declines": 13
+    }
+  }
+}

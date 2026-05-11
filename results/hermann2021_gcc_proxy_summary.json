@@ -1,0 +1,480 @@
+{
+  "source_csv": "clinical_doc/Hermann2021_supplementary_metadata_mmc2.csv",
+  "n_total": 64,
+  "baseline_counts": {
+    "EMCS": 7,
+    "VS/UWS": 23,
+    "MCS-": 22,
+    "MCS+": 12
+  },
+  "outcome_counts": {
+    "Conscious": 14,
+    "VS/UWS": 18,
+    "Dead": 9,
+    "MCS+": 10,
+    "MCS-": 13
+  },
+  "diagnostic_tests": [
+    {
+      "score": "PET MIBH",
+      "n": 57,
+      "n_positive": 34,
+      "n_negative": 23,
+      "auc": 0.8228900255754475,
+      "auc_ci95": [
+        0.6982097186700768,
+        0.9252078005115086
+      ],
+      "mannwhitney_p": 4.140570686632272e-05,
+      "threshold_youden": {
+        "threshold": 3.09,
+        "sensitivity": 0.8529411764705882,
+        "specificity": 0.782608695652174,
+        "youden": 0.6355498721227621
+      }
+    },
+    {
+      "score": "EEG SVM p(MCS)",
+      "n": 52,
+      "n_positive": 31,
+      "n_negative": 21,
+      "auc": 0.7711213517665131,
+      "auc_ci95": [
+        0.6259600614439325,
+        0.8932411674347158
+      ],
+      "mannwhitney_p": 0.0010220776430521015,
+      "threshold_youden": {
+        "threshold": 0.34,
+        "sensitivity": 0.7741935483870968,
+        "specificity": 0.7142857142857143,
+        "youden": 0.48847926267281094
+      }
+    },
+    {
+      "score": "Local-global ordinal",
+      "n": 52,
+      "n_positive": 31,
+      "n_negative": 21,
+      "auc": 0.6044546850998463,
+      "auc_ci95": [
+        0.4539170506912442,
+        0.7450076804915514
+      ],
+      "mannwhitney_p": 0.17995223650537695,
+      "threshold_youden": {
+        "threshold": 0.5,
+        "sensitivity": 0.6774193548387096,
+        "specificity": 0.5238095238095238,
+        "youden": 0.20122887864823347
+      }
+    },
+    {
+      "score": "GCC proxy PET+EEG",
+      "n": 52,
+      "n_positive": 31,
+      "n_negative": 21,
+      "auc": 0.8341013824884793,
+      "auc_ci95": [
+        0.7065668202764976,
+        0.9385560675883257
+      ],
+      "mannwhitney_p": 5.19015260133112e-05,
+      "threshold_youden": {
+        "threshold": -0.6034738739028322,
+        "sensitivity": 0.967741935483871,
+        "specificity": 0.6666666666666666,
+        "youden": 0.6344086021505375
+      }
+    },
+    {
+      "score": "GCC proxy PET+EEG+LG",
+      "n": 52,
+      "n_positive": 31,
+      "n_negative": 21,
+      "auc": 0.8125960061443932,
+      "auc_ci95": [
+        0.674347158218126,
+        0.9324116743471582
+      ],
+      "mannwhitney_p": 0.00015321183326587413,
+      "threshold_youden": {
+        "threshold": -0.7194357508565897,
+        "sensitivity": 1.0,
+        "specificity": 0.5714285714285714,
+        "youden": 0.5714285714285714
+      }
+    }
+  ],
+  "outcome_tests": [
+    {
+      "score": "PET MIBH",
+      "n": 64,
+      "n_positive": 24,
+      "n_negative": 40,
+      "auc": 0.7203125,
+      "auc_ci95": [
+        0.5901041666666667,
+        0.8385416666666666
+      ],
+      "mannwhitney_p": 0.003430072736366607,
+      "threshold_youden": {
+        "threshold": 3.13,
+        "sensitivity": 0.9166666666666666,
+        "specificity": 0.55,
+        "youden": 0.4666666666666668
+      }
+    },
+    {
+      "score": "EEG SVM p(MCS)",
+      "n": 59,
+      "n_positive": 23,
+      "n_negative": 36,
+      "auc": 0.6902173913043478,
+      "auc_ci95": [
+        0.5471014492753623,
+        0.8194444444444444
+      ],
+      "mannwhitney_p": 0.014617007606726178,
+      "threshold_youden": {
+        "threshold": 0.313986502,
+        "sensitivity": 0.8695652173913043,
+        "specificity": 0.5,
+        "youden": 0.3695652173913042
+      }
+    },
+    {
+      "score": "Local-global ordinal",
+      "n": 59,
+      "n_positive": 23,
+      "n_negative": 36,
+      "auc": 0.5821256038647343,
+      "auc_ci95": [
+        0.44021739130434784,
+        0.722841183574879
+      ],
+      "mannwhitney_p": 0.26443476552071044,
+      "threshold_youden": {
+        "threshold": 0.5,
+        "sensitivity": 0.6956521739130435,
+        "specificity": 0.4444444444444444,
+        "youden": 0.14009661835748788
+      }
+    },
+    {
+      "score": "GCC proxy PET+EEG",
+      "n": 59,
+      "n_positive": 23,
+      "n_negative": 36,
+      "auc": 0.7620772946859904,
+      "auc_ci95": [
+        0.6352657004830918,
+        0.8756038647342995
+      ],
+      "mannwhitney_p": 0.0007660244159915409,
+      "threshold_youden": {
+        "threshold": -0.5006864512273492,
+        "sensitivity": 1.0,
+        "specificity": 0.5277777777777778,
+        "youden": 0.5277777777777777
+      }
+    },
+    {
+      "score": "GCC proxy PET+EEG+LG",
+      "n": 59,
+      "n_positive": 23,
+      "n_negative": 36,
+      "auc": 0.7355072463768116,
+      "auc_ci95": [
+        0.6014492753623188,
+        0.8514492753623188
+      ],
+      "mannwhitney_p": 0.002503899854607444,
+      "threshold_youden": {
+        "threshold": 0.05893072804224538,
+        "sensitivity": 0.8260869565217391,
+        "specificity": 0.6111111111111112,
+        "youden": 0.4371980676328504
+      }
+    }
+  ],
+  "paired_auc_delta_tests": [
+    {
+      "target": "Baseline MCS-/MCS+ vs VS/UWS",
+      "score_a": "GCC proxy PET+EEG",
+      "score_b": "PET MIBH",
+      "n": 52,
+      "n_positive": 31,
+      "n_negative": 21,
+      "auc_a": 0.8341013824884793,
+      "auc_b": 0.8172043010752689,
+      "delta_auc": 0.016897081413210446,
+      "delta_auc_ci95": [
+        -0.06209224598930481,
+        0.0980392156862745
+      ],
+      "bootstrap_p_two_sided": 0.67448,
+      "n_bootstrap": 50000,
+      "n_skipped": 0
+    },
+    {
+      "target": "Baseline MCS-/MCS+ vs VS/UWS",
+      "score_a": "GCC proxy PET+EEG",
+      "score_b": "EEG SVM p(MCS)",
+      "n": 52,
+      "n_positive": 31,
+      "n_negative": 21,
+      "auc_a": 0.8341013824884793,
+      "auc_b": 0.7711213517665131,
+      "delta_auc": 0.06298003072196623,
+      "delta_auc_ci95": [
+        -0.001536098310291778,
+        0.13726033650710875
+      ],
+      "bootstrap_p_two_sided": 0.05868,
+      "n_bootstrap": 50000,
+      "n_skipped": 0
+    },
+    {
+      "target": "6-month MCS+/Conscious vs Other",
+      "score_a": "GCC proxy PET+EEG",
+      "score_b": "PET MIBH",
+      "n": 59,
+      "n_positive": 23,
+      "n_negative": 36,
+      "auc_a": 0.7620772946859904,
+      "auc_b": 0.7216183574879227,
+      "delta_auc": 0.0404589371980677,
+      "delta_auc_ci95": [
+        -0.05434782608695643,
+        0.14038690476190496
+      ],
+      "bootstrap_p_two_sided": 0.40956,
+      "n_bootstrap": 50000,
+      "n_skipped": 0
+    },
+    {
+      "target": "6-month MCS+/Conscious vs Other",
+      "score_a": "GCC proxy PET+EEG",
+      "score_b": "EEG SVM p(MCS)",
+      "n": 59,
+      "n_positive": 23,
+      "n_negative": 36,
+      "auc_a": 0.7620772946859904,
+      "auc_b": 0.6902173913043478,
+      "delta_auc": 0.07185990338164261,
+      "delta_auc_ci95": [
+        -0.0073710073710072654,
+        0.1597222222222222
+      ],
+      "bootstrap_p_two_sided": 0.07836,
+      "n_bootstrap": 50000,
+      "n_skipped": 0
+    }
+  ],
+  "ordinal_baseline_spearman": {
+    "PET MIBH": {
+      "rho": 0.655918186615684,
+      "p": 4.029816070279978e-09,
+      "n": 64
+    },
+    "EEG SVM p(MCS)": {
+      "rho": 0.5318263577130514,
+      "p": 1.4600231379134772e-05,
+      "n": 59
+    },
+    "Local-global ordinal": {
+      "rho": 0.17632926019462627,
+      "p": 0.1815733569882029,
+      "n": 59
+    },
+    "GCC proxy PET+EEG": {
+      "rho": 0.7165006446795692,
+      "p": 1.758905276936608e-10,
+      "n": 59
+    },
+    "GCC proxy PET+EEG+LG": {
+      "rho": 0.6516174117240915,
+      "p": 2.278545836169014e-08,
+      "n": 59
+    }
+  },
+  "pet_threshold_youden_for_mcs_vs_vsuws": 3.09,
+  "eeg_threshold_fixed": 0.5,
+  "gcc_threshold_youden_for_mcs_vs_vsuws": -0.6034738739028322,
+  "gcc_gate_summary": [
+    {
+      "gate": "capacity_only",
+      "n": 16,
+      "baseline_counts": {
+        "VS/UWS": 3,
+        "MCS-": 8,
+        "MCS+": 3,
+        "EMCS": 2
+      },
+      "outcome_counts": {
+        "VS/UWS": 3,
+        "Dead": 2,
+        "MCS+": 3,
+        "Conscious": 5,
+        "MCS-": 3
+      },
+      "outcome_command_following_rate": 0.5,
+      "patients": [
+        "P2",
+        "P5",
+        "P8",
+        "P12",
+        "P23",
+        "P25",
+        "P26",
+        "P40",
+        "P46",
+        "P47",
+        "P49",
+        "P50",
+        "P55",
+        "P57",
+        "P59",
+        "P61"
+      ]
+    },
+    {
+      "gate": "concordant_high",
+      "n": 23,
+      "baseline_counts": {
+        "EMCS": 5,
+        "MCS-": 7,
+        "VS/UWS": 2,
+        "MCS+": 9
+      },
+      "outcome_counts": {
+        "Conscious": 9,
+        "Dead": 3,
+        "VS/UWS": 2,
+        "MCS+": 4,
+        "MCS-": 5
+      },
+      "outcome_command_following_rate": 0.5652173913043478,
+      "patients": [
+        "P1",
+        "P3",
+        "P4",
+        "P6",
+        "P9",
+        "P10",
+        "P11",
+        "P15",
+        "P20",
+        "P21",
+        "P27",
+        "P28",
+        "P29",
+        "P33",
+        "P36",
+        "P43",
+        "P45",
+        "P48",
+        "P51",
+        "P52",
+        "P58",
+        "P62",
+        "P64"
+      ]
+    },
+    {
+      "gate": "concordant_low",
+      "n": 16,
+      "baseline_counts": {
+        "VS/UWS": 14,
+        "MCS-": 2
+      },
+      "outcome_counts": {
+        "Dead": 3,
+        "VS/UWS": 10,
+        "MCS-": 3
+      },
+      "outcome_command_following_rate": 0.0,
+      "patients": [
+        "P13",
+        "P14",
+        "P16",
+        "P18",
+        "P22",
+        "P31",
+        "P32",
+        "P34",
+        "P35",
+        "P37",
+        "P39",
+        "P41",
+        "P54",
+        "P56",
+        "P60",
+        "P63"
+      ]
+    },
+    {
+      "gate": "dynamics_only",
+      "n": 4,
+      "baseline_counts": {
+        "MCS-": 2,
+        "VS/UWS": 2
+      },
+      "outcome_counts": {
+        "MCS+": 2,
+        "VS/UWS": 2
+      },
+      "outcome_command_following_rate": 0.5,
+      "patients": [
+        "P7",
+        "P30",
+        "P38",
+        "P44"
+      ]
+    },
+    {
+      "gate": "missing_eeg",
+      "n": 5,
+      "baseline_counts": {
+        "MCS-": 3,
+        "VS/UWS": 2
+      },
+      "outcome_counts": {
+        "MCS-": 2,
+        "Dead": 1,
+        "MCS+": 1,
+        "VS/UWS": 1
+      },
+      "outcome_command_following_rate": 0.2,
+      "patients": [
+        "P17",
+        "P19",
+        "P24",
+        "P42",
+        "P53"
+      ]
+    }
+  ],
+  "baseline_vsuws_concordant_high_patients": [
+    "P9",
+    "P48"
+  ],
+  "baseline_vsuws_any_pet_or_eeg_positive_patients": [
+    "P2",
+    "P9",
+    "P38",
+    "P44",
+    "P47",
+    "P48",
+    "P49"
+  ],
+  "outputs": {
+    "features_csv": "results/hermann2021_gcc_proxy_features.csv",
+    "summary_json": "results/hermann2021_gcc_proxy_summary.json",
+    "report_md": "results/hermann2021_gcc_proxy_report.md",
+    "diagnostic_figure": "figures/hermann2021_gcc_proxy_diagnostic.png",
+    "outcome_figure": "figures/hermann2021_gcc_proxy_outcome.png"
+  },
+  "interpretation_guardrail": "This is a GCC proxy analysis of post-processed biomarkers. It does not extract GCC observables from raw EEG/PET time series."
+}

@@ -1,0 +1,464 @@
+\documentclass[11pt,a4paper]{article}
+
+% -- Encoding & Fonts --
+\usepackage[utf8]{inputenc}
+
+% -- Mathematics --
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+% -- Layout --
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\doublespacing
+\usepackage{parskip}
+
+% -- Line numbers for review --
+\IfFileExists{lineno.sty}{%
+  \usepackage{lineno}
+  \linenumbers
+}{}
+
+% -- Section formatting --
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{0.5em}{}
+
+% -- TOC formatting --
+\usepackage[titles]{tocloft}
+
+% -- Headers & footers --
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{GCC: A dynamical regime model for global access}}
+\fancyhead[R]{\small\textit{Tugan}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% -- Hyperlinks --
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+% -- Bibliography --
+\usepackage[numbers,sort&compress]{natbib}
+
+\usepackage{graphicx}
+
+% -- Theorem environments --
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{significance}{Significance}
+
+% -- Custom commands --
+\newcommand{\Deff}{D_{\mathrm{eff}}}
+\newcommand{\Mtau}{M_{\tau}}
+\newcommand{\Rmin}{R_{\min}}
+\newcommand{\Dmin}{D_{\min}}
+\newcommand{\Dmax}{D_{\max}}
+\newcommand{\Mmin}{M_{\min}}
+\newcommand{\Mmax}{M_{\max}}
+\newcommand{\Gmax}{G_{\max}}
+\newcommand{\Kcop}{K_c^{\mathrm{op}}}
+\newcommand{\Lobs}{L_{\mathrm{obs}}}
+
+% -- Title block --
+\title{%
+  \textbf{The Gamma-Code Consensus: a dynamical regime model for level of consciousness and global access}
+}
+\author{%
+  Mehmet Oktay Tugan\textsuperscript{1,*}
+}
+\date{}
+
+% ==================================================================
+\title{\textbf{Supplementary Material for: The Gamma-Code Consensus}}
+\author{Mehmet Oktay Tugan}
+\date{}
+\begin{document}
+\maketitle
+\noindent This supplementary file contains the mathematical appendix and code-resource description moved out of the main manuscript for the Neuroscience of Consciousness submission version.
+
+\appendix
+\makeatletter
+% Inline implementation of removefromreset (avoids needing the remreset package):
+% remove section from the reset-list of the theorem counter so numbering is globally unique
+\providecommand*{\@removefromreset}[2]{%
+  \let\@tempa\@elt
+  \let\@elt\relax
+  \expandafter\let\expandafter\@tempb\csname cl@#2\endcsname
+  \expandafter\def\csname cl@#2\endcsname{}%
+  \def\@elt##1{%
+    \ifx ##1#1\else
+      \expandafter\@temptokena\expandafter{\csname cl@#2\endcsname}%
+      \edef\x{\noexpand\expandafter\noexpand\def\noexpand\csname cl@#2\noexpand\endcsname{\the\@temptokena \noexpand\@elt{##1}}}\x
+    \fi}%
+  \@tempb
+  \let\@elt\@tempa}
+\@removefromreset{theorem}{section}
+\makeatother
+\section*{Mathematical Appendix}
+\addcontentsline{toc}{section}{Mathematical Appendix}
+\label{sec:appendix}
+\setcounter{section}{0}
+\setcounter{theorem}{0}
+\renewcommand{\thesection}{A.\arabic{section}}
+\renewcommand{\thesubsection}{A.\arabic{section}.\arabic{subsection}}
+\renewcommand{\thetheorem}{A.\arabic{theorem}}
+
+% Redefine section format for appendix: no trailing dot (already in thesection)
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+
+% Widen TOC number column for appendix entries (A.1 needs more space than 1)
+\addtocontents{toc}{\string\setlength{\string\cftsecnumwidth}{3.2em}}
+
+This appendix supplements the GCC with mathematical results that address three common lines of attack: (1)~Is the dynamics well-posed? (2)~Are the observables controlled? (3)~Can the gain-based re-entry idea be formulated as a sufficient condition?
+
+\paragraph{Core definitions used below.}
+For self-contained reading, the core dynamics, ridge regularization, and residual-backbone definition from the main manuscript are repeated here:
+\begin{equation}
+\label{eq:dynamics}
+\mathrm{d}\theta_i(t)
+= \biggl[\,\omega_i
++ K \cdot G(t) \cdot g_i(t) \sum_{j} W_{ij}(t)\,\sin\!\bigl(\theta_j(t) - \theta_i(t) - \varphi_{ij}(t)\bigr)
+\biggr]\,\mathrm{d}t
++ \sigma_i(t)\,\mathrm{d}B_i(t).
+\end{equation}
+\begin{equation}
+\label{eq:ridge}
+\varepsilon_D^{\lambda}(t) =
+\max\!\biggl(\lambda\,\frac{\mathrm{tr}\bigl(\hat{C}_D(t)\bigr)}{N},\;\varepsilon_{\mathrm{floor}}\biggr),
+\qquad
+C_D^{\lambda}(t) = \hat{C}_D(t) + \varepsilon_D^{\lambda}(t)\cdot I.
+\end{equation}
+\begin{equation}
+\label{eq:backbone}
+S(t;\,g_*) = \text{largest connected component of the subgraph on } \{i : g_i(t) \geq g_*\}.
+\end{equation}
+
+
+\section{Assumptions}
+\label{app:voraussetzungen}
+
+We consider, over a finite horizon $t \in [0,T]$, the GCC dynamics~\eqref{eq:dynamics} under the following assumptions.
+
+\paragraph{A1.\;Structure.}
+$W_{ij}(t) \geq 0$, \;\;$\sum_j W_{ij}(t) = 1$ for all $i$ with non-empty rows, \;\;$W_{ii}(t) = 0$.
+
+\paragraph{A2.\;Boundedness.}
+There exist finite constants $\Gmax$, $\Sigma_{\max}$, $\Phi_{\max}$ such that
+\[
+0 \leq G(t) \leq \Gmax, \quad
+0 \leq g_i(t) \leq 1, \quad
+0 \leq \sigma_i(t) \leq \Sigma_{\max}, \quad
+|\varphi_{ij}(t)| \leq \Phi_{\max}.
+\]
+
+\paragraph{A3.\;Temporal regularity.}
+All control functions are measurable and bounded; for stability statements, piecewise continuity suffices.
+
+\paragraph{A4.\;Observation windows.}
+$\Deff^{\lambda}$ and $\Mtau$ are computed on fixed window lengths $\tau_D > 0$ and $\tau_M > 0$, with ridge regularization according to~\eqref{eq:ridge}.
+
+
+\section{Elementary Bounds of the Observables}
+
+\begin{proposition}[Elementary bounds]
+\label{prop:schranken}
+For all times $t$:
+\begin{equation}
+0 \leq R(t) \leq 1, \qquad
+1 \leq \Deff(t) \leq N, \qquad
+0 \leq \Mtau(t) \leq \tfrac{1}{4}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+$R(t)$ is the modulus of a mean of unit complex numbers. $\Deff(t)$ is the participation ratio of a positive semi-definite matrix. $\Mtau(t)$ is the variance of a time series with values in $[0,1]$; its maximum is $\frac{1}{4}$.
+\end{proof}
+
+\begin{significance}
+All three core observables are mathematically compact and controlled. This prevents empirical fits from drifting into unphysical regions.
+\end{significance}
+
+
+\section{Well-Posedness of the Dynamics}
+
+\begin{theorem}[Global Lipschitz property and well-posedness]
+\label{satz:lipschitz}
+Define the drift vector $b(\theta,t)$ component-wise by
+\begin{equation}
+b_i(\theta,t) = \omega_i + K\,G(t)\,g_i(t)\sum_j W_{ij}(t)\,\sin\!\bigl(\theta_j - \theta_i - \varphi_{ij}(t)\bigr).
+\end{equation}
+Then, for all $\theta,\psi \in \mathbb{R}^N$ and all $t \in [0,T]$,
+\begin{equation}
+\label{eq:lipschitz}
+\|b(\theta,t) - b(\psi,t)\|_{\infty} \;\leq\; 2\,|K|\,\Gmax\,\|\theta - \psi\|_{\infty}.
+\end{equation}
+Moreover, $\|b(\theta,t)\|_{\infty} \leq \|\omega\|_{\infty} + |K|\,\Gmax$. In particular, under \textup{A1--A3}, the GCC dynamics has a unique global strong solution on $[0,T]$ for every initial condition $\theta(0)$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+For each component, using $|\sin(x) - \sin(y)| \leq |x - y|$:
+\begin{align}
+|b_i(\theta,t) - b_i(\psi,t)|
+&\leq |K|\,\Gmax \sum_j W_{ij}(t)\,\bigl|(\theta_j - \theta_i) - (\psi_j - \psi_i)\bigr| \notag\\
+&\leq |K|\,\Gmax\,\Bigl[\sum_j W_{ij}(t)\,|\theta_j - \psi_j| + |\theta_i - \psi_i|\underbrace{\sum_j W_{ij}(t)}_{=\,1}\Bigr] \notag\\
+&\leq 2\,|K|\,\Gmax\,\|\theta - \psi\|_{\infty}. \label{eq:lip_detail}
+\end{align}
+Standard results for SDEs with globally Lipschitz drift and bounded diffusion yield existence and uniqueness.
+\end{proof}
+
+
+\section{Finite-Horizon Stability}
+
+\begin{theorem}[Stability under drift perturbations]
+\label{satz:stabilitaet}
+Consider two systems driven by the same Brownian motion:
+\begin{align}
+\mathrm{d}\theta(t) &= b\bigl(\theta(t),t\bigr)\,\mathrm{d}t + \Sigma(t)\,\mathrm{d}B(t), \\
+\mathrm{d}\vartheta(t) &= \tilde{b}\bigl(\vartheta(t),t\bigr)\,\mathrm{d}t + \Sigma(t)\,\mathrm{d}B(t).
+\end{align}
+Suppose both drifts are globally $L$-Lipschitz and
+\begin{equation}
+\|b(x,t) - \tilde{b}(x,t)\|_{\infty} \leq \varepsilon(t) \quad \text{for all } x \in \mathbb{R}^N,\; t \in [0,T].
+\end{equation}
+Then
+\begin{equation}
+\label{eq:gronwall}
+\boxed{\;
+\|\theta(t) - \vartheta(t)\|_{\infty}
+\;\leq\; e^{Lt}\,\biggl(\|\theta(0) - \vartheta(0)\|_{\infty} + \int_0^t \varepsilon(s)\,\mathrm{d}s\biggr)
+\;}
+\end{equation}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The diffusion terms cancel in the difference equation. For $\delta(t) = \theta(t) - \vartheta(t)$, we have $\|\delta'(t)\|_{\infty} \leq L\,\|\delta(t)\|_{\infty} + \varepsilon(t)$. Gronwall's inequality yields the claim.
+\end{proof}
+
+\begin{significance}
+Small changes in $W$, $G$, $g_i$, or $\varphi_{ij}$ produce only controlled changes in the trajectory on finite time horizons.
+\end{significance}
+
+
+\section{Continuity of the Observables}
+
+\begin{proposition}[Local Lipschitz property]
+\label{prop:stetigkeit}
+For fixed $\tau_D$, $\tau_M$, $\lambda$, and $\varepsilon_{\mathrm{floor}}$, the observables $R(t)$, $\Deff^{\lambda}(t)$, and $\Mtau(t)$ are continuous functions of the window trajectory. On compact sets they are locally Lipschitz. In particular, on any suitable compact tube there exists a constant $\Lobs$ such that
+\begin{equation}
+\label{eq:Lobs}
+\|O(\mathrm{traj}_1) - O(\mathrm{traj}_2)\|_{\infty} \;\leq\; \Lobs \cdot \|\mathrm{traj}_1 - \mathrm{traj}_2\|_{\infty},
+\end{equation}
+where $O = (R,\;\Deff^{\lambda},\;\Mtau)$.
+\end{proposition}
+
+\paragraph{Empirical estimation of $\Lobs$.}
+One chooses small initial perturbations $\delta_0$, simulates $\theta$ and $\theta^{\delta}$ with the same noise path, and computes
+\begin{equation}
+\hat{L}_{\mathrm{obs}}(\delta_0) = \frac{\sup_t \|O(\theta^{\delta})(t) - O(\theta)(t)\|_{\infty}}{\sup_t \|\theta^{\delta}(t) - \theta(t)\|_{\infty}}.
+\end{equation}
+
+
+\section{Residual-Backbone Re-Entry}
+
+\begin{theorem}[Sufficient condition for re-entry]
+\label{satz:reentry}
+Let $S = S(t_1;\,g_*)$ be the residual backbone structure as in~\eqref{eq:backbone}. Consider, on $I = [t_1,t_2]$, the system restricted to $S$ in which the coupling terms coming from outside $S$ are switched off. Define the external residual mass
+\begin{equation}
+\alpha_S(t) = \max_{i \in S}\sum_{j \notin S} W_{ij}(t).
+\end{equation}
+Assume that:
+\begin{enumerate}
+\item The reduced system lies on $I$ within the access region with safety margin $\rho > 0$:
+\begin{align}
+R_S(t) &> \Rmin + \rho, \notag\\
+\Dmin + \rho &< D_{\mathrm{eff},S}^{\lambda}(t) < \Dmax - \rho, \label{eq:marge}\\
+\Mmin + \rho &< M_{\tau,S}(t) < \Mmax - \rho. \notag
+\end{align}
+\item The initial states coincide at $t_1$.
+\item A local Lipschitz constant $\Lobs$ for $O = (R_S,\,D_{\mathrm{eff},S}^{\lambda},\,M_{\tau,S})$ exists.
+\item The following holds:
+\begin{equation}
+\label{eq:eta}
+\boxed{\;
+\int_{t_1}^{t_2} \alpha_S(s)\,\mathrm{d}s \;<\; \eta, \qquad
+\eta \;<\; \frac{\rho}{\Lobs \cdot |K| \cdot \Gmax \cdot e^{2|K|\Gmax(t_2 - t_1)}}
+\;}
+\end{equation}
+\end{enumerate}
+Then the full system restricted to $S$ remains in the access region throughout $I$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+By Theorem~\ref{satz:stabilitaet} with $L = 2|K|\Gmax$ and $\varepsilon(t) = |K|\Gmax\,\alpha_S(t)$,
+\begin{equation}
+\sup_{t \in I}\|\theta_{\mathrm{full}}(t) - \theta_{\mathrm{red}}(t)\|_{\infty}
+\;\leq\; |K|\,\Gmax\,e^{2|K|\Gmax(t_2 - t_1)}\cdot\eta.
+\end{equation}
+Using $\Lobs$, it follows that $\|O_{\mathrm{full}} - O_{\mathrm{red}}\|_{\infty} \leq \Lobs \cdot |K|\,\Gmax\,e^{2|K|\Gmax(t_2-t_1)}\cdot\eta$. If $\eta$ is chosen according to~\eqref{eq:eta}, this stays below $\rho$.
+\end{proof}
+
+\begin{significance}
+This is the mathematically sharpest form of the gain-based terminal-lucidity hypothesis: a transient re-entry is sufficiently possible whenever a residual subnetwork can carry the dynamics and the rest of the system does not perturb it too strongly on a short interval.
+\end{significance}
+
+\paragraph{Conservativity.}
+The $\eta$-condition is a Gronwall-based worst-case bound. If numerical dynamics show a re-entry even though the analytical bound is not satisfied, this primarily reflects conservativity of the bound, not evidence against the simulated mechanism.
+
+
+\section{Corollary: Gain-Mediated Lucidity}
+
+\begin{corollary}
+\label{kor:lucidity}
+If there exist a subset $S$ and an interval $I$ such that $\alpha_S(t)$ becomes small on $I$, the effective drives $\Lambda_i(t) = K\,G(t)\,g_i(t)$ for $i \in S$ do not fall below the reduced access threshold, and the reduced dynamics on $S$ remains in the access region with safety margin, then a transient re-entry of the full system onto $S$ is internally sufficiently possible within the model.
+\end{corollary}
+
+The mathematical core of the hypothesis:
+
+\begin{quote}
+\itshape
+Within the GCC, a lucidity-like re-entry can be understood as finite-horizon persistence of a residual backbone regime under decreasing external perturbation load.
+\end{quote}
+
+
+\section{What This Appendix Delivers and What It Does Not}
+
+\paragraph{Delivers.}
+Well-posedness of the GCC as an SDE; controlled bounds for the core observables; finite-horizon stability; a genuine sufficient re-entry condition (Theorem~\ref{satz:reentry}).
+
+\paragraph{Does not deliver.}
+No mathematical proof that real terminal lucidity exists; no general theorem that every form of dementia shifts the access region; no proof of a universal threshold $K_c$; no identifiability result for real EEG/MEG data.
+
+
+% ==================================================================
+\section*{Supporting Information}
+\addcontentsline{toc}{section}{Supporting Information}
+
+\begin{sloppypar}
+\noindent\textbf{S1 Code. GCC simulation and analysis code} (\texttt{gcc\_simulation\_v1.3.0.zip})\textbf{.} Complete Python codebase for the GCC dynamical model, per-subject EEG analysis pipeline, Chennu gamma baseline-holdout analysis (\texttt{run\_chennu\_baseline\_holdout\_from\_observables.py}), Hermann DoC proxy analysis (\texttt{run\_hermann2021\_gcc\_proxy\_analysis.py}), V3/V4 ensemble simulation (\texttt{test\_v2\_v3\_ensemble.py}), V6 retuning-control sweep (\texttt{test\_v5\_retuning\_control.py}), mixed-effects statistical analysis over the sweep (\texttt{test\_v5\_mixed\_effects.py}), and figure-generation scripts. Includes \texttt{requirements.txt} and \texttt{README.md} with reproduction instructions. Corresponds to release \texttt{v1.3.0} of the public repository \url{https://github.com/oktaytugan82/gcc_simulation}, prepared for Zenodo archival with DOI \href{https://doi.org/10.5281/zenodo.19744970}{10.5281/zenodo.19744970}.
+\end{sloppypar}
+
+
+% ==================================================================
+
+\section*{Supplementary Clinical Plausibility Check: Hermann et al. 2021}
+\addcontentsline{toc}{section}{Supplementary Clinical Plausibility Check: Hermann et al. 2021}
+
+\noindent This supplementary analysis is included only as a clinical plausibility anchor. It is not a primary validation of the GCC and does not extract GCC observables from raw EEG or PET signals. The analysis uses the publicly released post-processed metadata table from \citet{hermann2021}, which contains diagnostic labels, six-month outcomes, PET-derived metabolic information, and EEG-derived classifier information. Because raw signal time series are not available in this table, the analysis can only test whether a simple combined PET-plus-EEG proxy behaves in the direction expected by the GCC's general claim that residual metabolic structure and functional signal evidence should be informative together.
+
+\noindent For each participant, PET and EEG proxy variables were z-scored and averaged into a simple multimodal proxy. Receiver-operating-characteristic analyses were then computed for two clinically relevant endpoints: baseline MCS-/MCS+ versus VS/UWS diagnostic discrimination, and six-month MCS+/conscious versus other outcome discrimination. The resulting AUCs are shown in Supplementary Table~S1. We additionally used paired patient-level bootstrap resampling over complete cases to test whether the descriptive AUC advantages of the combined proxy were stable against paired sampling uncertainty.
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table S1. Hermann et al.\ (2021) post-processed proxy analysis. AUC values are descriptive and based on the public metadata table only.}
+\label{tab:hermann-proxy}
+\small
+\begin{tabular}{lccc}
+\hline
+Endpoint & PET proxy & EEG proxy & PET-plus-EEG proxy \\
+\hline
+Baseline MCS-/MCS+ vs.\ VS/UWS & 0.823 & 0.771 & 0.834 \\
+Six-month MCS+/conscious vs.\ other & 0.720 & 0.690 & 0.762 \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent The combined proxy descriptively exceeds either unimodal proxy for both endpoints, but paired AUC-delta tests do not establish significant superiority. For baseline MCS-/MCS+ versus VS/UWS, $\Delta$AUC was $+0.017$ versus PET (95\% CI $-0.062$ to $+0.098$, $p = 0.67$) and $+0.063$ versus EEG (CI $-0.002$ to $+0.137$, $p = 0.059$). For six-month MCS+/conscious versus other outcome, $\Delta$AUC was $+0.040$ versus PET (CI $-0.054$ to $+0.140$, $p = 0.41$) and $+0.072$ versus EEG (CI $-0.007$ to $+0.160$, $p = 0.078$). This pattern is compatible with, but does not prove, the GCC's broader expectation that residual structural-metabolic capacity and functional signal organization are complementary in structurally degraded cohorts. The analysis should therefore be read as a supplementary bridge to the disorders-of-consciousness literature, not as evidence that the GCC access index is already a validated clinical biomarker.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.92\linewidth]{data/hermann_2021_fdg_pet_eeg/hermann2021_gcc_proxy_diagnostic.png}
+\caption{Supplementary Figure S5. Diagnostic Hermann et al.\ (2021) proxy analysis. PET, EEG, and PET-plus-EEG proxy scores are compared for baseline MCS-/MCS+ versus VS/UWS discrimination.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.92\linewidth]{data/hermann_2021_fdg_pet_eeg/hermann2021_gcc_proxy_outcome.png}
+\caption{Supplementary Figure S6. Prognostic Hermann et al.\ (2021) proxy analysis. PET, EEG, and PET-plus-EEG proxy scores are compared for six-month MCS+/conscious versus other outcome discrimination.}
+\end{figure}
+
+\begin{sloppypar}
+\noindent Reproduction files for this supplementary check are stored under \path{data/hermann_2021_fdg_pet_eeg/}, including the public metadata table, the analysis script, derived features, summary JSON file, markdown report, and generated figures.
+\end{sloppypar}
+
+% ==================================================================
+
+\section*{Supplementary Baseline-Window Holdout}
+\addcontentsline{toc}{section}{Supplementary Baseline-Window Holdout}
+
+\noindent The Cambridge raw-data bundle for \citet{chennu2016} was downloaded and its \texttt{datainfo.mat} table was used to verify state labels. For the theory-driven gamma-band pilot, each baseline recording was split into first-half calibration and second-half holdout. Regime bounds were estimated only from the first half of baseline and then applied to the held-out baseline half and to all sedation states. Results are summarized in Supplementary Table~S2.
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table S2. Gamma-band baseline-window holdout for the Chennu et al.\ (2016) pilot.}
+\label{tab:chennu-holdout}
+\small
+\begin{tabular}{lcccc}
+\hline
+Level & N & Mean $\Pi$ & SD & Median $\Pi$ \\
+\hline
+Baseline holdout & 20 & 0.658 & 0.032 & 0.659 \\
+Mild & 20 & 0.599 & 0.085 & 0.626 \\
+Moderate & 20 & 0.530 & 0.116 & 0.543 \\
+Recovery & 20 & 0.572 & 0.153 & 0.648 \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent Paired tests against the baseline holdout remained significant for mild sedation (mean difference $+0.059$, Wilcoxon $p = 5.86 \times 10^{-4}$, $d_z = 0.75$, 16/20 declines), moderate sedation (mean difference $+0.128$, $p = 1.05 \times 10^{-4}$, $d_z = 1.05$, 17/20 declines), and recovery (mean difference $+0.086$, $p = 0.048$, $d_z = 0.55$, 13/20 declines). This is an internal within-recording holdout, not an independent baseline session.
+
+% ==================================================================
+
+\section*{Supplementary Figures}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.98\linewidth]{pilot_trajectories_gamma.png}\\[0.3em]
+\includegraphics[width=0.98\linewidth]{pilot_trajectories_alpha.png}
+\caption{Supplementary Figure S1. Per-participant $\Pi$ trajectories across the four sedation levels. Top: gamma band. Bottom: alpha band. The dashed line at $\Pi = 0.5$ serves as orientation.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\linewidth]{drowsy_responsive_diagnostic.png}
+\caption{Supplementary Figure S2. Diagnostics for the drowsy--responsive question. Top: histograms of $\Pi$-declines (baseline minus moderate) per band. Bottom left: cross-band scatter of declines per participant; no discernible linear or cluster structure. Bottom right: ordered $\Pi$-declines per participant (sorted by gamma).}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\linewidth]{pilot_robustness.png}
+\caption{Supplementary Figure S3. Robustness diagnostics for the pilot finding. Top: bootstrap distributions (10{,}000 resamples) of the mean $\Pi$-decline, gamma band (left) and alpha band (right). Bottom: leave-one-out $p$-values (Wilcoxon on the remaining 19 participants) as $-\log_{10}(p)$; both bands remain significant upon exclusion of any individual participant.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.98\linewidth]{sweep_heatmap_gamma.png}\\[0.3em]
+\includegraphics[width=0.98\linewidth]{sweep_heatmap_alpha.png}
+\caption{Supplementary Figure S4. Sensitivity sweep over calibration hyperparameters. Heatmaps of $-\log_{10}(p)$ for the baseline-vs-moderate Wilcoxon test, per $\alpha$ quantile value (panels), $\tau_D$ (rows), and $\tau_M$ (x-axis within each panel). Top: gamma band. Bottom: alpha band. All 72 combinations remain significant; the direction of the effect is never reversed.}
+\end{figure}
+
+\begin{thebibliography}{1}
+
+\bibitem[Chennu et~al.(2016)]{chennu2016}
+Chennu,~S., O'Connor,~S., Adapa,~R., Menon,~D.\,K., \& Bekinschtein,~T.\,A.\ (2016).
+Brain connectivity dissociates responsiveness from drug exposure during propofol-induced transitions of consciousness.
+\textit{PLoS Computational Biology}, \textbf{12}(1), e1004669.
+
+\bibitem[Hermann et~al.(2021)]{hermann2021}
+Hermann,~B., Stender,~J., Habert,~M.-O., et~al.\ (2021).
+Multimodal FDG-PET and EEG assessment improves diagnosis and prognostication of disorders of consciousness.
+\textit{NeuroImage: Clinical}, \textbf{30}, 102601.
+\url{https://doi.org/10.1016/j.nicl.2021.102601}
+
+\end{thebibliography}
+
+\end{document}

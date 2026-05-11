@@ -1,6 +1,6 @@
 {
   "title": "GCC simulation and analysis code",
-  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v1.3.2 adds the final Neuroscience of Consciousness-oriented manuscript and supplement, the Chennu 2016 gamma baseline-holdout analysis with Cambridge raw-data manifest, the Hermann 2021 FDG-PET/EEG disorders-of-consciousness proxy analysis with paired AUC-delta controls, the corrected Zenodo concept DOI metadata, and direct frozen-tag GitHub links in the manuscript files.",
+  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v1.3.3 adds the final Neuroscience of Consciousness-oriented manuscript and supplement, the Chennu 2016 gamma baseline-holdout analysis with Cambridge raw-data manifest, the Hermann 2021 FDG-PET/EEG disorders-of-consciousness proxy analysis with paired AUC-delta controls, the corrected Zenodo concept DOI metadata, direct frozen-tag GitHub links, and reviewer-driven framing refinements.",
   "creators": [
     {
       "name": "Tugan, Mehmet Oktay",
@@ -10,7 +10,7 @@
   "license": "mit",
   "upload_type": "software",
   "access_right": "open",
-  "version": "v1.3.2",
+  "version": "v1.3.3",
   "keywords": [
     "global access",
     "consciousness",

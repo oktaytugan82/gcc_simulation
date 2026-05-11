@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the archived Zenodo release."
 title: "GCC simulation and analysis code"
-version: "v1.3.2"
+version: "v1.3.3"
 doi: "10.5281/zenodo.19744969"
 date-released: "2026-05-11"
 type: software

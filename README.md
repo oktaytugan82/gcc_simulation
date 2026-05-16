@@ -146,7 +146,13 @@ GitHub repository: https://github.com/oktaytugan82/gcc_simulation
 NoC submission snapshot: v2.0.0-noc
 ```
 
-The repository-level Zenodo concept DOI is:
+The archived NoC submission snapshot DOI is:
+
+```text
+10.5281/zenodo.19798082
+```
+
+The repository-level Zenodo concept DOI, which resolves to the latest version, is:
 
 ```text
 10.5281/zenodo.19744969

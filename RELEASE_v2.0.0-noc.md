@@ -42,4 +42,5 @@ Raw public datasets are excluded from this repository. Reproduction requires dow
 
 Repository: `https://github.com/oktaytugan82/gcc_simulation`  
 Snapshot: `v2.0.0-noc`  
+Zenodo version DOI: `10.5281/zenodo.19798082`  
 Zenodo concept DOI: `10.5281/zenodo.19744969`

@@ -1,6 +1,6 @@
 {
   "title": "GCC simulation and analysis code",
-  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v2.0.0-noc is the Neuroscience of Consciousness submission snapshot. It adds the final manuscript source files and the author-generated validation package covering synthetic regime simulations, Chennu and DS005620 propofol EEG analyses, Sleep-EDF state geometry, Mendeley disorders-of-consciousness pilot analyses, ketamine boundary-state analyses, DS004504 degradation-proxy analyses, spectral residualization, gamma-artifact controls, phase-surrogate controls, wPLI controls, amplitude-normalized phase-only analyses, CSD/source-proxy analyses, reliability checks, derived result tables, and figure-generation scripts. Raw third-party datasets are not redistributed.",
+  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v2.0.1-noc-preflight is the Paperpal/OUP preflight-clean Neuroscience of Consciousness submission snapshot. It adds the shortened technical-compliance manuscript while retaining the final author-generated validation package covering synthetic regime simulations, Chennu and DS005620 propofol EEG analyses, Sleep-EDF state geometry, Mendeley disorders-of-consciousness pilot analyses, ketamine boundary-state analyses, DS004504 degradation-proxy analyses, spectral residualization, gamma-artifact controls, phase-surrogate controls, wPLI controls, amplitude-normalized phase-only analyses, CSD/source-proxy analyses, reliability checks, derived result tables, and figure-generation scripts. Raw third-party datasets are not redistributed.",
   "creators": [
     {
       "name": "Tugan, Mehmet Oktay",
@@ -10,7 +10,7 @@
   "license": "mit",
   "upload_type": "software",
   "access_right": "open",
-  "version": "v2.0.0-noc",
+  "version": "v2.0.1-noc-preflight",
   "keywords": [
     "global access",
     "consciousness",

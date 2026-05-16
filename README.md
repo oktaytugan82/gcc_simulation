@@ -13,10 +13,10 @@ The Gamma-Code Consensus (GCC) is a computational regime model of access-compati
 The NoC submission snapshot is designated:
 
 ```text
-v2.0.0-noc
+v2.0.1-noc-preflight
 ```
 
-This release adds the final NoC manuscript files and the complete author-generated validation outputs used in the submission version:
+This release adds the Paperpal/OUP preflight-clean NoC manuscript files and the complete author-generated validation outputs used in the submission version:
 
 - synthetic regime validation and matched-stress simulations;
 - Chennu et al. propofol analysis with cross-validation;
@@ -52,7 +52,8 @@ gcc_simulation/
 ├── requirements.txt
 ├── CITATION.cff
 ├── .zenodo.json
-└── RELEASE_v2.0.0-noc.md
+├── RELEASE_v2.0.0-noc.md
+└── RELEASE_v2.0.1-noc-preflight.md
 ```
 
 ## NoC validation package
@@ -143,13 +144,7 @@ If you use this repository, cite the archived Zenodo release and the manuscript:
 ```text
 Tugan, M. O. (2026). GCC simulation and analysis code.
 GitHub repository: https://github.com/oktaytugan82/gcc_simulation
-NoC submission snapshot: v2.0.0-noc
-```
-
-The archived NoC submission snapshot DOI is:
-
-```text
-10.5281/zenodo.19798082
+NoC preflight-clean submission snapshot: v2.0.1-noc-preflight
 ```
 
 The repository-level Zenodo concept DOI, which resolves to the latest version, is:

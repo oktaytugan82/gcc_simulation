@@ -1,0 +1,25 @@
+Dear Editors of Neuroscience of Consciousness,
+
+I am submitting the manuscript "Balanced-coherence regimes of conscious access: a computational model with public EEG validation" for consideration as a Research Article.
+
+The paper presents the Gamma-Code Consensus (GCC), a computational regime model of access-compatible neural dynamics. The central contributions are: (i) a formally specified bounded-regime model of global access with evaluated predictions in synthetic networks and one model-internal instantiation of selective-preservation re-entry; (ii) a reproducible cross-paradigm empirical pipeline applied to public EEG/PSG datasets, including two independent propofol cohorts, sleep-state geometry, a ketamine boundary-state analysis, a degradation-proxy analysis, and a pilot clinical anchor in disorders of consciousness; and (iii) a frozen validation specification with spectral, artifact, phase-only, lagged-coupling, source-proxy, and reliability controls.
+
+The work is intentionally framed as an organizational and computational model of access-compatible neural dynamics. It does not propose an alternative physical substrate of consciousness and does not make a diagnostic clinical claim.
+
+The full reproducibility package, including all author-generated simulation code, analysis scripts, derived tables, figures, manuscript source files, and release notes, is publicly available at:
+
+https://github.com/oktaytugan82/gcc_simulation/releases/tag/v2.0.1-noc-preflight
+
+The named release asset is:
+
+https://github.com/oktaytugan82/gcc_simulation/releases/download/v2.0.1-noc-preflight/gcc_simulation_v2.0.1-noc-preflight.zip
+
+The NoC preflight-clean submission snapshot is archived through Zenodo under the repository-level concept DOI 10.5281/zenodo.19744969, which resolves to the latest archived version. Raw third-party datasets are not redistributed; all public dataset sources and DOIs are listed in the manuscript Data Availability statement. I apply for the Open Materials badge and provide open derived results and full public data-source documentation.
+
+The manuscript has not been submitted elsewhere and is not under consideration by any other journal. The author declares no competing interests.
+
+Sincerely,
+
+Mehmet Oktay Tugan
+Independent Researcher, Zurich
+ORCID: 0009-0005-8665-3583

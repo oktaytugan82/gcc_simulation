@@ -1,0 +1,227 @@
+{
+  "bounds": {
+    "R_min": 0.27991057761778926,
+    "D_min": 1.1138657947869979,
+    "D_max": 2.0206530318892084,
+    "M_min": 4.491092481822636e-06,
+    "M_max": 0.0028126410272275477
+  },
+  "matched": {
+    "backbone": {
+      "score_gcc_triad": {
+        "mean_delta_reentry_minus_uniform": 0.184,
+        "median_delta": 0.12857142857142856,
+        "sd_delta": 0.25495411028972875,
+        "wilcoxon_W": 579.5,
+        "p": 5.057428703666743e-12,
+        "positive_pairs": 86,
+        "n_pairs": 120
+      },
+      "score_r_only": {
+        "mean_delta_reentry_minus_uniform": 0.3425952380952381,
+        "median_delta": 0.3514285714285714,
+        "sd_delta": 0.37392163516091287,
+        "wilcoxon_W": 630.5,
+        "p": 7.184426363169628e-14,
+        "positive_pairs": 94,
+        "n_pairs": 120
+      },
+      "score_d_only": {
+        "mean_delta_reentry_minus_uniform": 0.05642857142857143,
+        "median_delta": 0.02999999999999997,
+        "sd_delta": 0.18846781321508402,
+        "wilcoxon_W": 1987.5,
+        "p": 0.0009776871327731014,
+        "positive_pairs": 72,
+        "n_pairs": 120
+      },
+      "score_m_only": {
+        "mean_delta_reentry_minus_uniform": -0.033523809523809525,
+        "median_delta": 0.0,
+        "sd_delta": 0.12336489250000487,
+        "wilcoxon_W": 899.5,
+        "p": 0.005518770047842062,
+        "positive_pairs": 30,
+        "n_pairs": 120
+      },
+      "score_criticality_only": {
+        "mean_delta_reentry_minus_uniform": 0.041595238095238095,
+        "median_delta": 0.035714285714285685,
+        "sd_delta": 0.19714400397506726,
+        "wilcoxon_W": 2357.0,
+        "p": 0.019136636631326254,
+        "positive_pairs": 71,
+        "n_pairs": 120
+      },
+      "score_global_gain_only": {
+        "mean_delta_reentry_minus_uniform": 0.0,
+        "median_delta": 0.0,
+        "sd_delta": 0.0,
+        "wilcoxon_W": 0.0,
+        "p": null,
+        "positive_pairs": 0,
+        "n_pairs": 120
+      },
+      "by_network": [
+        {
+          "network": "barabasi",
+          "mean_delta_gcc": 0.19123809523809526,
+          "n_pairs": 30
+        },
+        {
+          "network": "erdos",
+          "mean_delta_gcc": 0.1981904761904762,
+          "n_pairs": 30
+        },
+        {
+          "network": "modular",
+          "mean_delta_gcc": 0.1443809523809524,
+          "n_pairs": 30
+        },
+        {
+          "network": "small_world",
+          "mean_delta_gcc": 0.2021904761904762,
+          "n_pairs": 30
+        }
+      ]
+    },
+    "full": {
+      "score_gcc_triad": {
+        "mean_delta_reentry_minus_uniform": 0.04083333333333334,
+        "median_delta": 0.0,
+        "sd_delta": 0.11397039082897174,
+        "wilcoxon_W": 49.0,
+        "p": 5.8044303361563716e-05,
+        "positive_pairs": 27,
+        "n_pairs": 120
+      },
+      "score_r_only": {
+        "mean_delta_reentry_minus_uniform": 0.1025952380952381,
+        "median_delta": 0.0,
+        "sd_delta": 0.2016226392929876,
+        "wilcoxon_W": 141.5,
+        "p": 3.742465291594839e-07,
+        "positive_pairs": 45,
+        "n_pairs": 120
+      },
+      "score_d_only": {
+        "mean_delta_reentry_minus_uniform": 0.025357142857142856,
+        "median_delta": 0.0,
+        "sd_delta": 0.10185288215775505,
+        "wilcoxon_W": 375.0,
+        "p": 0.004241934873326132,
+        "positive_pairs": 35,
+        "n_pairs": 120
+      },
+      "score_m_only": {
+        "mean_delta_reentry_minus_uniform": 0.022333333333333334,
+        "median_delta": 0.0,
+        "sd_delta": 0.08975049416765614,
+        "wilcoxon_W": 830.5,
+        "p": 0.015884944662152026,
+        "positive_pairs": 41,
+        "n_pairs": 120
+      },
+      "score_criticality_only": {
+        "mean_delta_reentry_minus_uniform": 0.026119047619047615,
+        "median_delta": 0.0,
+        "sd_delta": 0.10107451915972368,
+        "wilcoxon_W": 613.5,
+        "p": 0.00270313412704361,
+        "positive_pairs": 43,
+        "n_pairs": 120
+      },
+      "score_global_gain_only": {
+        "mean_delta_reentry_minus_uniform": 0.0,
+        "median_delta": 0.0,
+        "sd_delta": 0.0,
+        "wilcoxon_W": 0.0,
+        "p": null,
+        "positive_pairs": 0,
+        "n_pairs": 120
+      },
+      "by_network": [
+        {
+          "network": "barabasi",
+          "mean_delta_gcc": 0.027714285714285712,
+          "n_pairs": 30
+        },
+        {
+          "network": "erdos",
+          "mean_delta_gcc": 0.05761904761904762,
+          "n_pairs": 30
+        },
+        {
+          "network": "modular",
+          "mean_delta_gcc": 0.020190476190476193,
+          "n_pairs": 30
+        },
+        {
+          "network": "small_world",
+          "mean_delta_gcc": 0.057809523809523804,
+          "n_pairs": 30
+        }
+      ]
+    }
+  },
+  "sweeps": {
+    "lesion": {
+      "score_gcc_triad": {
+        "spearman_rho": -0.3833979339346033,
+        "p": 7.9966772028903e-10
+      },
+      "score_r_only": {
+        "spearman_rho": -0.6482299302053403,
+        "p": 5.3570920131908386e-30
+      },
+      "score_d_only": {
+        "spearman_rho": 0.04443758479660903,
+        "p": 0.49323760009403944
+      },
+      "score_m_only": {
+        "spearman_rho": 0.4188458986503096,
+        "p": 1.3000838224958404e-11
+      },
+      "score_criticality_only": {
+        "spearman_rho": 0.11783652308089315,
+        "p": 0.06840358970805632
+      }
+    },
+    "noise": {
+      "score_gcc_triad": {
+        "spearman_rho": -0.36465239408071676,
+        "p": 1.7415936773379727e-10
+      },
+      "score_r_only": {
+        "spearman_rho": -0.017694717681012107,
+        "p": 0.7649348723090676
+      },
+      "score_d_only": {
+        "spearman_rho": -0.3664433685296607,
+        "p": 1.3965592357763164e-10
+      },
+      "score_m_only": {
+        "spearman_rho": 0.3828793029162848,
+        "p": 1.725903526603618e-11
+      },
+      "score_criticality_only": {
+        "spearman_rho": -0.3327642216835578,
+        "p": 7.104628814410633e-09
+      }
+    }
+  },
+  "parameters": {
+    "outdir": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch3_20260513\\results",
+    "n_pairs": 120,
+    "n_sweep_seeds": 48,
+    "n_nodes": 72,
+    "mean_degree": 8,
+    "t_seconds": 7.0,
+    "dt": 0.02,
+    "tau_d": 0.8,
+    "tau_m": 1.2,
+    "calib_seeds": 5,
+    "alpha": 0.1,
+    "seed": 20260513
+  }
+}

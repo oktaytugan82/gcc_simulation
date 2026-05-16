@@ -1,0 +1,214 @@
+{
+  "root": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch3_20260513\\data\\ds005620_subset",
+  "local_recordings": 126,
+  "local_subjects": 21,
+  "local_size_gb": 30.403919470496476,
+  "public_reported_recordings": 202,
+  "public_reported_size_gb": 77.3,
+  "estimated_missing_recordings_vs_public": 76,
+  "estimated_missing_size_gb_vs_public": 46.89608052950352,
+  "tasks": {
+    "awake": 21,
+    "sed": 54,
+    "sed2": 51
+  },
+  "acquisitions": [
+    {
+      "task": "awake",
+      "acq": "EC",
+      "n": 21
+    },
+    {
+      "task": "sed",
+      "acq": "rest",
+      "n": 54
+    },
+    {
+      "task": "sed2",
+      "acq": "rest",
+      "n": 51
+    }
+  ],
+  "subjects_without_awake": [],
+  "subjects_with_awake_sed_sed2": [
+    "1010",
+    "1016",
+    "1017",
+    "1022",
+    "1024",
+    "1033",
+    "1036",
+    "1045",
+    "1046",
+    "1054",
+    "1055",
+    "1057",
+    "1060",
+    "1061",
+    "1062",
+    "1064",
+    "1067",
+    "1068",
+    "1071",
+    "1074"
+  ],
+  "n_subjects_with_awake_sed_sed2": 20,
+  "duration_by_task": [
+    {
+      "task": "awake",
+      "count": 21,
+      "mean": 300.04761904761904,
+      "min": 300.0,
+      "max": 301.0
+    },
+    {
+      "task": "sed",
+      "count": 54,
+      "mean": 295.11073703703704,
+      "min": 26.9798,
+      "max": 303.0
+    },
+    {
+      "task": "sed2",
+      "count": 51,
+      "mean": 59.95450980392157,
+      "min": 57.68,
+      "max": 60.0
+    }
+  ],
+  "sfreq_values": [
+    5000.0
+  ],
+  "channel_count_values": [
+    64,
+    65
+  ],
+  "by_subject_task": [
+    {
+      "subject": "1010",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1016",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 2
+    },
+    {
+      "subject": "1017",
+      "awake": 1,
+      "sed": 2,
+      "sed2": 2
+    },
+    {
+      "subject": "1022",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1024",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1033",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1036",
+      "awake": 1,
+      "sed": 2,
+      "sed2": 1
+    },
+    {
+      "subject": "1037",
+      "awake": 1,
+      "sed": 0,
+      "sed2": 0
+    },
+    {
+      "subject": "1045",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1046",
+      "awake": 1,
+      "sed": 2,
+      "sed2": 2
+    },
+    {
+      "subject": "1054",
+      "awake": 1,
+      "sed": 2,
+      "sed2": 2
+    },
+    {
+      "subject": "1055",
+      "awake": 1,
+      "sed": 2,
+      "sed2": 2
+    },
+    {
+      "subject": "1057",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1060",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1061",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1062",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1064",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1067",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1068",
+      "awake": 1,
+      "sed": 2,
+      "sed2": 1
+    },
+    {
+      "subject": "1071",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    },
+    {
+      "subject": "1074",
+      "awake": 1,
+      "sed": 3,
+      "sed2": 3
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "title": "GCC simulation and analysis code",
-  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v1.3.3 adds the final Neuroscience of Consciousness-oriented manuscript and supplement, the Chennu 2016 gamma baseline-holdout analysis with Cambridge raw-data manifest, the Hermann 2021 FDG-PET/EEG disorders-of-consciousness proxy analysis with paired AUC-delta controls, the corrected Zenodo concept DOI metadata, direct frozen-tag GitHub links, and reviewer-driven framing refinements.",
+  "description": "Software archive for the Gamma-Code Consensus (GCC) project. Version v2.0.0-noc is the Neuroscience of Consciousness submission snapshot. It adds the final manuscript source files and the author-generated validation package covering synthetic regime simulations, Chennu and DS005620 propofol EEG analyses, Sleep-EDF state geometry, Mendeley disorders-of-consciousness pilot analyses, ketamine boundary-state analyses, DS004504 degradation-proxy analyses, spectral residualization, gamma-artifact controls, phase-surrogate controls, wPLI controls, amplitude-normalized phase-only analyses, CSD/source-proxy analyses, reliability checks, derived result tables, and figure-generation scripts. Raw third-party datasets are not redistributed.",
   "creators": [
     {
       "name": "Tugan, Mehmet Oktay",
@@ -10,21 +10,21 @@
   "license": "mit",
   "upload_type": "software",
   "access_right": "open",
-  "version": "v1.3.3",
+  "version": "v2.0.0-noc",
   "keywords": [
     "global access",
     "consciousness",
     "neural dynamics",
     "EEG",
-    "fMRI",
-    "diffusion MRI",
-    "HARDI",
+    "PSG",
+    "propofol",
+    "sleep",
+    "ketamine",
     "disorders of consciousness",
-    "FDG-PET",
-    "Kuramoto model",
-    "connectome",
-    "Human Connectome Project",
-    "Terminal Lucidity"
+    "phase synchrony",
+    "effective dimensionality",
+    "metastability",
+    "Kuramoto model"
   ],
   "related_identifiers": [
     {

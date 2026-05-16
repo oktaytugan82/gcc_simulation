@@ -1,0 +1,3 @@
+subject,filename,band,error
+210,210_20161207_0006eyesOpen_afterICA.set,alpha,buffer is too small for requested array
+210,210_20161207_0006eyesOpen_afterICA.set,gamma,buffer is too small for requested array

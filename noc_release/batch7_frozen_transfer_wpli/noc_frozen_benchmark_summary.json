@@ -1,0 +1,496 @@
+{
+  "design": {
+    "standard_features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch4_20260513\\results\\combined_gcc_spectral_normalized_features.csv",
+    "wpli_chennu": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch7_noc_20260514",
+    "wpli_ds005620": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch6_20260513",
+    "rule": "All thresholds, scaling, and logistic weights are fitted only on the training dataset; sign-rule models use no fitted parameters."
+  },
+  "standard": {
+    "alpha": {
+      "GCC_Pi_sign_rule": {
+        "all": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.925,
+          "n": 101
+        }
+      },
+      "R_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.7,
+          "balanced_accuracy": 0.725,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.9,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "D_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.5,
+          "balanced_accuracy": 0.725,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.775,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "M_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.5,
+          "balanced_accuracy": 0.7125,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.25,
+          "balanced_accuracy": 0.575,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "GCC_Pi_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.9125,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "GCC_triad_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.575,
+          "balanced_accuracy": 0.7375,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.8,
+          "balanced_accuracy": 0.7,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "GCC_triad_plus_Pi": {
+        "train_chennu_test_ds": {
+          "auc": 0.625,
+          "balanced_accuracy": 0.75,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_bandpowers": {
+        "train_chennu_test_ds": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.9375,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.775,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_all": {
+        "train_chennu_test_ds": {
+          "auc": 0.775,
+          "balanced_accuracy": 0.775,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_plus_GCC_Pi": {
+        "train_chennu_test_ds": {
+          "auc": 0.8,
+          "balanced_accuracy": 0.825,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_plus_GCC_triad": {
+        "train_chennu_test_ds": {
+          "auc": 0.55,
+          "balanced_accuracy": 0.725,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.7,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        }
+      }
+    },
+    "gamma": {
+      "GCC_Pi_sign_rule": {
+        "all": {
+          "auc": 0.9666666666666667,
+          "balanced_accuracy": 0.9833333333333334,
+          "n": 101
+        }
+      },
+      "R_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.575,
+          "balanced_accuracy": 0.7625,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.25,
+          "balanced_accuracy": 0.6,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "D_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.85,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.8,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "M_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.45,
+          "balanced_accuracy": 0.6875,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.3,
+          "balanced_accuracy": 0.65,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "GCC_Pi_delta": {
+        "train_chennu_test_ds": {
+          "auc": 1.0,
+          "balanced_accuracy": 1.0,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "GCC_triad_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.675,
+          "balanced_accuracy": 0.825,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.45,
+          "balanced_accuracy": 0.65,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "GCC_triad_plus_Pi": {
+        "train_chennu_test_ds": {
+          "auc": 0.8,
+          "balanced_accuracy": 0.9,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.7,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_bandpowers": {
+        "train_chennu_test_ds": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.9375,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.775,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_all": {
+        "train_chennu_test_ds": {
+          "auc": 0.775,
+          "balanced_accuracy": 0.775,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_plus_GCC_Pi": {
+        "train_chennu_test_ds": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.9125,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.625,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "spectral_plus_GCC_triad": {
+        "train_chennu_test_ds": {
+          "auc": 0.775,
+          "balanced_accuracy": 0.8875,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.65,
+          "n_train": 61,
+          "n_test": 40
+        }
+      }
+    }
+  },
+  "wpli": {
+    "alpha": {
+      "wPLI_Pi_sign_rule": {
+        "all": {
+          "auc": 0.7333333333333333,
+          "balanced_accuracy": 0.8666666666666667,
+          "n": 101
+        }
+      },
+      "wPLI_R_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.55,
+          "balanced_accuracy": 0.775,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.65,
+          "balanced_accuracy": 0.8,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_D_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.725,
+          "balanced_accuracy": 0.8,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.6,
+          "balanced_accuracy": 0.75,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_M_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.65,
+          "balanced_accuracy": 0.7875,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.55,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_Pi_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.65,
+          "balanced_accuracy": 0.7625,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.8,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_triad_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.725,
+          "balanced_accuracy": 0.8,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.7,
+          "balanced_accuracy": 0.8,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_triad_plus_Pi": {
+        "train_chennu_test_ds": {
+          "auc": 0.65,
+          "balanced_accuracy": 0.7875,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.8,
+          "balanced_accuracy": 0.8,
+          "n_train": 61,
+          "n_test": 40
+        }
+      }
+    },
+    "gamma": {
+      "wPLI_Pi_sign_rule": {
+        "all": {
+          "auc": 0.8583333333333334,
+          "balanced_accuracy": 0.925,
+          "n": 101
+        }
+      },
+      "wPLI_R_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.675,
+          "balanced_accuracy": 0.7,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.85,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_D_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.675,
+          "balanced_accuracy": 0.775,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.7,
+          "balanced_accuracy": 0.825,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_M_only": {
+        "train_chennu_test_ds": {
+          "auc": 0.875,
+          "balanced_accuracy": 0.9,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.7,
+          "balanced_accuracy": 0.775,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_Pi_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.9125000000000001,
+          "balanced_accuracy": 0.925,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.85,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_triad_delta": {
+        "train_chennu_test_ds": {
+          "auc": 0.825,
+          "balanced_accuracy": 0.875,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.65,
+          "balanced_accuracy": 0.65,
+          "n_train": 61,
+          "n_test": 40
+        }
+      },
+      "wPLI_triad_plus_Pi": {
+        "train_chennu_test_ds": {
+          "auc": 0.95,
+          "balanced_accuracy": 0.95,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "train_ds_test_chennu": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.825,
+          "n_train": 61,
+          "n_test": 40
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the archived Zenodo release."
+message: "If you use this software, please cite the archived Zenodo release and the associated manuscript."
 title: "GCC simulation and analysis code"
-version: "v1.3.3"
+version: "v2.0.0-noc"
 doi: "10.5281/zenodo.19744969"
-date-released: "2026-05-11"
+date-released: "2026-05-16"
 type: software
 authors:
   - family-names: "Tugan"
@@ -11,17 +11,18 @@ authors:
     orcid: "https://orcid.org/0009-0005-8665-3583"
 repository-code: "https://github.com/oktaytugan82/gcc_simulation"
 license: MIT
-abstract: "Simulation and analysis code for the Gamma-Code Consensus (GCC), including synthetic Kuramoto network experiments, EEG pilot analysis with Chennu 2016 baseline-holdout validation, HCP-derived Budapest Reference Connectome topology stress tests, OpenNeuro ds006623 fMRI validation, OpenNeuro ds003367 traumatic coma/DoC HARDI structural backbone analyses, OpenNeuro ds004504 neurodegenerative EEG P1-proxy analyses, and Hermann 2021 FDG-PET/EEG disorders-of-consciousness proxy analyses."
+abstract: "Simulation and public EEG/PSG analysis code for the Gamma-Code Consensus (GCC) model. The NoC submission release includes synthetic balanced-coherence regime simulations, Chennu and DS005620 propofol analyses, Sleep-EDF state-geometry analyses, Mendeley disorders-of-consciousness pilot analyses, ketamine boundary-state analyses, DS004504 degradation-proxy analyses, spectral residualization, gamma-artifact controls, phase-surrogate controls, wPLI controls, phase-only analyses, source/CSD proxy analyses, reliability checks, derived outputs, and manuscript source files."
 keywords:
   - consciousness
   - global access
   - neural dynamics
-  - Kuramoto model
-  - connectome
-  - fMRI
-  - diffusion MRI
-  - HARDI
-  - disorders of consciousness
   - EEG
-  - FDG-PET
-  - terminal lucidity
+  - PSG
+  - propofol
+  - sleep
+  - disorders of consciousness
+  - ketamine
+  - phase synchrony
+  - effective dimensionality
+  - metastability
+  - Kuramoto model

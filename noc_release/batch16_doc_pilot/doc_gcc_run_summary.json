@@ -1,0 +1,13 @@
+{
+  "n_files": 42,
+  "failures": [],
+  "labels": {
+    "VS": 30,
+    "MCS+": 8,
+    "MCS-": 4
+  },
+  "sfreq_counts": {
+    "256_raw_to_128": 42
+  },
+  "analysis_s": 14400.0
+}

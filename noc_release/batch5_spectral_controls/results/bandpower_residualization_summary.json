@@ -1,0 +1,430 @@
+{
+  "bandpower_only_residualization": {
+    "alpha": {
+      "within_Chennu_LOSO": {
+        "spectral": {
+          "auc": 0.915,
+          "balanced_accuracy": 0.9,
+          "n": 40
+        },
+        "pi_only": {
+          "auc": 0.8099999999999999,
+          "balanced_accuracy": 0.8,
+          "n": 40
+        },
+        "residual_pi": {
+          "auc": 0.6124999999999999,
+          "balanced_accuracy": 0.775,
+          "n": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.9,
+          "n": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.06500000000000006,
+        "auc_delta_residual_pi_minus_spectral": -0.3025000000000001
+      },
+      "within_DS005620_LOSO": {
+        "spectral": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.8875,
+          "n": 60
+        },
+        "pi_only": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.875,
+          "n": 60
+        },
+        "residual_pi": {
+          "auc": 0.5425000000000001,
+          "balanced_accuracy": 0.75,
+          "n": 60
+        },
+        "spectral_plus_pi": {
+          "auc": 0.95,
+          "balanced_accuracy": 0.9375,
+          "n": 60
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.025000000000000022,
+        "auc_delta_residual_pi_minus_spectral": -0.4324999999999999
+      },
+      "train_Chennu_test_DS005620": {
+        "spectral": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.9375,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "pi_only": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.9125,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "residual_pi": {
+          "auc": 0.35,
+          "balanced_accuracy": 0.65,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "spectral_plus_pi": {
+          "auc": 1.0,
+          "balanced_accuracy": 0.95,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.025000000000000022,
+        "auc_delta_residual_pi_minus_spectral": -0.625
+      },
+      "train_DS005620_test_Chennu": {
+        "spectral": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.775,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "pi_only": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "residual_pi": {
+          "auc": 0.45,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.75,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.050000000000000044,
+        "auc_delta_residual_pi_minus_spectral": -0.45
+      }
+    },
+    "gamma": {
+      "within_Chennu_LOSO": {
+        "spectral": {
+          "auc": 0.915,
+          "balanced_accuracy": 0.9,
+          "n": 40
+        },
+        "pi_only": {
+          "auc": 0.8700000000000001,
+          "balanced_accuracy": 0.8,
+          "n": 40
+        },
+        "residual_pi": {
+          "auc": 0.605,
+          "balanced_accuracy": 0.75,
+          "n": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.85,
+          "n": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.015000000000000013,
+        "auc_delta_residual_pi_minus_spectral": -0.31000000000000005
+      },
+      "within_DS005620_LOSO": {
+        "spectral": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.8875,
+          "n": 60
+        },
+        "pi_only": {
+          "auc": 1.0,
+          "balanced_accuracy": 0.9625,
+          "n": 60
+        },
+        "residual_pi": {
+          "auc": 0.68375,
+          "balanced_accuracy": 0.8125,
+          "n": 60
+        },
+        "spectral_plus_pi": {
+          "auc": 1.0,
+          "balanced_accuracy": 0.975,
+          "n": 60
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.025000000000000022,
+        "auc_delta_residual_pi_minus_spectral": -0.29125
+      },
+      "train_Chennu_test_DS005620": {
+        "spectral": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.9375,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "pi_only": {
+          "auc": 1.0,
+          "balanced_accuracy": 1.0,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "residual_pi": {
+          "auc": 0.925,
+          "balanced_accuracy": 0.95,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "spectral_plus_pi": {
+          "auc": 1.0,
+          "balanced_accuracy": 1.0,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.025000000000000022,
+        "auc_delta_residual_pi_minus_spectral": -0.04999999999999993
+      },
+      "train_DS005620_test_Chennu": {
+        "spectral": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.775,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "pi_only": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "residual_pi": {
+          "auc": 0.3,
+          "balanced_accuracy": 0.575,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.65,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.15000000000000002,
+        "auc_delta_residual_pi_minus_spectral": -0.6000000000000001
+      }
+    }
+  },
+  "all_spectral_residualization": {
+    "alpha": {
+      "within_Chennu_LOSO": {
+        "spectral": {
+          "auc": 0.95,
+          "balanced_accuracy": 0.875,
+          "n": 40
+        },
+        "pi_only": {
+          "auc": 0.8099999999999999,
+          "balanced_accuracy": 0.8,
+          "n": 40
+        },
+        "residual_pi": {
+          "auc": 0.5762499999999999,
+          "balanced_accuracy": 0.75,
+          "n": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.92,
+          "balanced_accuracy": 0.875,
+          "n": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.029999999999999916,
+        "auc_delta_residual_pi_minus_spectral": -0.37375
+      },
+      "within_DS005620_LOSO": {
+        "spectral": {
+          "auc": 0.9774999999999999,
+          "balanced_accuracy": 0.975,
+          "n": 60
+        },
+        "pi_only": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.875,
+          "n": 60
+        },
+        "residual_pi": {
+          "auc": 0.475,
+          "balanced_accuracy": 0.7375,
+          "n": 60
+        },
+        "spectral_plus_pi": {
+          "auc": 0.975,
+          "balanced_accuracy": 0.975,
+          "n": 60
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.0024999999999999467,
+        "auc_delta_residual_pi_minus_spectral": -0.5025
+      },
+      "train_Chennu_test_DS005620": {
+        "spectral": {
+          "auc": 0.775,
+          "balanced_accuracy": 0.775,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "pi_only": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.9125,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "residual_pi": {
+          "auc": 0.4,
+          "balanced_accuracy": 0.7,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "spectral_plus_pi": {
+          "auc": 0.8,
+          "balanced_accuracy": 0.825,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.025000000000000022,
+        "auc_delta_residual_pi_minus_spectral": -0.375
+      },
+      "train_DS005620_test_Chennu": {
+        "spectral": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "pi_only": {
+          "auc": 0.85,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "residual_pi": {
+          "auc": 0.5,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.0,
+        "auc_delta_residual_pi_minus_spectral": -0.25
+      }
+    },
+    "gamma": {
+      "within_Chennu_LOSO": {
+        "spectral": {
+          "auc": 0.95,
+          "balanced_accuracy": 0.875,
+          "n": 40
+        },
+        "pi_only": {
+          "auc": 0.8700000000000001,
+          "balanced_accuracy": 0.8,
+          "n": 40
+        },
+        "residual_pi": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.825,
+          "n": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.9075,
+          "balanced_accuracy": 0.925,
+          "n": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": -0.04249999999999998,
+        "auc_delta_residual_pi_minus_spectral": -0.19999999999999996
+      },
+      "within_DS005620_LOSO": {
+        "spectral": {
+          "auc": 0.9774999999999999,
+          "balanced_accuracy": 0.975,
+          "n": 60
+        },
+        "pi_only": {
+          "auc": 1.0,
+          "balanced_accuracy": 0.9625,
+          "n": 60
+        },
+        "residual_pi": {
+          "auc": 0.5875,
+          "balanced_accuracy": 0.775,
+          "n": 60
+        },
+        "spectral_plus_pi": {
+          "auc": 1.0,
+          "balanced_accuracy": 1.0,
+          "n": 60
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.022500000000000075,
+        "auc_delta_residual_pi_minus_spectral": -0.3899999999999999
+      },
+      "train_Chennu_test_DS005620": {
+        "spectral": {
+          "auc": 0.775,
+          "balanced_accuracy": 0.775,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "pi_only": {
+          "auc": 1.0,
+          "balanced_accuracy": 1.0,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "residual_pi": {
+          "auc": 0.6,
+          "balanced_accuracy": 0.7875,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "spectral_plus_pi": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.9125,
+          "n_train": 40,
+          "n_test": 61
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.125,
+        "auc_delta_residual_pi_minus_spectral": -0.17500000000000004
+      },
+      "train_DS005620_test_Chennu": {
+        "spectral": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.675,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "pi_only": {
+          "auc": 0.9,
+          "balanced_accuracy": 0.725,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "residual_pi": {
+          "auc": 0.35,
+          "balanced_accuracy": 0.65,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "spectral_plus_pi": {
+          "auc": 0.75,
+          "balanced_accuracy": 0.625,
+          "n_train": 61,
+          "n_test": 40
+        },
+        "auc_delta_spectral_plus_pi_minus_spectral": 0.0,
+        "auc_delta_residual_pi_minus_spectral": -0.4
+      }
+    }
+  }
+}

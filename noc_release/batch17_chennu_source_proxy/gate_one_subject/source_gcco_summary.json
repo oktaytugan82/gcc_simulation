@@ -1,0 +1,15 @@
+{
+  "target_sfreq": 125.0,
+  "crop_s": 90.0,
+  "window_s": 3.0,
+  "stride_s": 1.5,
+  "alpha": 0.1,
+  "spacing": "ico-5",
+  "method": "sLORETA",
+  "snr": 3.0,
+  "loose": 0.2,
+  "depth": 0.8,
+  "subjects_requested": 1,
+  "subjects_completed": 1,
+  "failures": []
+}

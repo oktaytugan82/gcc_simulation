@@ -1,0 +1,105 @@
+{
+  "inputs": {
+    "features": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch11_source_proxy_csd_20260514\\csd_phase_only_delta_features.csv"
+  },
+  "bootstrap_incremental_auc": {
+    "Chennu_alpha": {
+      "spectral_all_plus_gcc_minus_spectral_all": {
+        "delta_auc_mean": -0.04916666666666667,
+        "ci_low": -0.15000000000000013,
+        "ci_high": 1.1102230246251565e-16,
+        "p_delta_le_0": 0.9733333333333334,
+        "n_boot": 600
+      },
+      "residual_gcc_minus_spectral_all": {
+        "delta_auc_mean": -0.34445,
+        "ci_low": -0.5499999999999999,
+        "ci_high": -0.1499999999999999,
+        "p_delta_le_0": 1.0,
+        "n_boot": 600
+      },
+      "gcc_triad_minus_spectral_all": {
+        "delta_auc_mean": -0.22357916666666663,
+        "ci_low": -0.43999999999999995,
+        "ci_high": 0.0,
+        "p_delta_le_0": 0.9816666666666667,
+        "n_boot": 600
+      }
+    },
+    "DS005620_alpha": {
+      "spectral_all_plus_gcc_minus_spectral_all": {
+        "delta_auc_mean": 0.021332472243283284,
+        "ci_low": 0.0,
+        "ci_high": 0.06428571428571417,
+        "p_delta_le_0": 0.3466666666666667,
+        "n_boot": 600
+      },
+      "residual_gcc_minus_spectral_all": {
+        "delta_auc_mean": -0.321571237096203,
+        "ci_low": -0.5296641156462585,
+        "ci_high": -0.10769557823129258,
+        "p_delta_le_0": 0.9983333333333333,
+        "n_boot": 600
+      },
+      "gcc_triad_minus_spectral_all": {
+        "delta_auc_mean": -0.08684178898167452,
+        "ci_low": -0.2105889724310777,
+        "ci_high": 0.00756892230576431,
+        "p_delta_le_0": 0.9616666666666667,
+        "n_boot": 600
+      }
+    },
+    "Chennu_gamma": {
+      "spectral_all_plus_gcc_minus_spectral_all": {
+        "delta_auc_mean": -0.052083333333333336,
+        "ci_low": -0.15000000000000013,
+        "ci_high": 0.0,
+        "p_delta_le_0": 0.9766666666666667,
+        "n_boot": 600
+      },
+      "residual_gcc_minus_spectral_all": {
+        "delta_auc_mean": -0.25293333333333334,
+        "ci_low": -0.5,
+        "ci_high": -0.050000000000000044,
+        "p_delta_le_0": 0.99,
+        "n_boot": 600
+      },
+      "gcc_triad_minus_spectral_all": {
+        "delta_auc_mean": -0.0006666666666666704,
+        "ci_low": -0.15000000000000002,
+        "ci_high": 0.15000000000000002,
+        "p_delta_le_0": 0.635,
+        "n_boot": 600
+      }
+    },
+    "DS005620_gamma": {
+      "spectral_all_plus_gcc_minus_spectral_all": {
+        "delta_auc_mean": 0.021332472243283284,
+        "ci_low": 0.0,
+        "ci_high": 0.06428571428571417,
+        "p_delta_le_0": 0.3466666666666667,
+        "n_boot": 600
+      },
+      "residual_gcc_minus_spectral_all": {
+        "delta_auc_mean": -0.37535617319539905,
+        "ci_low": -0.5929705215419501,
+        "ci_high": -0.17371598639455774,
+        "p_delta_le_0": 1.0,
+        "n_boot": 600
+      },
+      "gcc_triad_minus_spectral_all": {
+        "delta_auc_mean": -0.04048132193910702,
+        "ci_low": -0.11116071428571433,
+        "ci_high": 0.023842592592592592,
+        "p_delta_le_0": 0.8766666666666667,
+        "n_boot": 600
+      }
+    }
+  },
+  "key_outputs": [
+    "batch9_loso_metrics.csv",
+    "batch9_cross_dataset_metrics.csv",
+    "batch9_spectral_caliper_metrics.csv",
+    "BATCH9_BANDPOWER_INDEPENDENCE_REPORT.md"
+  ]
+}

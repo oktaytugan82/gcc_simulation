@@ -1,0 +1,256 @@
+{
+  "bounds": {
+    "R_min": 0.48059469965979373,
+    "D_min": 1.1168252123529119,
+    "D_max": 1.9430988289111057,
+    "M_min": 0.08559795440380381,
+    "M_max": 0.1033297729118867
+  },
+  "n_epochs": 3921,
+  "subjects": [
+    "SC4001",
+    "SC4011",
+    "SC4021",
+    "SC4031"
+  ],
+  "state_counts": {
+    "NREM": 2641,
+    "REM": 667,
+    "Wake": 613
+  },
+  "state_summary": {
+    "NREM": {
+      "R_mean": 0.482071,
+      "R_std": 0.045292,
+      "R_median": 0.483673,
+      "R_count": 2641,
+      "D_eff_mean": 1.553012,
+      "D_eff_std": 0.160359,
+      "D_eff_median": 1.561904,
+      "D_eff_count": 2641,
+      "M_tau_mean": 0.093594,
+      "M_tau_std": 0.006326,
+      "M_tau_median": 0.09415,
+      "M_tau_count": 2641,
+      "Pi_mean": 0.787833,
+      "Pi_std": 0.228544,
+      "Pi_median": 0.666667,
+      "Pi_count": 2641,
+      "Access_all_mean": 0.480121,
+      "Access_all_std": 0.499699,
+      "Access_all_median": 0.0,
+      "Access_all_count": 2641
+    },
+    "REM": {
+      "R_mean": 0.471889,
+      "R_std": 0.045341,
+      "R_median": 0.479376,
+      "R_count": 667,
+      "D_eff_mean": 1.482959,
+      "D_eff_std": 0.241232,
+      "D_eff_median": 1.486408,
+      "D_eff_count": 667,
+      "M_tau_mean": 0.094036,
+      "M_tau_std": 0.006845,
+      "M_tau_median": 0.094639,
+      "M_tau_count": 667,
+      "Pi_mean": 0.765617,
+      "Pi_std": 0.229325,
+      "Pi_median": 0.666667,
+      "Pi_count": 667,
+      "Access_all_mean": 0.425787,
+      "Access_all_std": 0.494833,
+      "Access_all_median": 0.0,
+      "Access_all_count": 667
+    },
+    "Wake": {
+      "R_mean": 0.57898,
+      "R_std": 0.075345,
+      "R_median": 0.591395,
+      "R_count": 613,
+      "D_eff_mean": 1.502326,
+      "D_eff_std": 0.312803,
+      "D_eff_median": 1.468799,
+      "D_eff_count": 613,
+      "M_tau_mean": 0.095088,
+      "M_tau_std": 0.007391,
+      "M_tau_median": 0.095986,
+      "M_tau_count": 613,
+      "Pi_mean": 0.83143,
+      "Pi_std": 0.230732,
+      "Pi_median": 1.0,
+      "Pi_count": 613,
+      "Access_all_mean": 0.595432,
+      "Access_all_std": 0.491209,
+      "Access_all_median": 1.0,
+      "Access_all_count": 613
+    }
+  },
+  "subject_state_mean": [
+    {
+      "subject": "SC4001",
+      "state": "NREM",
+      "R": 0.514832,
+      "D_eff": 1.596776,
+      "M_tau": 0.095292,
+      "Pi": 0.925505,
+      "Access_all": 0.795455
+    },
+    {
+      "subject": "SC4001",
+      "state": "REM",
+      "R": 0.500832,
+      "D_eff": 1.703033,
+      "M_tau": 0.096869,
+      "Pi": 0.882667,
+      "Access_all": 0.672
+    },
+    {
+      "subject": "SC4001",
+      "state": "Wake",
+      "R": 0.585826,
+      "D_eff": 1.785877,
+      "M_tau": 0.095605,
+      "Pi": 0.856383,
+      "Access_all": 0.606383
+    },
+    {
+      "subject": "SC4011",
+      "state": "NREM",
+      "R": 0.477689,
+      "D_eff": 1.647236,
+      "M_tau": 0.094596,
+      "Pi": 0.790808,
+      "Access_all": 0.425258
+    },
+    {
+      "subject": "SC4011",
+      "state": "REM",
+      "R": 0.491113,
+      "D_eff": 1.712996,
+      "M_tau": 0.096178,
+      "Pi": 0.843137,
+      "Access_all": 0.547059
+    },
+    {
+      "subject": "SC4011",
+      "state": "Wake",
+      "R": 0.576792,
+      "D_eff": 1.580426,
+      "M_tau": 0.092084,
+      "Pi": 0.760085,
+      "Access_all": 0.484076
+    },
+    {
+      "subject": "SC4021",
+      "state": "NREM",
+      "R": 0.437369,
+      "D_eff": 1.482645,
+      "M_tau": 0.088471,
+      "Pi": 0.58901,
+      "Access_all": 0.100817
+    },
+    {
+      "subject": "SC4021",
+      "state": "REM",
+      "R": 0.410369,
+      "D_eff": 1.410624,
+      "M_tau": 0.087393,
+      "Pi": 0.543967,
+      "Access_all": 0.0
+    },
+    {
+      "subject": "SC4021",
+      "state": "Wake",
+      "R": 0.568736,
+      "D_eff": 1.276696,
+      "M_tau": 0.097402,
+      "Pi": 0.893229,
+      "Access_all": 0.71875
+    },
+    {
+      "subject": "SC4031",
+      "state": "NREM",
+      "R": 0.513438,
+      "D_eff": 1.479088,
+      "M_tau": 0.097055,
+      "Pi": 0.905473,
+      "Access_all": 0.736318
+    },
+    {
+      "subject": "SC4031",
+      "state": "REM",
+      "R": 0.486924,
+      "D_eff": 1.220638,
+      "M_tau": 0.095781,
+      "Pi": 0.805423,
+      "Access_all": 0.511962
+    },
+    {
+      "subject": "SC4031",
+      "state": "Wake",
+      "R": 0.581605,
+      "D_eff": 1.240262,
+      "M_tau": 0.095649,
+      "Pi": 0.821429,
+      "Access_all": 0.592857
+    }
+  ],
+  "stats": {
+    "kruskal_R_H": 888.4696466805326,
+    "kruskal_R_p": 1.178331680019799e-193,
+    "kruskal_D_eff_H": 41.79715872736233,
+    "kruskal_D_eff_p": 8.391938698051076e-10,
+    "kruskal_M_tau_H": 35.945251042827294,
+    "kruskal_M_tau_p": 1.565265131181216e-08,
+    "kruskal_Pi_H": 35.530688857192814,
+    "kruskal_Pi_p": 1.9257900812540982e-08
+  },
+  "cross_validated_baselines": {
+    "R_only": {
+      "wake_vs_nrem_auc": 0.8640326684303797,
+      "rem_vs_nrem_auc": 0.5280449513978338,
+      "multiclass": {
+        "accuracy": 0.4483550114766641,
+        "macro_f1": 0.44570004558873344
+      }
+    },
+    "D_only": {
+      "wake_vs_nrem_auc": 0.45098283869684536,
+      "rem_vs_nrem_auc": 0.3879005215302232,
+      "multiclass": {
+        "accuracy": 0.47717419025758734,
+        "macro_f1": 0.2773200962337475
+      }
+    },
+    "M_only": {
+      "wake_vs_nrem_auc": 0.39534804713969013,
+      "rem_vs_nrem_auc": 0.5238974605843614,
+      "multiclass": {
+        "accuracy": 0.24305024228513133,
+        "macro_f1": 0.20718823282646212
+      }
+    },
+    "GCC_triad": {
+      "wake_vs_nrem_auc": 0.8139818015940129,
+      "rem_vs_nrem_auc": 0.406582963724499,
+      "multiclass": {
+        "accuracy": 0.5419535832695741,
+        "macro_f1": 0.45208584522167944
+      }
+    },
+    "Pi_only": {
+      "wake_vs_nrem_auc": 0.41697062200844637,
+      "rem_vs_nrem_auc": 0.5041128621603624,
+      "multiclass": {
+        "accuracy": 0.15378729915837797,
+        "macro_f1": 0.16243258544349837
+      }
+    }
+  },
+  "band": "alpha",
+  "band_hz": [
+    8.0,
+    13.0
+  ]
+}

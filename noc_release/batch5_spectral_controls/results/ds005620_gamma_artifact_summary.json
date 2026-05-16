@@ -1,0 +1,285 @@
+{
+  "n_recordings": 126,
+  "n_subjects": 21,
+  "channel_counts": {
+    "all_eeg": 62,
+    "posterior": 18,
+    "centro_posterior": 32,
+    "frontotemporal": 30
+  },
+  "alpha": 0.2,
+  "target_sfreq": 250.0,
+  "crop_s": 120.0,
+  "window_s": 2.0,
+  "stride_s": 0.5,
+  "pi_stats": [
+    {
+      "channel_set": "all_eeg",
+      "comparison": "awake_vs_sed",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.3649579120866555,
+      "mean_diff_awake_minus_target": 0.29748934529731075,
+      "paired_d": 2.1330035031870187,
+      "p": 1.1193208526537747e-08,
+      "auc_awake_vs_target": 1.0
+    },
+    {
+      "channel_set": "all_eeg",
+      "comparison": "awake_vs_sed2",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.3737335935312814,
+      "mean_diff_awake_minus_target": 0.2887136638526849,
+      "paired_d": 1.9215867133438966,
+      "p": 5.696666280324951e-08,
+      "auc_awake_vs_target": 1.0
+    },
+    {
+      "channel_set": "centro_posterior",
+      "comparison": "awake_vs_sed",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.4538412469718428,
+      "mean_diff_awake_minus_target": 0.2086060104121234,
+      "paired_d": 1.1562219007783576,
+      "p": 5.4366890883930525e-05,
+      "auc_awake_vs_target": 0.9500000000000001
+    },
+    {
+      "channel_set": "centro_posterior",
+      "comparison": "awake_vs_sed2",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.45888405820968436,
+      "mean_diff_awake_minus_target": 0.20356319917428184,
+      "paired_d": 1.1768072577229578,
+      "p": 4.434869442269316e-05,
+      "auc_awake_vs_target": 1.0
+    },
+    {
+      "channel_set": "frontotemporal",
+      "comparison": "awake_vs_sed",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.45401815832504316,
+      "mean_diff_awake_minus_target": 0.2084290990589231,
+      "paired_d": 1.4701196033712225,
+      "p": 2.708693590948839e-06,
+      "auc_awake_vs_target": 1.0
+    },
+    {
+      "channel_set": "frontotemporal",
+      "comparison": "awake_vs_sed2",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.4594876186398344,
+      "mean_diff_awake_minus_target": 0.20295963874413184,
+      "paired_d": 1.3556619032851716,
+      "p": 7.862123060110732e-06,
+      "auc_awake_vs_target": 0.95
+    },
+    {
+      "channel_set": "posterior",
+      "comparison": "awake_vs_sed",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.45222723716085855,
+      "mean_diff_awake_minus_target": 0.21022002022310765,
+      "paired_d": 1.2743699563696351,
+      "p": 1.7100446250879936e-05,
+      "auc_awake_vs_target": 1.0
+    },
+    {
+      "channel_set": "posterior",
+      "comparison": "awake_vs_sed2",
+      "metric": "Pi",
+      "n": 20,
+      "awake_mean": 0.6624472573839664,
+      "target_mean": 0.4428026996909463,
+      "mean_diff_awake_minus_target": 0.21964455769301994,
+      "paired_d": 1.3444593889640832,
+      "p": 8.742245933958042e-06,
+      "auc_awake_vs_target": 1.0
+    }
+  ],
+  "hf_stats": [
+    {
+      "channel_set": "all_eeg",
+      "comparison": "awake_vs_sed",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.043385954204783764,
+      "target_mean": 0.02110809487344093,
+      "mean_diff_awake_minus_target": 0.02227785933134283,
+      "paired_d": 0.5397983781788639,
+      "p": 0.02603223728509885,
+      "auc_awake_vs_target": 0.6825000000000001
+    },
+    {
+      "channel_set": "all_eeg",
+      "comparison": "awake_vs_sed2",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.043385954204783764,
+      "target_mean": 0.020124083790156747,
+      "mean_diff_awake_minus_target": 0.023261870414627014,
+      "paired_d": 0.6250088369686342,
+      "p": 0.011545614872749695,
+      "auc_awake_vs_target": 0.7275
+    },
+    {
+      "channel_set": "centro_posterior",
+      "comparison": "awake_vs_sed",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.03206011084127671,
+      "target_mean": 0.021860063713018855,
+      "mean_diff_awake_minus_target": 0.010200047128257863,
+      "paired_d": 0.2761400982341795,
+      "p": 0.2319087975720289,
+      "auc_awake_vs_target": 0.5975
+    },
+    {
+      "channel_set": "centro_posterior",
+      "comparison": "awake_vs_sed2",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.03206011084127671,
+      "target_mean": 0.023632799502152253,
+      "mean_diff_awake_minus_target": 0.008427311339124464,
+      "paired_d": 0.21966674096389907,
+      "p": 0.3382577525458052,
+      "auc_awake_vs_target": 0.5975
+    },
+    {
+      "channel_set": "frontotemporal",
+      "comparison": "awake_vs_sed",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.05325475607521407,
+      "target_mean": 0.019040956342803245,
+      "mean_diff_awake_minus_target": 0.034213799732410836,
+      "paired_d": 0.7322956034924345,
+      "p": 0.003984029970021935,
+      "auc_awake_vs_target": 0.76
+    },
+    {
+      "channel_set": "frontotemporal",
+      "comparison": "awake_vs_sed2",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.05325475607521407,
+      "target_mean": 0.01691528183760689,
+      "mean_diff_awake_minus_target": 0.03633947423760718,
+      "paired_d": 0.8239714316884603,
+      "p": 0.0015729150197110085,
+      "auc_awake_vs_target": 0.8025
+    },
+    {
+      "channel_set": "posterior",
+      "comparison": "awake_vs_sed",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.02017010560535296,
+      "target_mean": 0.022784711022837408,
+      "mean_diff_awake_minus_target": -0.0026146054174844514,
+      "paired_d": -0.09066211927851425,
+      "p": 0.6896735529080412,
+      "auc_awake_vs_target": 0.53
+    },
+    {
+      "channel_set": "posterior",
+      "comparison": "awake_vs_sed2",
+      "metric": "hf_rel_power",
+      "n": 20,
+      "awake_mean": 0.02017010560535296,
+      "target_mean": 0.02233300533807758,
+      "mean_diff_awake_minus_target": -0.0021628997327246243,
+      "paired_d": -0.07091467393746223,
+      "p": 0.7545958103158488,
+      "auc_awake_vs_target": 0.55
+    }
+  ],
+  "delta_correlations": [
+    {
+      "channel_set": "all_eeg",
+      "comparison": "awake_vs_sed",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": -0.3488721804511278,
+      "spearman_p": 0.13166317155695242,
+      "delta_pi_mean": 0.29748934529731075,
+      "delta_hf_mean": 0.02227785933134283
+    },
+    {
+      "channel_set": "all_eeg",
+      "comparison": "awake_vs_sed2",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": 0.13984962406015036,
+      "spearman_p": 0.5564935505662203,
+      "delta_pi_mean": 0.2887136638526849,
+      "delta_hf_mean": 0.023261870414627014
+    },
+    {
+      "channel_set": "centro_posterior",
+      "comparison": "awake_vs_sed",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": -0.08048138967046659,
+      "spearman_p": 0.7358936167877855,
+      "delta_pi_mean": 0.2086060104121234,
+      "delta_hf_mean": 0.010200047128257863
+    },
+    {
+      "channel_set": "centro_posterior",
+      "comparison": "awake_vs_sed2",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": 0.21654135338345865,
+      "spearman_p": 0.35914578257040025,
+      "delta_pi_mean": 0.20356319917428184,
+      "delta_hf_mean": 0.008427311339124464
+    },
+    {
+      "channel_set": "frontotemporal",
+      "comparison": "awake_vs_sed",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": -0.04060150375939849,
+      "spearman_p": 0.8650468790077723,
+      "delta_pi_mean": 0.2084290990589231,
+      "delta_hf_mean": 0.034213799732410836
+    },
+    {
+      "channel_set": "frontotemporal",
+      "comparison": "awake_vs_sed2",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": 0.08120300751879699,
+      "spearman_p": 0.733607630478017,
+      "delta_pi_mean": 0.20295963874413184,
+      "delta_hf_mean": 0.03633947423760718
+    },
+    {
+      "channel_set": "posterior",
+      "comparison": "awake_vs_sed",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": 0.12180451127819547,
+      "spearman_p": 0.608956622164901,
+      "delta_pi_mean": 0.21022002022310765,
+      "delta_hf_mean": -0.0026146054174844514
+    },
+    {
+      "channel_set": "posterior",
+      "comparison": "awake_vs_sed2",
+      "n": 20,
+      "spearman_r_delta_pi_delta_hf": 0.16691729323308271,
+      "spearman_p": 0.4818249184315467,
+      "delta_pi_mean": 0.21964455769301994,
+      "delta_hf_mean": -0.0021628997327246243
+    }
+  ]
+}

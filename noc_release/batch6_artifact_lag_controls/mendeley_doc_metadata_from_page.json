@@ -1,0 +1,23 @@
+{
+  "id": "6wx4n25h4v",
+  "version": 1,
+  "name": "Polysomnographic records of  patients with disorders of consciousness",
+  "doi": "10.17632/6wx4n25h4v.1",
+  "publish_date": "2020-06-16T07:15:30.720Z",
+  "description": "Dataset contains 43 polysomnographic records 6 hours long  each of  patients with persistent disorders of consciousness, i.e. vegetative state and minimally conscious state, made in Federal Scientific and Clinical Center of Intensive Care Medicine and Rehabilitation, Russia.  \n\nAll records are in .edf format. \n\nThe name of the file contains  a number of patient and the level of consciousness: Patient_1_VS means, that patient №1 is in vegetative state, Patient_2_MCS+ means that patient №2 is in minimally conscious state plus.\n\nEach record include 2 EOG channels, 1 EMG channel, and EEG channels over frontal, central and occipital zones. EEG channels may have different references and different number of channels depending on the quality of the record.\n\n\"SOMNOScreen Plus\" polysomnographic equipment wae used fo obtaining the data.",
+  "method": "Dataset contains 42 polysomnographic records 6 hours long  each of  patients with chronic disorders of consciousness, i.e. vegetative state and minimally conscious state (plus or minus), made in Federal Scientific and Clinical Center of Intensive Care Medicine and Rehabilitation,  Russia.  \n\nAll records are in .edf format. \n\nThe name of the file contains  a number of patient and the level of consciousness: Patient_1_VS means, that patient №1 is in vegetative state, Patient_2_MCS+ means that patient №2 is in minimally conscious state plus.\n\nEach record include 2 EOG channels, 1 EMG channel, and EEG channels over frontal, central and occipital zones. EEG channels may have different references and different number of channels depending on the quality of the record.\n\n\"SOMNOscreen™ plus\" polysomnographic equipment was used for obtaining the data.",
+  "categories": [
+    "Electroencephalography",
+    "Sleep",
+    "Consciousness Studies"
+  ],
+  "licence": "CC BY 4.0",
+  "contributors": [
+    "Julia Nekrasova",
+    "Mikhail Kanarskii",
+    "Dmitriy Yankevich",
+    "Ilya Borisov",
+    "Pranil Pradhan"
+  ],
+  "files_loaded": 0
+}

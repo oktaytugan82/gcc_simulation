@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,geometry,array}
+\usepackage{hyperref}
+\geometry{margin=1in}
+\newcommand{\Deff}{D_{\mathrm{eff}}}
+\newcommand{\Mtau}{M_{\tau}}
+\newcommand{\Kcop}{K_c^{\mathrm{op}}}
+\title{Supplementary Tables S1--S7\\Gamma-Code Consensus NoC Submission}
+\author{Mehmet Oktay Tugan}
+\date{}
+\begin{document}
+\maketitle
+\noindent This file contains detailed numerical tables moved out of the main manuscript to keep the main NoC submission within length and readability constraints.
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table. Retuning vs.\ re-entry effect across four baseline coupling strengths ($N_{\mathrm{seeds}} = 20$ per $K$). Retuning effect: difference $\langle\Pi_{\mathrm{full}}^A\rangle(\mathrm{decline}) - \langle\Pi_{\mathrm{full}}^A\rangle(\mathrm{baseline})$. Re-entry effect: difference $\langle\Pi_S^B\rangle - \langle\Pi_S^A\rangle$ in phase~3.}
+\label{tab:retuning}
+\begin{tabular}{ccccccc}
+\hline
+$K_{\mathrm{baseline}}$ & Retuning $\Delta\Pi$ & $\langle\Pi_S^A\rangle$ & $\langle\Pi_S^B\rangle$ & B$-$A & Rel.\ increase & Wilcoxon $p$ \\
+\hline
+$1.6$ & $+0.16$ & $0.15$ & $0.27$ & $+0.12$ & $+81\%$  & $0.006$ \\
+$2.0$ & $+0.07$ & $0.26$ & $0.53$ & $+0.27$ & $+102\%$ & $0.0009$ \\
+$2.5$ & $+0.19$ & $0.52$ & $0.75$ & $+0.23$ & $+44\%$  & $0.004$ \\
+$3.0$ & $+0.15$ & $0.73$ & $0.76$ & $+0.04$ & $+5\%$   & $0.54$ n.s. \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table. Access indicator $\Pi$ per sedation level and paired Wilcoxon signed-rank tests (baseline vs.~moderate). $N = 20$ participants.}
+\label{tab:pilot-results}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Band & $\Pi_{\mathrm{base}}$ & $\Pi_{\mathrm{mild}}$ & $\Pi_{\mathrm{mod}}$ & $\Pi_{\mathrm{rec}}$ & $\Delta\Pi$ (base$-$mod) & $p$-value \\
+\midrule
+Gamma & $0.661$ & $0.604$ & $0.543$ & $0.569$ & $+0.118$ & $6.3 \times 10^{-5}$ \\
+Alpha & $0.659$ & $0.641$ & $0.561$ & $0.632$ & $+0.098$ & $0.0037$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table. Frozen cross-dataset benchmark. AUC and balanced accuracy for selected no-fit and train-on-one-dataset/test-on-the-other models. Sign-rule models use no fitted parameters. Logistic transfer models fit scaling and weights only on the training dataset.}
+\label{tab:frozen-transfer}
+\small
+\begin{tabular}{llccc}
+\toprule
+Model & Direction & Band & AUC & Balanced accuracy \\
+\midrule
+Standard $\Pi$ sign rule & pooled no-fit & gamma & 0.967 & 0.983 \\
+Standard $\Pi$ delta & Chennu$\to$DS005620 & gamma & 1.000 & 1.000 \\
+Standard $\Pi$ delta & DS005620$\to$Chennu & gamma & 0.900 & 0.725 \\
+wPLI $\Pi$ sign rule & pooled no-fit & gamma & 0.858 & 0.925 \\
+wPLI triad + $\Pi$ & Chennu$\to$DS005620 & gamma & 0.950 & 0.950 \\
+wPLI triad + $\Pi$ & DS005620$\to$Chennu & gamma & 0.900 & 0.825 \\
+Spectral bandpowers & Chennu$\to$DS005620 & gamma & 0.975 & 0.938 \\
+Spectral bandpowers & DS005620$\to$Chennu & gamma & 0.900 & 0.775 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table. Sleep-EDF sigma-band state differentiation under leave-recording-out validation. Values are computed on 22 Sleep-EDF Sleep Cassette recordings. Wake and REM are each compared against NREM. Spectral features remain stronger for canonical sleep staging; GCC is interpreted as cross-paradigm state geometry rather than as a replacement sleep-stage biomarker.}
+\label{tab:sleep-edf}
+\small
+\begin{tabular}{lcc}
+\toprule
+Model & Wake vs.\ NREM AUC & REM vs.\ NREM AUC \\
+\midrule
+Spectral features & 0.959 & 0.892 \\
+GCC triad $+\Pi$ & 0.875 & 0.727 \\
+$\Pi$ only & 0.534 & 0.534 \\
+Residual GCC after spectral regression & 0.637 & 0.572 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Supplementary Table. Additional robustness and boundary-domain analyses. These analyses are not used to claim bandpower independence or direct P1 validation; they test implementation stability and empirical breadth.}
+\label{tab:additional-controls}
+\small
+\begin{tabular}{p{0.29\linewidth}p{0.29\linewidth}p{0.34\linewidth}}
+\toprule
+Analysis & Main result & Interpretation \\
+\midrule
+Amplitude-normalized phase-only GCC & Chennu gamma $\Delta\Pi=0.463$; DS005620 gamma awake-vs-\texttt{sed} $\Delta\Pi=0.439$ & Propofol sensitivity is not solely produced by amplitude entering the GCC observables. \\
+CSD/source-proxy phase-only GCC & Chennu gamma $\Delta\Pi=0.159$; DS005620 gamma awake-vs-\texttt{sed} $\Delta\Pi=0.393$ & Effect survives a surface-Laplacian source-proxy; individualized MRI source reconstruction remains future work. \\
+Subanaesthetic ketamine & Gamma $\Pi$ shift $-0.142$; alpha $\Deff$ shift $+0.631$ & Altered-state shift, not propofol-like collapse. \\
+DS004504 dementia proxy & Dementia-vs-control combined triad AUC $=0.769$ & Degradation sensitivity, not direct access validation. \\
+Reliability & Phase-only/CSD split-half gamma $\Pi$ ICC $\approx0.92$--$0.93$; repeated-run gamma ICC $\approx0.67$--$0.87$ & GCC $\Pi$ is stable enough for recording-level analysis, with lower reliability across distinct acquisition runs. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Supplementary Table. P3/P4 Ensemble ($N_{\mathrm{seeds}} = 10$ per cell): shift of $\langle K_c^{\mathrm{op}}\rangle$ and maximum access index $\langle\max_K \Pi(K)\rangle$ with increasing degradation. Values are means $\pm$ standard deviations over the seed ensemble. Both quantities behave monotonically under increasing lesion.}
+\label{tab:v2}
+\begin{tabular}{ccc}
+\hline
+Lesion $f$ & $\langle K_c^{\mathrm{op}}\rangle \pm $ SD & $\langle\max_K \Pi(K)\rangle \pm $ SD \\
+\hline
+$0.00$ & $1.38 \pm 0.57$ & $0.83 \pm 0.29$ \\
+$0.15$ & $1.49 \pm 0.44$ & $0.81 \pm 0.24$ \\
+$0.30$ & $1.80 \pm 0.40$ & $0.71 \pm 0.30$ \\
+$0.45$ & $2.15 \pm 0.33$ & $0.58 \pm 0.38$ \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Supplementary Table. P6: Phase-wise access indices $\Pi$ (fraction of time inside the access region), averaged across $N_{\mathrm{seeds}} = 20$ independent seeds (mean~$\pm$~SD). \textbf{Critical finding:} In phase~3 (re-entry window), condition~B (selective preservation) shows a significantly higher access index on backbone~$S$ than condition~A (uniform): $\langle\Pi_S^B\rangle = 0.273$ vs.\ $\langle\Pi_S^A\rangle = 0.151$. In phase~4, both collapse nearly completely, with a marginal residual signal in condition~B ($\langle\Pi_S^B\rangle = 0.07$) vs.\ condition~A ($\langle\Pi_S^A\rangle = 0.00$) consistent with a short-lived gain residuum on $S$; the re-entry is thus essentially transient.}
+\label{tab:v5}
+\begin{tabular}{lcccc}
+\hline
+Phase & $\Pi$ A full & $\Pi$ B full & $\Pi$ A on $S$ & $\Pi$ B on $S$ \\
+\hline
+Phase 1 baseline   & $0.53 \pm 0.38$ & $0.53 \pm 0.38$ & $0.54 \pm 0.38$ & $0.54 \pm 0.38$ \\
+Phase 2 decline   & $0.69 \pm 0.33$ & $0.69 \pm 0.33$ & $0.61 \pm 0.33$ & $0.61 \pm 0.33$ \\
+Phase 3 re-entry  & $0.09 \pm 0.12$ & $0.09 \pm 0.13$ & $\mathbf{0.15 \pm 0.19}$ & $\mathbf{0.27 \pm 0.27}$ \\
+Phase 4 final     & $0.00 \pm 0.00$ & $0.00 \pm 0.00$ & $0.00 \pm 0.00$ & $0.07 \pm 0.11$ \\
+\hline
+\end{tabular}
+\end{table}
+\end{document}

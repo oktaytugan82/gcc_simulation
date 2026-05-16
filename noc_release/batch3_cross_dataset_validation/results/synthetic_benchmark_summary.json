@@ -1,0 +1,83 @@
+{
+  "bounds": {
+    "R_min": 0.13154937928349456,
+    "D_min": 1.124266869357606,
+    "D_max": 2.370160145988047,
+    "M_min": 1.712322677199352e-06,
+    "M_max": 0.0027645003339583814
+  },
+  "n_cases": 240,
+  "network_types": [
+    "small_world",
+    "erdos",
+    "barabasi",
+    "modular"
+  ],
+  "metrics": [
+    "score_gcc_triad",
+    "score_r_only",
+    "score_d_only",
+    "score_m_only",
+    "score_criticality_only",
+    "score_global_gain_only"
+  ],
+  "aucs": {
+    "score_gcc_triad": 0.5686328125,
+    "score_r_only": 0.5017578125,
+    "score_d_only": 0.44761718749999996,
+    "score_m_only": 0.5514453125000001,
+    "score_criticality_only": 0.48878906250000004,
+    "score_global_gain_only": 0.64453125
+  },
+  "tests": {
+    "score_gcc_triad": {
+      "U": 7278.5,
+      "p": 0.08288553282873622,
+      "pos_mean": 0.41917857142857134,
+      "neg_mean": 0.34398214285714285
+    },
+    "score_r_only": {
+      "U": 6422.5,
+      "p": 0.9618289125823375,
+      "pos_mean": 0.8391071428571429,
+      "neg_mean": 0.7979821428571429
+    },
+    "score_d_only": {
+      "U": 5729.5,
+      "p": 0.18336350043250704,
+      "pos_mean": 0.5256428571428572,
+      "neg_mean": 0.5790892857142858
+    },
+    "score_m_only": {
+      "U": 7058.5,
+      "p": 0.14037395822073098,
+      "pos_mean": 0.9051785714285714,
+      "neg_mean": 0.8095000000000001
+    },
+    "score_criticality_only": {
+      "U": 6256.5,
+      "p": 0.7765949032171795,
+      "pos_mean": 0.4943214285714285,
+      "neg_mean": 0.49635714285714283
+    },
+    "score_global_gain_only": {
+      "U": 8250.0,
+      "p": 0.0002395848000182842,
+      "pos_mean": 0.9956250000000001,
+      "neg_mean": 0.88125
+    }
+  },
+  "parameters": {
+    "outdir": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch3_20260513\\results",
+    "n_cases": 240,
+    "n_nodes": 72,
+    "mean_degree": 8,
+    "t_seconds": 7.0,
+    "dt": 0.02,
+    "tau_d": 0.8,
+    "tau_m": 1.2,
+    "calib_seeds": 5,
+    "alpha": 0.1,
+    "seed": 20260513
+  }
+}

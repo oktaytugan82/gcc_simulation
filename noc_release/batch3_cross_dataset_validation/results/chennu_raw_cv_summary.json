@@ -1,0 +1,312 @@
+{
+  "alpha": {
+    "band": "alpha",
+    "n_rows": 80,
+    "n_subjects": 20,
+    "level_counts": {
+      "baseline": 20,
+      "mild": 20,
+      "moderate": 20,
+      "recovery": 20
+    },
+    "group_means": {
+      "baseline": {
+        "R_mean": 0.146975,
+        "D_mean": 2.690498,
+        "M_mean": 0.002865,
+        "Pi": 0.658708
+      },
+      "mild": {
+        "R_mean": 0.14205,
+        "D_mean": 2.722367,
+        "M_mean": 0.002671,
+        "Pi": 0.64132
+      },
+      "moderate": {
+        "R_mean": 0.116904,
+        "D_mean": 2.918201,
+        "M_mean": 0.002524,
+        "Pi": 0.560694
+      },
+      "recovery": {
+        "R_mean": 0.149356,
+        "D_mean": 2.619148,
+        "M_mean": 0.002723,
+        "Pi": 0.631688
+      }
+    },
+    "paired_stats": {
+      "R_mean": {
+        "n_subjects": 20,
+        "baseline_mean": 0.1469746340759491,
+        "moderate_mean": 0.1169038404150067,
+        "recovery_mean": 0.1493555694609428,
+        "baseline_minus_moderate_mean": 0.030070793660942452,
+        "baseline_minus_moderate_median": 0.019167471616924357,
+        "paired_d_baseline_minus_moderate": 0.9637024284631277,
+        "wilcoxon_baseline_vs_moderate_W": 16.0,
+        "wilcoxon_baseline_vs_moderate_p": 0.0003223419189453125,
+        "wilcoxon_moderate_vs_recovery_W": 12.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.000133514404296875,
+        "friedman_chi2": 15.300000000000011,
+        "friedman_p": 0.0015774228981298136
+      },
+      "D_mean": {
+        "n_subjects": 20,
+        "baseline_mean": 2.6904981017081426,
+        "moderate_mean": 2.91820081956351,
+        "recovery_mean": 2.6191482236687995,
+        "baseline_minus_moderate_mean": -0.22770271785536753,
+        "baseline_minus_moderate_median": -0.21258546434469916,
+        "paired_d_baseline_minus_moderate": -0.6597292562265512,
+        "wilcoxon_baseline_vs_moderate_W": 40.0,
+        "wilcoxon_baseline_vs_moderate_p": 0.013616561889648438,
+        "wilcoxon_moderate_vs_recovery_W": 13.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.0001678466796875,
+        "friedman_chi2": 13.860000000000014,
+        "friedman_p": 0.0031020447746336957
+      },
+      "M_mean": {
+        "n_subjects": 20,
+        "baseline_mean": 0.0028649096775492005,
+        "moderate_mean": 0.0025235965444101753,
+        "recovery_mean": 0.00272265729313252,
+        "baseline_minus_moderate_mean": 0.000341313133139025,
+        "baseline_minus_moderate_median": 0.0004710629002910001,
+        "paired_d_baseline_minus_moderate": 0.5915690211246575,
+        "wilcoxon_baseline_vs_moderate_W": 45.0,
+        "wilcoxon_baseline_vs_moderate_p": 0.023950576782226562,
+        "wilcoxon_moderate_vs_recovery_W": 64.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.13272666931152344,
+        "friedman_chi2": 8.699999999999989,
+        "friedman_p": 0.03355726870553817
+      },
+      "Pi": {
+        "n_subjects": 20,
+        "baseline_mean": 0.6587084757249987,
+        "moderate_mean": 0.5606935108598627,
+        "recovery_mean": 0.6316877192688061,
+        "baseline_minus_moderate_mean": 0.09801496486513592,
+        "baseline_minus_moderate_median": 0.05271066738139907,
+        "paired_d_baseline_minus_moderate": 0.6876750700132637,
+        "wilcoxon_baseline_vs_moderate_W": 30.0,
+        "wilcoxon_baseline_vs_moderate_p": 0.00365447998046875,
+        "wilcoxon_moderate_vs_recovery_W": 60.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.09730720520019531,
+        "friedman_chi2": 10.620000000000005,
+        "friedman_p": 0.013968577128629265
+      }
+    },
+    "cross_validated_baselines": {
+      "R_only": {
+        "baseline_vs_moderate_auc": 0.7225,
+        "baseline_vs_mild_auc": 0.54,
+        "moderate_vs_recovery_auc": 0.765,
+        "four_level_multiclass": {
+          "accuracy": 0.3375,
+          "macro_f1": 0.2888198309090804
+        }
+      },
+      "D_only": {
+        "baseline_vs_moderate_auc": 0.6675,
+        "baseline_vs_mild_auc": 0.4825,
+        "moderate_vs_recovery_auc": 0.7825,
+        "four_level_multiclass": {
+          "accuracy": 0.375,
+          "macro_f1": 0.30151500242641915
+        }
+      },
+      "M_only": {
+        "baseline_vs_moderate_auc": 0.6675,
+        "baseline_vs_mild_auc": 0.5824999999999999,
+        "moderate_vs_recovery_auc": 0.6525000000000001,
+        "four_level_multiclass": {
+          "accuracy": 0.3875,
+          "macro_f1": 0.3251449275362319
+        }
+      },
+      "Pi_only": {
+        "baseline_vs_moderate_auc": 0.805,
+        "baseline_vs_mild_auc": 0.5950000000000001,
+        "moderate_vs_recovery_auc": 0.6675,
+        "four_level_multiclass": {
+          "accuracy": 0.45,
+          "macro_f1": 0.40758300838946
+        }
+      },
+      "GCC_triad": {
+        "baseline_vs_moderate_auc": 0.68,
+        "baseline_vs_mild_auc": 0.5625,
+        "moderate_vs_recovery_auc": 0.8025,
+        "four_level_multiclass": {
+          "accuracy": 0.4,
+          "macro_f1": 0.378792848203755
+        }
+      },
+      "GCC_triad_plus_Pi": {
+        "baseline_vs_moderate_auc": 0.7875000000000001,
+        "baseline_vs_mild_auc": 0.5349999999999999,
+        "moderate_vs_recovery_auc": 0.81,
+        "four_level_multiclass": {
+          "accuracy": 0.375,
+          "macro_f1": 0.34710958296362027
+        }
+      }
+    }
+  },
+  "gamma": {
+    "band": "gamma",
+    "n_rows": 80,
+    "n_subjects": 20,
+    "level_counts": {
+      "baseline": 20,
+      "mild": 20,
+      "moderate": 20,
+      "recovery": 20
+    },
+    "group_means": {
+      "baseline": {
+        "R_mean": 0.098651,
+        "D_mean": 4.450642,
+        "M_mean": 0.002396,
+        "Pi": 0.660624
+      },
+      "mild": {
+        "R_mean": 0.093838,
+        "D_mean": 4.208672,
+        "M_mean": 0.002212,
+        "Pi": 0.604135
+      },
+      "moderate": {
+        "R_mean": 0.087403,
+        "D_mean": 3.987195,
+        "M_mean": 0.001975,
+        "Pi": 0.543166
+      },
+      "recovery": {
+        "R_mean": 0.102498,
+        "D_mean": 4.358267,
+        "M_mean": 0.002603,
+        "Pi": 0.569243
+      }
+    },
+    "paired_stats": {
+      "R_mean": {
+        "n_subjects": 20,
+        "baseline_mean": 0.09865098840467525,
+        "moderate_mean": 0.08740253873704049,
+        "recovery_mean": 0.10249760133407397,
+        "baseline_minus_moderate_mean": 0.011248449667634742,
+        "baseline_minus_moderate_median": 0.008919935287530253,
+        "paired_d_baseline_minus_moderate": 0.5617100686800462,
+        "wilcoxon_baseline_vs_moderate_W": 40.0,
+        "wilcoxon_baseline_vs_moderate_p": 0.013616561889648438,
+        "wilcoxon_moderate_vs_recovery_W": 45.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.023950576782226562,
+        "friedman_chi2": 5.579999999999984,
+        "friedman_p": 0.13393126427009164
+      },
+      "D_mean": {
+        "n_subjects": 20,
+        "baseline_mean": 4.450641546056952,
+        "moderate_mean": 3.9871947140268764,
+        "recovery_mean": 4.358267402206352,
+        "baseline_minus_moderate_mean": 0.46344683203007586,
+        "baseline_minus_moderate_median": 0.46000476201177776,
+        "paired_d_baseline_minus_moderate": 1.1355017614038938,
+        "wilcoxon_baseline_vs_moderate_W": 9.0,
+        "wilcoxon_baseline_vs_moderate_p": 6.29425048828125e-05,
+        "wilcoxon_moderate_vs_recovery_W": 33.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.005580902099609375,
+        "friedman_chi2": 21.30000000000001,
+        "friedman_p": 9.120307329149839e-05
+      },
+      "M_mean": {
+        "n_subjects": 20,
+        "baseline_mean": 0.002395605406122845,
+        "moderate_mean": 0.0019754363068916854,
+        "recovery_mean": 0.0026034331228924055,
+        "baseline_minus_moderate_mean": 0.00042016909923116004,
+        "baseline_minus_moderate_median": 0.00024342379692754998,
+        "paired_d_baseline_minus_moderate": 0.5149237054802959,
+        "wilcoxon_baseline_vs_moderate_W": 49.0,
+        "wilcoxon_baseline_vs_moderate_p": 0.03623390197753906,
+        "wilcoxon_moderate_vs_recovery_W": 42.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.017181396484375,
+        "friedman_chi2": 6.71999999999997,
+        "friedman_p": 0.08137854594210872
+      },
+      "Pi": {
+        "n_subjects": 20,
+        "baseline_mean": 0.6606240119374072,
+        "moderate_mean": 0.5431664876824005,
+        "recovery_mean": 0.5692427516802379,
+        "baseline_minus_moderate_mean": 0.11745752425500655,
+        "baseline_minus_moderate_median": 0.0857410571507346,
+        "paired_d_baseline_minus_moderate": 0.9924221704201777,
+        "wilcoxon_baseline_vs_moderate_W": 9.0,
+        "wilcoxon_baseline_vs_moderate_p": 6.29425048828125e-05,
+        "wilcoxon_moderate_vs_recovery_W": 85.0,
+        "wilcoxon_moderate_vs_recovery_p": 0.47490501403808594,
+        "friedman_chi2": 16.80000000000001,
+        "friedman_p": 0.0007769289490594053
+      }
+    },
+    "cross_validated_baselines": {
+      "R_only": {
+        "baseline_vs_moderate_auc": 0.76,
+        "baseline_vs_mild_auc": 0.6299999999999999,
+        "moderate_vs_recovery_auc": 0.705,
+        "four_level_multiclass": {
+          "accuracy": 0.2875,
+          "macro_f1": 0.23037957765303396
+        }
+      },
+      "D_only": {
+        "baseline_vs_moderate_auc": 0.8225,
+        "baseline_vs_mild_auc": 0.6575,
+        "moderate_vs_recovery_auc": 0.74,
+        "four_level_multiclass": {
+          "accuracy": 0.3375,
+          "macro_f1": 0.29809704809704807
+        }
+      },
+      "M_only": {
+        "baseline_vs_moderate_auc": 0.7225,
+        "baseline_vs_mild_auc": 0.6475,
+        "moderate_vs_recovery_auc": 0.71,
+        "four_level_multiclass": {
+          "accuracy": 0.35,
+          "macro_f1": 0.3125828421813322
+        }
+      },
+      "Pi_only": {
+        "baseline_vs_moderate_auc": 0.8575,
+        "baseline_vs_mild_auc": 0.86,
+        "moderate_vs_recovery_auc": 0.51,
+        "four_level_multiclass": {
+          "accuracy": 0.425,
+          "macro_f1": 0.34754492819008953
+        }
+      },
+      "GCC_triad": {
+        "baseline_vs_moderate_auc": 0.85,
+        "baseline_vs_mild_auc": 0.6525,
+        "moderate_vs_recovery_auc": 0.8200000000000001,
+        "four_level_multiclass": {
+          "accuracy": 0.3375,
+          "macro_f1": 0.309041394335512
+        }
+      },
+      "GCC_triad_plus_Pi": {
+        "baseline_vs_moderate_auc": 0.9400000000000001,
+        "baseline_vs_mild_auc": 0.8025,
+        "moderate_vs_recovery_auc": 0.765,
+        "four_level_multiclass": {
+          "accuracy": 0.45,
+          "macro_f1": 0.40859396271419085
+        }
+      }
+    }
+  }
+}

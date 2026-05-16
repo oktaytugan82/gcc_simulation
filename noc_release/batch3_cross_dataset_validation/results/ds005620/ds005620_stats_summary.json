@@ -1,0 +1,412 @@
+{
+  "alpha": {
+    "band": "alpha",
+    "n_recordings": 126,
+    "n_subjects": 21,
+    "recording_counts": {
+      "awake": 21,
+      "sed": 54,
+      "sed2": 51
+    },
+    "condition_means_subject_level": {
+      "awake": {
+        "R_mean": 0.137741,
+        "D_mean": 2.991717,
+        "M_mean": 0.00366,
+        "Pi": 0.831224,
+        "Access_all": 0.594937
+      },
+      "sed": {
+        "R_mean": 0.128724,
+        "D_mean": 3.845331,
+        "M_mean": 0.004844,
+        "Pi": 0.653787,
+        "Access_all": 0.312899
+      },
+      "sed2": {
+        "R_mean": 0.127768,
+        "D_mean": 2.98831,
+        "M_mean": 0.005284,
+        "Pi": 0.667691,
+        "Access_all": 0.31258
+      }
+    },
+    "paired_tests": {
+      "awake_vs_sed": {
+        "R_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.13783096654249846,
+          "sed_mean": 0.12872415019024036,
+          "awake_minus_sed_mean": 0.009106816352258126,
+          "awake_minus_sed_median": 0.013474671453856182,
+          "paired_d": 0.1529362037235657,
+          "wilcoxon_W": 67.0,
+          "wilcoxon_p": 0.16495704650878906
+        },
+        "D_mean": {
+          "n_subjects": 20,
+          "awake_mean": 2.978441940961384,
+          "sed_mean": 3.845331159118802,
+          "awake_minus_sed_mean": -0.8668892181574179,
+          "awake_minus_sed_median": -0.04189801992416253,
+          "paired_d": -0.23391995570323704,
+          "wilcoxon_W": 86.0,
+          "wilcoxon_p": 0.49800872802734375
+        },
+        "M_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.0036199746302182046,
+          "sed_mean": 0.004843704568017582,
+          "awake_minus_sed_mean": -0.0012237299377993766,
+          "awake_minus_sed_median": 4.3582883158266696e-05,
+          "paired_d": -0.2490127770926492,
+          "wilcoxon_W": 95.0,
+          "wilcoxon_p": 0.7285060882568359
+        },
+        "Pi": {
+          "n_subjects": 20,
+          "awake_mean": 0.8312236286919832,
+          "sed_mean": 0.6537871542428504,
+          "awake_minus_sed_mean": 0.17743647444913266,
+          "awake_minus_sed_median": 0.16690107829348338,
+          "paired_d": 1.1574776382772267,
+          "wilcoxon_W": 11.0,
+          "wilcoxon_p": 0.0001049041748046875
+        },
+        "Access_all": {
+          "n_subjects": 20,
+          "awake_mean": 0.5932489451476793,
+          "sed_mean": 0.31289943741209564,
+          "awake_minus_sed_mean": 0.2803495077355837,
+          "awake_minus_sed_median": 0.29817158931082993,
+          "paired_d": 1.1645381187333264,
+          "wilcoxon_W": 11.0,
+          "wilcoxon_p": 0.0001049041748046875
+        }
+      },
+      "awake_vs_sed2": {
+        "R_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.13783096654249846,
+          "sed2_mean": 0.12776809056744448,
+          "awake_minus_sed2_mean": 0.010062875975054003,
+          "awake_minus_sed2_median": 0.005729809796607914,
+          "paired_d": 0.21062948695849965,
+          "wilcoxon_W": 74.0,
+          "wilcoxon_p": 0.26109886169433594
+        },
+        "D_mean": {
+          "n_subjects": 20,
+          "awake_mean": 2.978441940961384,
+          "sed2_mean": 2.9883098721764965,
+          "awake_minus_sed2_mean": -0.009867931215112268,
+          "awake_minus_sed2_median": 0.003937776495791967,
+          "paired_d": -0.019670605346983026,
+          "wilcoxon_W": 104.0,
+          "wilcoxon_p": 0.9854354858398438
+        },
+        "M_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.0036199746302182046,
+          "sed2_mean": 0.005284158496960699,
+          "awake_minus_sed2_mean": -0.001664183866742494,
+          "awake_minus_sed2_median": 6.592011818358501e-06,
+          "paired_d": -0.34037911950199334,
+          "wilcoxon_W": 83.0,
+          "wilcoxon_p": 0.4304332733154297
+        },
+        "Pi": {
+          "n_subjects": 20,
+          "awake_mean": 0.8312236286919832,
+          "sed2_mean": 0.6676909510242843,
+          "awake_minus_sed2_mean": 0.16353267766769872,
+          "awake_minus_sed2_median": 0.13606693353528804,
+          "paired_d": 1.081216565162148,
+          "wilcoxon_W": 12.0,
+          "wilcoxon_p": 0.000133514404296875
+        },
+        "Access_all": {
+          "n_subjects": 20,
+          "awake_mean": 0.5932489451476793,
+          "sed2_mean": 0.3125801282051282,
+          "awake_minus_sed2_mean": 0.28066881694255114,
+          "awake_minus_sed2_median": 0.26793248945147685,
+          "paired_d": 1.1267406473442954,
+          "wilcoxon_W": 13.0,
+          "wilcoxon_p": 0.0001678466796875
+        }
+      }
+    },
+    "cross_validated_baselines_recording_level": {
+      "R_only": {
+        "awake_vs_sed_auc": 0.6031746031746031,
+        "awake_vs_sed2_auc": 0.5667600373482726,
+        "three_condition_multiclass": {
+          "accuracy": 0.35714285714285715,
+          "macro_f1": 0.2911766960101608
+        }
+      },
+      "D_only": {
+        "awake_vs_sed_auc": 0.4894179894179894,
+        "awake_vs_sed2_auc": 0.45471521942110177,
+        "three_condition_multiclass": {
+          "accuracy": 0.373015873015873,
+          "macro_f1": 0.3173270875134229
+        }
+      },
+      "M_only": {
+        "awake_vs_sed_auc": 0.3201058201058201,
+        "awake_vs_sed2_auc": 0.5238095238095238,
+        "three_condition_multiclass": {
+          "accuracy": 0.30158730158730157,
+          "macro_f1": 0.2721321064321219
+        }
+      },
+      "Pi_only": {
+        "awake_vs_sed_auc": 0.818342151675485,
+        "awake_vs_sed2_auc": 0.84593837535014,
+        "three_condition_multiclass": {
+          "accuracy": 0.4444444444444444,
+          "macro_f1": 0.4199231620284252
+        }
+      },
+      "Access_all_only": {
+        "awake_vs_sed_auc": 0.8209876543209877,
+        "awake_vs_sed2_auc": 0.8487394957983193,
+        "three_condition_multiclass": {
+          "accuracy": 0.4523809523809524,
+          "macro_f1": 0.45240448539188344
+        }
+      },
+      "GCC_triad": {
+        "awake_vs_sed_auc": 0.5414462081128748,
+        "awake_vs_sed2_auc": 0.7432306255835668,
+        "three_condition_multiclass": {
+          "accuracy": 0.4603174603174603,
+          "macro_f1": 0.4359417525875598
+        }
+      },
+      "GCC_triad_plus_Pi": {
+        "awake_vs_sed_auc": 0.8253968253968255,
+        "awake_vs_sed2_auc": 0.8524743230625583,
+        "three_condition_multiclass": {
+          "accuracy": 0.49206349206349204,
+          "macro_f1": 0.4966626793982682
+        }
+      },
+      "GCC_all": {
+        "awake_vs_sed_auc": 0.8298059964726632,
+        "awake_vs_sed2_auc": 0.854341736694678,
+        "three_condition_multiclass": {
+          "accuracy": 0.5158730158730159,
+          "macro_f1": 0.5201465201465202
+        }
+      }
+    }
+  },
+  "gamma": {
+    "band": "gamma",
+    "n_recordings": 126,
+    "n_subjects": 21,
+    "recording_counts": {
+      "awake": 21,
+      "sed": 54,
+      "sed2": 51
+    },
+    "condition_means_subject_level": {
+      "awake": {
+        "R_mean": 0.12559,
+        "D_mean": 5.873335,
+        "M_mean": 0.004118,
+        "Pi": 0.831224,
+        "Access_all": 0.606389
+      },
+      "sed": {
+        "R_mean": 0.12623,
+        "D_mean": 5.684139,
+        "M_mean": 0.005117,
+        "Pi": 0.444088,
+        "Access_all": 0.111541
+      },
+      "sed2": {
+        "R_mean": 0.146843,
+        "D_mean": 5.240281,
+        "M_mean": 0.006142,
+        "Pi": 0.490519,
+        "Access_all": 0.132835
+      }
+    },
+    "paired_tests": {
+      "awake_vs_sed": {
+        "R_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.12719353113318022,
+          "sed_mean": 0.1262296473848954,
+          "awake_minus_sed_mean": 0.0009638837482848627,
+          "awake_minus_sed_median": 0.01277743466864531,
+          "paired_d": 0.011734845571335382,
+          "wilcoxon_W": 73.0,
+          "wilcoxon_p": 0.24548721313476562
+        },
+        "D_mean": {
+          "n_subjects": 20,
+          "awake_mean": 5.90305527074569,
+          "sed_mean": 5.684139221028906,
+          "awake_minus_sed_mean": 0.21891604971678363,
+          "awake_minus_sed_median": 0.8641125843259987,
+          "paired_d": 0.06255515948263304,
+          "wilcoxon_W": 45.0,
+          "wilcoxon_p": 0.023950576782226562
+        },
+        "M_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.004187144905077855,
+          "sed_mean": 0.005116778996053953,
+          "awake_minus_sed_mean": -0.0009296340909760975,
+          "awake_minus_sed_median": 6.740259559489983e-05,
+          "paired_d": -0.1554474430518004,
+          "wilcoxon_W": 100.0,
+          "wilcoxon_p": 0.8694877624511719
+        },
+        "Pi": {
+          "n_subjects": 20,
+          "awake_mean": 0.8312236286919831,
+          "sed_mean": 0.4440879043600562,
+          "awake_minus_sed_mean": 0.38713572433192683,
+          "awake_minus_sed_median": 0.3190342240975152,
+          "paired_d": 1.9099425514899826,
+          "wilcoxon_W": 0.0,
+          "wilcoxon_p": 1.9073486328125e-06
+        },
+        "Access_all": {
+          "n_subjects": 20,
+          "awake_mean": 0.6071729957805906,
+          "sed_mean": 0.1115407876230661,
+          "awake_minus_sed_mean": 0.49563220815752473,
+          "awake_minus_sed_median": 0.5207454289732771,
+          "paired_d": 4.419493055154184,
+          "wilcoxon_W": 0.0,
+          "wilcoxon_p": 1.9073486328125e-06
+        }
+      },
+      "awake_vs_sed2": {
+        "R_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.12719353113318022,
+          "sed2_mean": 0.1468425737253634,
+          "awake_minus_sed2_mean": -0.01964904259218317,
+          "awake_minus_sed2_median": 0.001779672433869138,
+          "paired_d": -0.18062905571535928,
+          "wilcoxon_W": 98.0,
+          "wilcoxon_p": 0.8123550415039062
+        },
+        "D_mean": {
+          "n_subjects": 20,
+          "awake_mean": 5.90305527074569,
+          "sed2_mean": 5.24028107627295,
+          "awake_minus_sed2_mean": 0.6627741944727396,
+          "awake_minus_sed2_median": 0.7699767879311974,
+          "paired_d": 0.4661240644048444,
+          "wilcoxon_W": 46.0,
+          "wilcoxon_p": 0.026641845703125
+        },
+        "M_mean": {
+          "n_subjects": 20,
+          "awake_mean": 0.004187144905077855,
+          "sed2_mean": 0.006142365101326371,
+          "awake_minus_sed2_mean": -0.0019552201962485154,
+          "awake_minus_sed2_median": -0.0006595361326670172,
+          "paired_d": -0.37953121288421326,
+          "wilcoxon_W": 61.0,
+          "wilcoxon_p": 0.10539817810058594
+        },
+        "Pi": {
+          "n_subjects": 20,
+          "awake_mean": 0.8312236286919831,
+          "sed2_mean": 0.49051901031067696,
+          "awake_minus_sed2_mean": 0.34070461838130617,
+          "awake_minus_sed2_median": 0.3433318908002452,
+          "paired_d": 1.969856204890298,
+          "wilcoxon_W": 0.0,
+          "wilcoxon_p": 1.9073486328125e-06
+        },
+        "Access_all": {
+          "n_subjects": 20,
+          "awake_mean": 0.6071729957805906,
+          "sed2_mean": 0.13283475783475782,
+          "awake_minus_sed2_mean": 0.47433823794583285,
+          "awake_minus_sed2_median": 0.5144253308810272,
+          "paired_d": 3.2634865035499265,
+          "wilcoxon_W": 0.0,
+          "wilcoxon_p": 1.9073486328125e-06
+        }
+      }
+    },
+    "cross_validated_baselines_recording_level": {
+      "R_only": {
+        "awake_vs_sed_auc": 0.4656084656084656,
+        "awake_vs_sed2_auc": 0.3790849673202614,
+        "three_condition_multiclass": {
+          "accuracy": 0.42063492063492064,
+          "macro_f1": 0.3450522696802954
+        }
+      },
+      "D_only": {
+        "awake_vs_sed_auc": 0.5908289241622575,
+        "awake_vs_sed2_auc": 0.6601307189542484,
+        "three_condition_multiclass": {
+          "accuracy": 0.3412698412698413,
+          "macro_f1": 0.31883166684585884
+        }
+      },
+      "M_only": {
+        "awake_vs_sed_auc": 0.5052910052910053,
+        "awake_vs_sed2_auc": 0.47619047619047616,
+        "three_condition_multiclass": {
+          "accuracy": 0.46825396825396826,
+          "macro_f1": 0.3438585328349108
+        }
+      },
+      "Pi_only": {
+        "awake_vs_sed_auc": 1.0,
+        "awake_vs_sed2_auc": 1.0,
+        "three_condition_multiclass": {
+          "accuracy": 0.5079365079365079,
+          "macro_f1": 0.5519347854553868
+        }
+      },
+      "Access_all_only": {
+        "awake_vs_sed_auc": 1.0,
+        "awake_vs_sed2_auc": 1.0,
+        "three_condition_multiclass": {
+          "accuracy": 0.5555555555555556,
+          "macro_f1": 0.6091212103725808
+        }
+      },
+      "GCC_triad": {
+        "awake_vs_sed_auc": 0.4735449735449736,
+        "awake_vs_sed2_auc": 0.6255835667600373,
+        "three_condition_multiclass": {
+          "accuracy": 0.42857142857142855,
+          "macro_f1": 0.37148965603974093
+        }
+      },
+      "GCC_triad_plus_Pi": {
+        "awake_vs_sed_auc": 0.980599647266314,
+        "awake_vs_sed2_auc": 0.9794584500466854,
+        "three_condition_multiclass": {
+          "accuracy": 0.5634920634920635,
+          "macro_f1": 0.5991970991970992
+        }
+      },
+      "GCC_all": {
+        "awake_vs_sed_auc": 0.9814814814814815,
+        "awake_vs_sed2_auc": 0.9953314659197012,
+        "three_condition_multiclass": {
+          "accuracy": 0.5634920634920635,
+          "macro_f1": 0.6198129446242007
+        }
+      }
+    }
+  }
+}

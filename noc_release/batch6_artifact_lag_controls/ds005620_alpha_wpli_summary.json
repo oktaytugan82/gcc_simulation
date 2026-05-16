@@ -1,0 +1,39 @@
+{
+  "band": "alpha",
+  "n_subjects": 21,
+  "target_sfreq": 125.0,
+  "crop_s": 90.0,
+  "window_s": 3.0,
+  "stride_s": 1.5,
+  "max_pairs": 750,
+  "stats": [
+    {
+      "band": "alpha",
+      "target": "sed",
+      "n": 20,
+      "awake_mean": 0.8275862068965516,
+      "target_mean": 0.6936781609195402,
+      "mean_delta_awake_minus_target": 0.13390804597701145,
+      "delta_ci_low": 0.04971264367816087,
+      "delta_ci_high": 0.22615660919540218,
+      "paired_d": 0.6406960278480626,
+      "ttest_p": 0.009905267727417465,
+      "wilcoxon_greater_p": 0.014475560927728675,
+      "auc_awake_gt_target": 0.7
+    },
+    {
+      "band": "alpha",
+      "target": "sed2",
+      "n": 20,
+      "awake_mean": 0.8275862068965516,
+      "target_mean": 0.7109649122807016,
+      "mean_delta_awake_minus_target": 0.11662129461584995,
+      "delta_ci_low": 0.034165154264972776,
+      "delta_ci_high": 0.2109305051421656,
+      "paired_d": 0.557555785985819,
+      "ttest_p": 0.02204184313907585,
+      "wilcoxon_greater_p": 0.028435696177413074,
+      "auc_awake_gt_target": 0.6
+    }
+  ]
+}

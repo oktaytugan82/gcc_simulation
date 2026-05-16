@@ -1,0 +1,15 @@
+{
+  "parameters": {
+    "target_sfreq": 125.0,
+    "crop_s": 90.0,
+    "window_s": 3.0,
+    "stride_s": 1.5,
+    "alpha": 0.1
+  },
+  "outputs": [
+    "phase_only_recording_summary.csv",
+    "phase_only_subject_condition_means.csv",
+    "phase_only_delta_features.csv",
+    "phase_only_paired_stats.csv"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "n_files": 42,
+  "failures": [],
+  "labels": {
+    "VS": 30,
+    "MCS+": 8,
+    "MCS-": 4
+  },
+  "sfreq_counts": {
+    "256.0": 42
+  },
+  "duration_s_min": 14404.0,
+  "duration_s_max": 28621.0,
+  "n_eeg_like_min": 6,
+  "n_eeg_like_max": 14,
+  "most_common_eeg_like_channels": {
+    "C4": 42,
+    "C3": 42,
+    "O1": 42,
+    "O2": 42,
+    "F4": 42,
+    "F3": 42,
+    "O1:A2": 9,
+    "F4:A1": 9,
+    "O2:A1": 9,
+    "C4:A1": 9,
+    "C3:A2": 8,
+    "F3:A2": 8,
+    "A1": 3,
+    "A2": 3
+  }
+}

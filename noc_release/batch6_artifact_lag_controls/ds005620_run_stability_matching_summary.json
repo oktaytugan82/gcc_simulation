@@ -1,0 +1,99 @@
+{
+  "run_stability": [
+    {
+      "band": "alpha",
+      "condition": "sed",
+      "n_subjects_with_repeats": 20,
+      "mean_within_subject_sd": 0.07341943003975557,
+      "median_within_subject_sd": 0.05664088474339571,
+      "mean_within_subject_range": 0.13228129395218008,
+      "median_within_subject_range": 0.09493670886075967
+    },
+    {
+      "band": "alpha",
+      "condition": "sed2",
+      "n_subjects_with_repeats": 18,
+      "mean_within_subject_sd": 0.057207665425115226,
+      "median_within_subject_sd": 0.049140674821151586,
+      "mean_within_subject_range": 0.10414688192465966,
+      "median_within_subject_range": 0.09401709401709407
+    },
+    {
+      "band": "gamma",
+      "condition": "sed",
+      "n_subjects_with_repeats": 20,
+      "mean_within_subject_sd": 0.113116329543372,
+      "median_within_subject_sd": 0.07205192383679077,
+      "mean_within_subject_range": 0.19747819971870612,
+      "median_within_subject_range": 0.12869198312236282
+    },
+    {
+      "band": "gamma",
+      "condition": "sed2",
+      "n_subjects_with_repeats": 18,
+      "mean_within_subject_sd": 0.09159778856306894,
+      "median_within_subject_sd": 0.03838337066348313,
+      "mean_within_subject_range": 0.16350110794555248,
+      "median_within_subject_range": 0.07264957264957267
+    }
+  ],
+  "spectrally_closest_stats": [
+    {
+      "band": "alpha",
+      "target": "sed",
+      "n": 20,
+      "awake_mean": 0.8312236286919832,
+      "target_mean": 0.6549929676511955,
+      "mean_delta_awake_minus_target": 0.1762306610407876,
+      "ci95_low": 0.10414205344585085,
+      "ci95_high": 0.24599331926863569,
+      "paired_d": 1.05442514630682,
+      "ttest_p": 0.00015055239130254273,
+      "wilcoxon_greater_p": 0.0001049041748046875,
+      "auc": 0.8
+    },
+    {
+      "band": "alpha",
+      "target": "sed2",
+      "n": 20,
+      "awake_mean": 0.8312236286919832,
+      "target_mean": 0.6643874643874643,
+      "mean_delta_awake_minus_target": 0.1668361643045187,
+      "ci95_low": 0.09247362869198307,
+      "ci95_high": 0.24134115005950446,
+      "paired_d": 0.9644202568790681,
+      "ttest_p": 0.00037508758628396237,
+      "wilcoxon_greater_p": 0.00035381317138671875,
+      "auc": 0.8
+    },
+    {
+      "band": "gamma",
+      "target": "sed",
+      "n": 20,
+      "awake_mean": 0.8312236286919831,
+      "target_mean": 0.47151898734177217,
+      "mean_delta_awake_minus_target": 0.3597046413502109,
+      "ci95_low": 0.26300632911392396,
+      "ci95_high": 0.4607718002812937,
+      "paired_d": 1.576082823672292,
+      "ttest_p": 1.0418219769482473e-06,
+      "wilcoxon_greater_p": 9.5367431640625e-07,
+      "auc": 1.0
+    },
+    {
+      "band": "gamma",
+      "target": "sed2",
+      "n": 20,
+      "awake_mean": 0.8312236286919831,
+      "target_mean": 0.47578347578347574,
+      "mean_delta_awake_minus_target": 0.35544015290850733,
+      "ci95_low": 0.26312889934725375,
+      "ci95_high": 0.4487521187204731,
+      "paired_d": 1.6295740247830282,
+      "ttest_p": 6.506022356232222e-07,
+      "wilcoxon_greater_p": 9.5367431640625e-07,
+      "auc": 1.0
+    }
+  ],
+  "interpretation": "This control minimizes spectral distance between each subject's awake recording and available sedated runs. It does not prove spectral independence, but tests whether the Pi effect survives the most spectrally similar local sedated recording."
+}

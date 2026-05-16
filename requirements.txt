@@ -7,3 +7,4 @@ statsmodels>=0.14
 mne>=1.5
 h5py>=3.9
 scikit-learn>=1.4
+edfio>=0.4

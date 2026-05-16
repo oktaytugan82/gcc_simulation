@@ -1,0 +1,53 @@
+{
+  "band": "gamma",
+  "n_subjects": 20,
+  "target_sfreq": 125.0,
+  "crop_s": 90.0,
+  "window_s": 3.0,
+  "stride_s": 1.5,
+  "max_pairs": 750,
+  "stats": [
+    {
+      "band": "gamma",
+      "target": "mild",
+      "n": 20,
+      "baseline_mean": 0.8275862068965516,
+      "target_mean": 0.7241379310344828,
+      "mean_delta_baseline_minus_target": 0.10344827586206898,
+      "delta_ci_low": 0.0640732758620689,
+      "delta_ci_high": 0.15114942528735634,
+      "paired_d": 1.0093898773656798,
+      "ttest_p": 0.000237449586526418,
+      "wilcoxon_greater_p": 0.00024916395426432755,
+      "auc_baseline_gt_target": 0.81625
+    },
+    {
+      "band": "gamma",
+      "target": "moderate",
+      "n": 20,
+      "baseline_mean": 0.8275862068965516,
+      "target_mean": 0.6551724137931034,
+      "mean_delta_baseline_minus_target": 0.17241379310344826,
+      "delta_ci_low": 0.11091235632183903,
+      "delta_ci_high": 0.2333405172413792,
+      "paired_d": 1.1782242452684184,
+      "ttest_p": 4.373265188257328e-05,
+      "wilcoxon_greater_p": 0.00013065338134765625,
+      "auc_baseline_gt_target": 0.76625
+    },
+    {
+      "band": "gamma",
+      "target": "recovery",
+      "n": 20,
+      "baseline_mean": 0.8275862068965516,
+      "target_mean": 0.6307471264367817,
+      "mean_delta_baseline_minus_target": 0.1968390804597701,
+      "delta_ci_low": 0.1298850574712644,
+      "delta_ci_high": 0.268103448275862,
+      "paired_d": 1.2164651147094168,
+      "ttest_p": 3.0029401415417318e-05,
+      "wilcoxon_greater_p": 7.754788639788509e-05,
+      "auc_baseline_gt_target": 0.91625
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "n_surrogates": 3,
+  "stats": [
+    {
+      "kind": "original",
+      "target": "sed",
+      "n": 20,
+      "awake_mean": 0.8312236286919831,
+      "target_mean": 0.5540787623066102,
+      "mean_delta_awake_minus_target": 0.27714486638537267,
+      "paired_d": 1.3098591317185124,
+      "ttest_p": 1.2156707888130582e-05,
+      "wilcoxon_greater_p": 6.99728965542622e-05
+    },
+    {
+      "kind": "original",
+      "target": "sed2",
+      "n": 20,
+      "awake_mean": 0.8312236286919831,
+      "target_mean": 0.5071225071225072,
+      "mean_delta_awake_minus_target": 0.32410112156947596,
+      "paired_d": 1.4662255931580144,
+      "ttest_p": 2.8071045049172033e-06,
+      "wilcoxon_greater_p": 6.67572021484375e-06
+    },
+    {
+      "kind": "phase_surrogate",
+      "target": "sed",
+      "n": 20,
+      "awake_mean": 0.8312236286919831,
+      "target_mean": 0.6002109704641351,
+      "mean_delta_awake_minus_target": 0.23101265822784806,
+      "paired_d": 2.596216452108975,
+      "ttest_p": 4.513390447423896e-10,
+      "wilcoxon_greater_p": 9.5367431640625e-07
+    },
+    {
+      "kind": "phase_surrogate",
+      "target": "sed2",
+      "n": 20,
+      "awake_mean": 0.8312236286919831,
+      "target_mean": 0.5607312440645775,
+      "mean_delta_awake_minus_target": 0.2704923846274056,
+      "paired_d": 2.5141893843006637,
+      "ttest_p": 7.715091464172756e-10,
+      "wilcoxon_greater_p": 4.4224575106059504e-05
+    }
+  ]
+}

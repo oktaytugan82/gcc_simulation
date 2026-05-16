@@ -1,0 +1,3 @@
+band,contrast,model,n,n_subjects,auc,balanced_accuracy
+sigma,Wake_vs_NREM,residual_gcco_after_spectral_all,19136,22,0.6367060229238908,0.6121643837350418
+sigma,REM_vs_NREM,residual_gcco_after_spectral_all,19280,22,0.5720631130716918,0.5589108871033772

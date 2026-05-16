@@ -1,0 +1,76 @@
+{
+  "dataset": "ds005620",
+  "openneuro_total_files": 1442,
+  "openneuro_total_size_gb": 77.30225401278585,
+  "openneuro_vhdr_recordings": 202,
+  "local_present_files": 886,
+  "local_present_vhdr_recordings": 126,
+  "missing_vhdr_recordings": 76,
+  "openneuro_recordings_by_task_acq": [
+    {
+      "task": "awake",
+      "acq": "EC",
+      "n": 21
+    },
+    {
+      "task": "awake",
+      "acq": "EO",
+      "n": 21
+    },
+    {
+      "task": "awake",
+      "acq": "tms",
+      "n": 17
+    },
+    {
+      "task": "sed",
+      "acq": "rest",
+      "n": 54
+    },
+    {
+      "task": "sed",
+      "acq": "tms",
+      "n": 38
+    },
+    {
+      "task": "sed2",
+      "acq": "rest",
+      "n": 51
+    }
+  ],
+  "local_recordings_by_task_acq": [
+    {
+      "task": "awake",
+      "acq": "EC",
+      "n": 21
+    },
+    {
+      "task": "sed",
+      "acq": "rest",
+      "n": 54
+    },
+    {
+      "task": "sed2",
+      "acq": "rest",
+      "n": 51
+    }
+  ],
+  "missing_recordings_by_task_acq": [
+    {
+      "task": "awake",
+      "acq": "EO",
+      "n": 21
+    },
+    {
+      "task": "awake",
+      "acq": "tms",
+      "n": 17
+    },
+    {
+      "task": "sed",
+      "acq": "tms",
+      "n": 38
+    }
+  ],
+  "missing_eeg_size_gb": 46.89748527947813
+}

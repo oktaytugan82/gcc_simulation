@@ -1,0 +1,81 @@
+{
+  "name": "GCC frozen validation pipeline",
+  "version": "1.0.0",
+  "frozen_on": "2026-05-14",
+  "scope": "Prospective evaluation of access-compatible EEG regime structure in independent datasets.",
+  "primary_claim": "GCC is a theory-grounded, state-sensitive regime composite. It is not claimed to be generally bandpower-independent.",
+  "preprocessing": {
+    "modality": "EEG",
+    "reference": "average reference after non-EEG channel exclusion",
+    "target_sampling_rate_hz": 125,
+    "channel_exclusions_case_insensitive": ["EOG", "EMG", "ECG", "TRIGGER", "STIM"],
+    "per_channel_normalization": "demean and divide by channel standard deviation",
+    "epoch_or_recording_crop": "use first 90 s for anesthesia datasets unless shorter; use complete preprocessed epoched recordings when continuous duration is not available",
+    "artifact_policy": "use public preprocessed data when supplied; otherwise reject recordings with unreadable files or fewer than 8 EEG channels"
+  },
+  "gcc_observables": {
+    "primary_variant": "amplitude-normalized phase-only GCC",
+    "bands": {
+      "alpha": [8, 13],
+      "gamma": [35, 45],
+      "sleep_sigma_secondary": [12, 16]
+    },
+    "window_s": 3.0,
+    "stride_s": 1.5,
+    "R": "mean Kuramoto order parameter across samples in the window from unit phase vectors",
+    "D_eff": "participation ratio of covariance eigenvalues from concatenated cos(phase) and sin(phase) channels",
+    "M_tau": "window-internal variance of instantaneous order parameter",
+    "Pi": "mean of the three binary regime conditions R_ok, D_ok, M_ok across windows"
+  },
+  "thresholding": {
+    "calibration": "subject-level baseline/reference windows only",
+    "alpha_quantile": 0.10,
+    "R_min": "Q_alpha(R | reference)",
+    "D_min": "Q_alpha(D_eff | reference)",
+    "D_max": "Q_1-alpha(D_eff | reference)",
+    "M_min": "Q_alpha(M_tau | reference)",
+    "M_max": "Q_1-alpha(M_tau | reference)",
+    "for_external_state_datasets": "calibrate on awake/baseline for each subject, then score target conditions without refitting"
+  },
+  "primary_endpoints": {
+    "anesthesia_loss": "paired baseline-minus-target Delta Pi in alpha and gamma; one-sided Wilcoxon baseline > target; paired Cohen d",
+    "altered_but_conscious_state": "paired target-minus-baseline shifts in R, D_eff, M_tau and Pi, reported without assuming loss",
+    "sleep_state": "Wake/REM/NREM classification in Pi/R/D/M space with subject-grouped cross-validation",
+    "degradation_proxy": "clinical group classification and MMSE associations, explicitly not interpreted as conscious-access validation"
+  },
+  "baselines": {
+    "single_observable": ["R_only", "D_only", "M_only"],
+    "spectral": ["delta_power", "theta_power", "alpha_power", "beta_power", "gamma_power", "spectral_all"],
+    "composites": ["spectral_all_plus_gcc", "residualized_gcc_after_bandpower"],
+    "criticality_proxy": "available avalanche or 1/f slope proxy when raw data support it"
+  },
+  "validation_rules": {
+    "cross_validation": "leave-one-subject-out for within-dataset; train-on-one-dataset/test-on-another for cross-dataset",
+    "cluster_level": "subject-level aggregation before inference",
+    "bootstrap": "subject-level bootstrap for confidence intervals",
+    "leakage_control": "all thresholds and scalers fit on training/reference data only",
+    "reporting": "always report negative and non-incremental findings"
+  },
+  "minimum_reporting": [
+    "number of subjects and recordings",
+    "number of channels retained",
+    "recording duration used",
+    "thresholds or calibration rule",
+    "paired Delta Pi with CI",
+    "R/D_eff/M_tau component shifts",
+    "single-observable baselines",
+    "spectral baselines and residualized GCC",
+    "reliability or split-half estimate when window-level data are available",
+    "all exclusions"
+  ],
+  "locked_interpretation": {
+    "supported_if": "GCC retains reproducible state sensitivity across independent datasets and survives phase-only/source-proxy controls.",
+    "not_supported_if": "GCC fails to separate states above single-observable and spectral baselines, or effects vanish under phase-only/source-proxy implementations.",
+    "forbidden_claims": [
+      "GCC is a proven neural correlate of consciousness",
+      "GCC is generally independent of spectral power",
+      "GCC validates terminal lucidity without direct TL data",
+      "Gamma is uniquely necessary"
+    ]
+  }
+}

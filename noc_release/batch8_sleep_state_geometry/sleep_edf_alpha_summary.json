@@ -1,0 +1,452 @@
+{
+  "bounds": {
+    "R_min": 0.4417175740098159,
+    "D_min": 1.1673821430981612,
+    "D_max": 1.9415345861239175,
+    "M_min": 0.08253580139282714,
+    "M_max": 0.10313510817497173
+  },
+  "n_epochs": 11261,
+  "subjects": [
+    "SC4001",
+    "SC4002",
+    "SC4011",
+    "SC4012",
+    "SC4021",
+    "SC4022",
+    "SC4031",
+    "SC4032",
+    "SC4041",
+    "SC4042",
+    "SC4051"
+  ],
+  "state_counts": {
+    "NREM": 7479,
+    "REM": 1970,
+    "Wake": 1812
+  },
+  "state_summary": {
+    "NREM": {
+      "R_mean": 0.48478,
+      "R_std": 0.043155,
+      "R_median": 0.483609,
+      "R_count": 7479,
+      "D_eff_mean": 1.567193,
+      "D_eff_std": 0.167198,
+      "D_eff_median": 1.568041,
+      "D_eff_count": 7479,
+      "M_tau_mean": 0.0937,
+      "M_tau_std": 0.006043,
+      "M_tau_median": 0.094131,
+      "M_tau_count": 7479,
+      "Pi_mean": 0.910951,
+      "Pi_std": 0.172998,
+      "Pi_median": 1.0,
+      "Pi_count": 7479,
+      "Access_all_mean": 0.767883,
+      "Access_all_std": 0.422211,
+      "Access_all_median": 1.0,
+      "Access_all_count": 7479
+    },
+    "REM": {
+      "R_mean": 0.475346,
+      "R_std": 0.041928,
+      "R_median": 0.478103,
+      "R_count": 1970,
+      "D_eff_mean": 1.586956,
+      "D_eff_std": 0.203214,
+      "D_eff_median": 1.613035,
+      "D_eff_count": 1970,
+      "M_tau_mean": 0.094031,
+      "M_tau_std": 0.006248,
+      "M_tau_median": 0.094451,
+      "M_tau_count": 1970,
+      "Pi_mean": 0.881387,
+      "Pi_std": 0.192922,
+      "Pi_median": 1.0,
+      "Pi_count": 1970,
+      "Access_all_mean": 0.695939,
+      "Access_all_std": 0.460125,
+      "Access_all_median": 1.0,
+      "Access_all_count": 1970
+    },
+    "Wake": {
+      "R_mean": 0.561226,
+      "R_std": 0.085374,
+      "R_median": 0.579397,
+      "R_count": 1812,
+      "D_eff_mean": 1.584336,
+      "D_eff_std": 0.272321,
+      "D_eff_median": 1.618943,
+      "D_eff_count": 1812,
+      "M_tau_mean": 0.093572,
+      "M_tau_std": 0.009411,
+      "M_tau_median": 0.095038,
+      "M_tau_count": 1812,
+      "Pi_mean": 0.832597,
+      "Pi_std": 0.240787,
+      "Pi_median": 1.0,
+      "Pi_count": 1812,
+      "Access_all_mean": 0.613687,
+      "Access_all_std": 0.487038,
+      "Access_all_median": 1.0,
+      "Access_all_count": 1812
+    }
+  },
+  "subject_state_mean": [
+    {
+      "subject": "SC4001",
+      "state": "NREM",
+      "R": 0.514832,
+      "D_eff": 1.596776,
+      "M_tau": 0.095292,
+      "Pi": 0.968434,
+      "Access_all": 0.907197
+    },
+    {
+      "subject": "SC4001",
+      "state": "REM",
+      "R": 0.500832,
+      "D_eff": 1.703033,
+      "M_tau": 0.096869,
+      "Pi": 0.946667,
+      "Access_all": 0.848
+    },
+    {
+      "subject": "SC4001",
+      "state": "Wake",
+      "R": 0.585826,
+      "D_eff": 1.785877,
+      "M_tau": 0.095605,
+      "Pi": 0.881206,
+      "Access_all": 0.670213
+    },
+    {
+      "subject": "SC4002",
+      "state": "NREM",
+      "R": 0.5086,
+      "D_eff": 1.596372,
+      "M_tau": 0.09687,
+      "Pi": 0.962048,
+      "Access_all": 0.888889
+    },
+    {
+      "subject": "SC4002",
+      "state": "REM",
+      "R": 0.49375,
+      "D_eff": 1.697351,
+      "M_tau": 0.096223,
+      "Pi": 0.950388,
+      "Access_all": 0.855814
+    },
+    {
+      "subject": "SC4002",
+      "state": "Wake",
+      "R": 0.581241,
+      "D_eff": 1.723576,
+      "M_tau": 0.094322,
+      "Pi": 0.907104,
+      "Access_all": 0.743169
+    },
+    {
+      "subject": "SC4011",
+      "state": "NREM",
+      "R": 0.477689,
+      "D_eff": 1.647236,
+      "M_tau": 0.094596,
+      "Pi": 0.939863,
+      "Access_all": 0.840206
+    },
+    {
+      "subject": "SC4011",
+      "state": "REM",
+      "R": 0.491113,
+      "D_eff": 1.712996,
+      "M_tau": 0.096178,
+      "Pi": 0.95098,
+      "Access_all": 0.852941
+    },
+    {
+      "subject": "SC4011",
+      "state": "Wake",
+      "R": 0.576792,
+      "D_eff": 1.580426,
+      "M_tau": 0.092084,
+      "Pi": 0.757962,
+      "Access_all": 0.528662
+    },
+    {
+      "subject": "SC4012",
+      "state": "NREM",
+      "R": 0.478896,
+      "D_eff": 1.65319,
+      "M_tau": 0.094738,
+      "Pi": 0.939858,
+      "Access_all": 0.830189
+    },
+    {
+      "subject": "SC4012",
+      "state": "REM",
+      "R": 0.491207,
+      "D_eff": 1.561375,
+      "M_tau": 0.095522,
+      "Pi": 0.962121,
+      "Access_all": 0.897727
+    },
+    {
+      "subject": "SC4012",
+      "state": "Wake",
+      "R": 0.543716,
+      "D_eff": 1.416499,
+      "M_tau": 0.093509,
+      "Pi": 0.691358,
+      "Access_all": 0.487654
+    },
+    {
+      "subject": "SC4021",
+      "state": "NREM",
+      "R": 0.437369,
+      "D_eff": 1.482645,
+      "M_tau": 0.088471,
+      "Pi": 0.731153,
+      "Access_all": 0.370572
+    },
+    {
+      "subject": "SC4021",
+      "state": "REM",
+      "R": 0.410369,
+      "D_eff": 1.410624,
+      "M_tau": 0.087393,
+      "Pi": 0.619632,
+      "Access_all": 0.09816
+    },
+    {
+      "subject": "SC4021",
+      "state": "Wake",
+      "R": 0.568736,
+      "D_eff": 1.276696,
+      "M_tau": 0.097402,
+      "Pi": 0.861979,
+      "Access_all": 0.65625
+    },
+    {
+      "subject": "SC4022",
+      "state": "NREM",
+      "R": 0.453204,
+      "D_eff": 1.67426,
+      "M_tau": 0.090498,
+      "Pi": 0.834515,
+      "Access_all": 0.582979
+    },
+    {
+      "subject": "SC4022",
+      "state": "REM",
+      "R": 0.433738,
+      "D_eff": 1.814028,
+      "M_tau": 0.090108,
+      "Pi": 0.707635,
+      "Access_all": 0.256983
+    },
+    {
+      "subject": "SC4022",
+      "state": "Wake",
+      "R": 0.612334,
+      "D_eff": 1.79168,
+      "M_tau": 0.094593,
+      "Pi": 0.866667,
+      "Access_all": 0.632
+    },
+    {
+      "subject": "SC4031",
+      "state": "NREM",
+      "R": 0.513438,
+      "D_eff": 1.479088,
+      "M_tau": 0.097055,
+      "Pi": 0.937535,
+      "Access_all": 0.829187
+    },
+    {
+      "subject": "SC4031",
+      "state": "REM",
+      "R": 0.486924,
+      "D_eff": 1.220638,
+      "M_tau": 0.095781,
+      "Pi": 0.861244,
+      "Access_all": 0.650718
+    },
+    {
+      "subject": "SC4031",
+      "state": "Wake",
+      "R": 0.581605,
+      "D_eff": 1.240262,
+      "M_tau": 0.095649,
+      "Pi": 0.795238,
+      "Access_all": 0.507143
+    },
+    {
+      "subject": "SC4032",
+      "state": "NREM",
+      "R": 0.537244,
+      "D_eff": 1.745634,
+      "M_tau": 0.094815,
+      "Pi": 0.976273,
+      "Access_all": 0.930556
+    },
+    {
+      "subject": "SC4032",
+      "state": "REM",
+      "R": 0.511212,
+      "D_eff": 1.676885,
+      "M_tau": 0.094451,
+      "Pi": 0.966499,
+      "Access_all": 0.914573
+    },
+    {
+      "subject": "SC4032",
+      "state": "Wake",
+      "R": 0.61392,
+      "D_eff": 1.585289,
+      "M_tau": 0.093696,
+      "Pi": 0.862745,
+      "Access_all": 0.639706
+    },
+    {
+      "subject": "SC4041",
+      "state": "NREM",
+      "R": 0.478157,
+      "D_eff": 1.45247,
+      "M_tau": 0.092555,
+      "Pi": 0.926103,
+      "Access_all": 0.794994
+    },
+    {
+      "subject": "SC4041",
+      "state": "REM",
+      "R": 0.47241,
+      "D_eff": 1.617822,
+      "M_tau": 0.09424,
+      "Pi": 0.909864,
+      "Access_all": 0.765306
+    },
+    {
+      "subject": "SC4041",
+      "state": "Wake",
+      "R": 0.533891,
+      "D_eff": 1.657339,
+      "M_tau": 0.095746,
+      "Pi": 0.9,
+      "Access_all": 0.74
+    },
+    {
+      "subject": "SC4042",
+      "state": "NREM",
+      "R": 0.480419,
+      "D_eff": 1.418653,
+      "M_tau": 0.092483,
+      "Pi": 0.930201,
+      "Access_all": 0.8
+    },
+    {
+      "subject": "SC4042",
+      "state": "REM",
+      "R": 0.472414,
+      "D_eff": 1.572747,
+      "M_tau": 0.093882,
+      "Pi": 0.92716,
+      "Access_all": 0.803704
+    },
+    {
+      "subject": "SC4042",
+      "state": "Wake",
+      "R": 0.546899,
+      "D_eff": 1.683223,
+      "M_tau": 0.097303,
+      "Pi": 0.92973,
+      "Access_all": 0.789189
+    },
+    {
+      "subject": "SC4051",
+      "state": "NREM",
+      "R": 0.473727,
+      "D_eff": 1.49624,
+      "M_tau": 0.095144,
+      "Pi": 0.887205,
+      "Access_all": 0.70202
+    },
+    {
+      "subject": "SC4051",
+      "state": "REM",
+      "R": 0.434683,
+      "D_eff": 1.430763,
+      "M_tau": 0.092273,
+      "Pi": 0.794118,
+      "Access_all": 0.455882
+    },
+    {
+      "subject": "SC4051",
+      "state": "Wake",
+      "R": 0.478794,
+      "D_eff": 1.550867,
+      "M_tau": 0.082392,
+      "Pi": 0.705128,
+      "Access_all": 0.350962
+    }
+  ],
+  "stats": {
+    "kruskal_R_H": 1601.9350028701956,
+    "kruskal_R_p": 0.0,
+    "kruskal_D_eff_H": 61.592741392915784,
+    "kruskal_D_eff_p": 4.2199387151187e-14,
+    "kruskal_M_tau_H": 26.078761438700894,
+    "kruskal_M_tau_p": 2.1730459319242456e-06,
+    "kruskal_Pi_H": 211.41473580952555,
+    "kruskal_Pi_p": 1.2355872621429785e-46
+  },
+  "cross_validated_baselines": {
+    "R_only": {
+      "wake_vs_nrem_auc": 0.7795238736158079,
+      "rem_vs_nrem_auc": 0.543092096109377,
+      "multiclass": {
+        "accuracy": 0.4107983305212681,
+        "macro_f1": 0.41402986224748495
+      }
+    },
+    "D_only": {
+      "wake_vs_nrem_auc": 0.3553024996849162,
+      "rem_vs_nrem_auc": 0.5056304522375001,
+      "multiclass": {
+        "accuracy": 0.2913595595417814,
+        "macro_f1": 0.2661866093200664
+      }
+    },
+    "M_only": {
+      "wake_vs_nrem_auc": 0.36810213557490035,
+      "rem_vs_nrem_auc": 0.5097795315886173,
+      "multiclass": {
+        "accuracy": 0.17502886066956752,
+        "macro_f1": 0.17666630562562644
+      }
+    },
+    "GCC_triad": {
+      "wake_vs_nrem_auc": 0.7484027388534844,
+      "rem_vs_nrem_auc": 0.5427960387222972,
+      "multiclass": {
+        "accuracy": 0.4059142172098393,
+        "macro_f1": 0.41137869177649256
+      }
+    },
+    "Pi_only": {
+      "wake_vs_nrem_auc": 0.5466772747357059,
+      "rem_vs_nrem_auc": 0.49722729564947676,
+      "multiclass": {
+        "accuracy": 0.5721516739188349,
+        "macro_f1": 0.3400659654820945
+      }
+    }
+  },
+  "band": "alpha",
+  "band_hz": [
+    8.0,
+    13.0
+  ]
+}

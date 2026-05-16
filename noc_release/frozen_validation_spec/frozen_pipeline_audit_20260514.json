@@ -1,0 +1,244 @@
+{
+  "spec_file": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_frozen_pipeline_20260514\\gcc_frozen_pipeline_v1.json",
+  "spec_sha256": "1277a9076003133d004d23825d9a75709000628bb20caf971ea397d69f70b34f",
+  "spec_version": "1.0.0",
+  "audited_files": [
+    {
+      "file": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch10_phase_only_20260514\\phase_only_delta_features.csv",
+      "sha256": "6444e91c88738eff58fe3b6f9cec3e0a1122650edf118f9f892e1e1304adccdc",
+      "rows": 202,
+      "columns": [
+        "dataset",
+        "band",
+        "subject",
+        "condition",
+        "y",
+        "dR",
+        "dD",
+        "dlogM",
+        "dPi",
+        "d_theta_power",
+        "d_alpha_power",
+        "d_beta_power",
+        "d_gamma_power",
+        "d_alpha_gamma_ratio",
+        "d_spectral_entropy"
+      ],
+      "dataset_values": [
+        "Chennu",
+        "DS005620"
+      ],
+      "band_values": [
+        "alpha",
+        "gamma"
+      ],
+      "condition_values": [
+        "awake",
+        "baseline",
+        "moderate",
+        "sed",
+        "sed2"
+      ],
+      "subject_values": [
+        "10",
+        "1010",
+        "1016",
+        "1017",
+        "1022",
+        "1024",
+        "1033",
+        "1036",
+        "1037",
+        "1045",
+        "1046",
+        "1054",
+        "1055",
+        "1057",
+        "1060",
+        "1061",
+        "1062",
+        "1064",
+        "1067",
+        "1068",
+        "1071",
+        "1074",
+        "13",
+        "14",
+        "18",
+        "2",
+        "20",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "numeric_summary": {}
+    },
+    {
+      "file": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch11_source_proxy_csd_20260514\\csd_phase_only_delta_features.csv",
+      "sha256": "343d84dbb099defa7e894bc3a9bd71a01cf1ded319e5cc05ea7e9e474b3d36f9",
+      "rows": 202,
+      "columns": [
+        "dataset",
+        "band",
+        "subject",
+        "condition",
+        "y",
+        "dR",
+        "dD",
+        "dlogM",
+        "dPi",
+        "d_theta_power",
+        "d_alpha_power",
+        "d_beta_power",
+        "d_gamma_power",
+        "d_alpha_gamma_ratio",
+        "d_spectral_entropy"
+      ],
+      "dataset_values": [
+        "Chennu",
+        "DS005620"
+      ],
+      "band_values": [
+        "alpha",
+        "gamma"
+      ],
+      "condition_values": [
+        "awake",
+        "baseline",
+        "moderate",
+        "sed",
+        "sed2"
+      ],
+      "subject_values": [
+        "10",
+        "1010",
+        "1016",
+        "1017",
+        "1022",
+        "1024",
+        "1033",
+        "1036",
+        "1037",
+        "1045",
+        "1046",
+        "1054",
+        "1055",
+        "1057",
+        "1060",
+        "1061",
+        "1062",
+        "1064",
+        "1067",
+        "1068",
+        "1071",
+        "1074",
+        "13",
+        "14",
+        "18",
+        "2",
+        "20",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "numeric_summary": {}
+    },
+    {
+      "file": "C:\\Users\\oktay\\OneDrive\\Dokumente\\New project\\gcc_batch13_ketamine_20260514\\ketamine_phase_only_recording_summary.csv",
+      "sha256": "a9e6153a55a9f9616b460475382d175c752651d3df766e99334b37a153b7be39",
+      "rows": 78,
+      "columns": [
+        "dataset",
+        "subject",
+        "condition",
+        "eyes",
+        "recording",
+        "filename",
+        "band",
+        "n_channels",
+        "duration_s",
+        "R_mean",
+        "D_mean",
+        "M_mean",
+        "Pi",
+        "Access_all",
+        "n_windows"
+      ],
+      "dataset_values": [
+        "FarnesKetamine"
+      ],
+      "band_values": [
+        "alpha",
+        "gamma"
+      ],
+      "condition_values": [
+        "awake",
+        "ketamine"
+      ],
+      "subject_values": [
+        "210",
+        "219",
+        "249",
+        "251",
+        "265",
+        "271",
+        "282",
+        "300",
+        "313",
+        "318"
+      ],
+      "numeric_summary": {
+        "Pi": {
+          "mean": 0.7779913141578613,
+          "sd": 0.10698332022174498,
+          "min": 0.4292237442922373,
+          "max": 0.9223744292237444
+        },
+        "R_mean": {
+          "mean": 0.1233138166304564,
+          "sd": 0.03254475900019017,
+          "min": 0.0809639585398735,
+          "max": 0.2340782741580198
+        },
+        "D_mean": {
+          "mean": 11.304985152983196,
+          "sd": 4.494465588205606,
+          "min": 4.146036353756644,
+          "max": 22.689390041836877
+        },
+        "M_mean": {
+          "mean": 0.003390957280045832,
+          "sd": 0.0012822821865149353,
+          "min": 0.0017004330221195,
+          "max": 0.0101763548810842
+        }
+      }
+    }
+  ],
+  "locked_primary_variant": "amplitude-normalized phase-only GCC",
+  "locked_window_s": 3.0,
+  "locked_stride_s": 1.5,
+  "locked_alpha_quantile": 0.1
+}

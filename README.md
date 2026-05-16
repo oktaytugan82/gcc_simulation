@@ -153,6 +153,12 @@ The repository-level Zenodo concept DOI, which resolves to the latest version, i
 10.5281/zenodo.19744969
 ```
 
+The version DOI for `v2.0.1-noc-preflight` is:
+
+```text
+10.5281/zenodo.19818741
+```
+
 ## License
 
 Author-generated code is released under the MIT License. Third-party datasets retain their original licenses and terms of use.

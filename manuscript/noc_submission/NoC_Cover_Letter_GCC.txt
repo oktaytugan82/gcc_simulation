@@ -14,7 +14,7 @@ The named release asset is:
 
 https://github.com/oktaytugan82/gcc_simulation/releases/download/v2.0.1-noc-preflight/gcc_simulation_v2.0.1-noc-preflight.zip
 
-The NoC preflight-clean submission snapshot is archived through Zenodo under the repository-level concept DOI 10.5281/zenodo.19744969, which resolves to the latest archived version. Raw third-party datasets are not redistributed; all public dataset sources and DOIs are listed in the manuscript Data Availability statement. I apply for the Open Materials badge and provide open derived results and full public data-source documentation.
+The NoC preflight-clean submission snapshot is archived on Zenodo with version DOI 10.5281/zenodo.19818741; the repository-level concept DOI is 10.5281/zenodo.19744969. Raw third-party datasets are not redistributed; all public dataset sources and DOIs are listed in the manuscript Data Availability statement. I apply for the Open Materials badge and provide open derived results and full public data-source documentation.
 
 The manuscript has not been submitted elsewhere and is not under consideration by any other journal. The author declares no competing interests.
 

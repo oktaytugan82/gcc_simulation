@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the archived Zenodo release and the associated manuscript."
 title: "GCC simulation and analysis code"
 version: "v2.0.1-noc-preflight"
-doi: "10.5281/zenodo.19744969"
+doi: "10.5281/zenodo.19818741"
 date-released: "2026-05-16"
 type: software
 authors:

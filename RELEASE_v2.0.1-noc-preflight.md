@@ -9,6 +9,11 @@ Relative to `v2.0.0-noc`, the author-generated analysis code, derived validation
 - removed stale version-DOI wording from the manuscript and cover letter;
 - retained the Zenodo concept DOI (`10.5281/zenodo.19744969`) as the stable latest-version DOI.
 
+Zenodo identifiers:
+
+- version DOI: `10.5281/zenodo.19818741`;
+- concept DOI: `10.5281/zenodo.19744969`.
+
 The release contains:
 
 - the NoC submission manuscript source and PDF;
